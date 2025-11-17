@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-'use client';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faArrowLeft, 
