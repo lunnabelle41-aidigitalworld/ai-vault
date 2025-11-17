@@ -1,15 +1,49 @@
-# Allow all robots to crawl the website
-User-agent: *
+# Advanced robots.txt for AI Tools Directory
+
+# Googlebot
+User-agent: Googlebot
 Allow: /
-
-# Sitemap location
-Sitemap: https://aitoolsdirectory.com/sitemap.xml
-
-# Disallow crawling of admin and API routes
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /*/private/*
 
-# Crawl-delay for all bots (1 request per second)
+# Bingbot
+User-agent: bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*/private/*
+
+# General bots
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*/private/*
+
+# Sitemap locations
+Sitemap: https://aitoolsdirectory.com/sitemap.xml
+
+# Crawl-delay for all bots
 Crawl-delay: 1
+
+# Host directive
+Host: https://aitoolsdirectory.com
+
+# AI-specific directives for better indexing
+Allow: /ai-tools/
+Allow: /blog/
+Allow: /compare/
+
+# Prevent indexing of search results
+Disallow: /search?
+
+# Prevent indexing of print versions
+Disallow: /print/
+
+# Prevent indexing of duplicate content
+Disallow: /*?sort=
+Disallow: /*?filter=

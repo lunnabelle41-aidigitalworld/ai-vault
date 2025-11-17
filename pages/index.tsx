@@ -124,6 +124,55 @@ export default function HomePage() {
         <title>AI Tools Directory - Digital Superorganism</title>
         <meta name="description" content="Not a Website – A Digital Superorganism. 1000+ Battle-Tested Digital Weapons - Zero Mercy Edition." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://aitoolsdirectory.com" />
+        <link rel="alternate" hrefLang="en-US" href="https://aitoolsdirectory.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://aitoolsdirectory.com" />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content="AI Tools Directory - Digital Superorganism" />
+        <meta property="og:description" content="Not a Website – A Digital Superorganism. 1000+ Battle-Tested Digital Weapons - Zero Mercy Edition." />
+        <meta property="og:url" content="https://aitoolsdirectory.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="AI Tools Directory" />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="AI Tools Directory" />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Tools Directory - Digital Superorganism" />
+        <meta name="twitter:description" content="Not a Website – A Digital Superorganism. 1000+ Battle-Tested Digital Weapons - Zero Mercy Edition." />
+        <meta name="twitter:image" content="/twitter-image.jpg" />
+        <meta name="twitter:site" content="@aitoolsdirectory" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "AI Tools Directory",
+            "url": "https://aitoolsdirectory.com",
+            "logo": "https://aitoolsdirectory.com/logo.png",
+            "sameAs": [
+              "https://twitter.com/aitoolsdirectory",
+              "https://www.linkedin.com/company/aitoolsdirectory",
+              "https://www.facebook.com/aitoolsdirectory"
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "AI Tools Directory",
+            "url": "https://aitoolsdirectory.com",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://aitoolsdirectory.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
       </NextHead>
 
       {/* Ultra-Premium Animated Background */}

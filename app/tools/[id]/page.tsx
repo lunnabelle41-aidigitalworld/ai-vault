@@ -3,7 +3,10 @@ import { getToolById, getRecommendedTools, getTools } from '@/lib/tools';
 import ToolRecommendations from '@/components/ToolRecommendations/ToolRecommendations';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaExternalLinkAlt, FaArrowLeft } from 'react-icons/fa';
+'use client';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default async function ToolPage({ params }: { params: { id: string } }) {
   const tool = await getToolById(params.id);
@@ -27,7 +30,7 @@ export default async function ToolPage({ params }: { params: { id: string } }) {
           href="/" 
           className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors mb-6"
         >
-          <FaArrowLeft className="mr-2" /> Back to all tools
+          <FontAwesomeIcon icon={faArrowLeft} className="w-5 h-5" /> Back to all tools
         </Link>
         
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
@@ -104,7 +107,7 @@ export default async function ToolPage({ params }: { params: { id: string } }) {
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
                 >
                   Visit Website
-                  <FaExternalLinkAlt className="ml-2" size={12} />
+                  <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 w-3 h-3" />
                 </a>
               </div>
             </div>

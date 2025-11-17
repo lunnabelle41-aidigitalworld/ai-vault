@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 import Navbar from '../Navbar';
-import AIAssistant from '../AIAssistant';
 import Footer from '../Footer/Footer';
 import { ComparisonProvider } from '@/contexts/ComparisonContext';
 
@@ -24,7 +23,6 @@ const Layout = ({ children }: LayoutProps) => {
           {children}
         </main>
         <Footer />
-        <AIAssistant />
         <ComparisonBar />
       </div>
     </ComparisonProvider>

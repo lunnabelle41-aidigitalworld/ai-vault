@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Tool } from '@/types/tool';
 import { useComparison } from '@/contexts/ComparisonContext';
-import { FaBalanceScale, FaCheck, FaPlus } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale, faCheck, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 interface ComparisonButtonProps {
   tool: Tool;
@@ -58,7 +59,7 @@ const ComparisonButton: React.FC<ComparisonButtonProps> = ({
         className={`inline-flex items-center ${sizeClasses[size]} ${className}`}
         disabled
       >
-        <FaBalanceScale className={iconClasses[size]} />
+        <FontAwesomeIcon icon={faBalanceScale} className={iconClasses[size]} />
         {showLabel && <span className="ml-2">Compare</span>}
       </button>
     );
@@ -82,12 +83,13 @@ const ComparisonButton: React.FC<ComparisonButtonProps> = ({
       title={isInCompare ? 'Remove from comparison' : 'Add to comparison'}
     >
       {isInCompare ? (
-        <FaCheck className={`${iconClasses[size]} fill-current`} />
+        <FontAwesomeIcon icon={faCheck} className="mr-1" />
       ) : (
-        <FaBalanceScale className={`${iconClasses[size]} fill-current`} />
+        <FontAwesomeIcon icon={faBalanceScale} className={iconClasses[size]} />
       )}
       {showLabel && (
         <span className="ml-2">
+          <FontAwesomeIcon icon={faPlus} className="mr-1" />
           {buttonText}
         </span>
       )}

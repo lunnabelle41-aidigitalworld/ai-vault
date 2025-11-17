@@ -1,7 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
-import { FiMail, FiUser, FiCheck, FiAlertCircle } from 'react-icons/fi';
+'use client';
+
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faUser, faCheck, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -55,7 +58,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
     return (
       <div className={`bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-6 md:p-8 shadow-lg ${className}`}>
         <div className="flex items-center justify-center space-x-3 text-white">
-          <FiCheck className="w-6 h-6" />
+          <FontAwesomeIcon icon={faCheck} className="w-6 h-6" />
           <h3 className="text-xl font-bold">Thank you for subscribing!</h3>
         </div>
         <p className="mt-2 text-blue-100 text-center">
@@ -74,7 +77,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <FiUser className="h-5 w-5 text-blue-300" />
+              <FontAwesomeIcon icon={faUser} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             </div>
             <input
               type="text"
@@ -88,7 +91,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
           
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <FiMail className="h-5 w-5 text-blue-300" />
+              <FontAwesomeIcon icon={faEnvelope} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             </div>
             <input
               type="email"
@@ -115,7 +118,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
           
           {status === 'error' && (
             <div className="flex items-center justify-center space-x-2 text-red-200 text-sm">
-              <FiAlertCircle className="w-4 h-4" />
+              <FontAwesomeIcon icon={faCircleExclamation} className="w-5 h-5 text-red-500" />
               <span>{error || 'Failed to subscribe. Please try again.'}</span>
             </div>
           )}

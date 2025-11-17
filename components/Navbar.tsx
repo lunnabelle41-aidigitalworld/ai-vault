@@ -1,8 +1,14 @@
-﻿"use client";
+"use client";
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
+import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faBars, 
+  faMoon, 
+  faSun, 
+  faTimes 
+} from '@fortawesome/free-solid-svg-icons';
 import { useAuth } from '../contexts/MockAuthContext';
 
 export default function Navbar() {
@@ -27,7 +33,7 @@ export default function Navbar() {
   }, []);
 
   const toggleTheme = () => {
-    setTheme(prev => {
+    setTheme((prev: 'light' | 'dark') => {
       const next = prev === 'light' ? 'dark' : 'light';
       if (next === 'dark') {
         document.documentElement.classList.add('dark');
@@ -56,6 +62,9 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Home</Link>
             <Link href="/ai-tools" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Categories</Link>
+            <Link href="/best-tools" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-sm">
+              Best Tools
+            </Link>
             <Link href="/new-tools" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">New Tools</Link>
             <Link href="/compare" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Compare</Link>
             <Link href="/favorites" className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Favorites</Link>
@@ -74,7 +83,11 @@ export default function Navbar() {
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
               title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
-              {theme === 'light' ? <FiMoon className="w-5 h-5" /> : <FiSun className="w-5 h-5" />}
+              <FontAwesomeIcon 
+                icon={theme === 'dark' ? faSun : faMoon} 
+                className="w-5 h-5" 
+                fixedWidth 
+              />
             </button>
 
             {isAuthenticated ? (
@@ -93,10 +106,10 @@ export default function Navbar() {
             {/* Mobile menu button */}
             <button
               className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
-              onClick={() => setIsMenuOpen(v => !v)}
+              onClick={() => setIsMenuOpen((v: boolean) => !v)}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
+              {isMenuOpen ? <FontAwesomeIcon icon={faTimes} className="h-6 w-6" /> : <FontAwesomeIcon icon={faBars} className="w-5 h-5" fixedWidth />}
             </button>
           </div>
         </div>
@@ -107,6 +120,7 @@ export default function Navbar() {
         <div className="px-4 pt-2 pb-4 space-y-1 bg-white dark:bg-gray-900">
           <Link href="/" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Home</Link>
           <Link href="/ai-tools" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Categories</Link>
+          <Link href="/best-tools" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">Best Tools</Link>
           <Link href="/new-tools" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">New Tools</Link>
           <Link href="/compare" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Compare</Link>
           <Link href="/favorites" onClick={closeMenu} className="block px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">Favorites</Link>

@@ -2,13 +2,455 @@ export const categories = [
   {
     name: "AI for Nonprofits & Social Impact",
     icon: "🤝",
-    toolCount: 4,
+    toolCount: 6,
     subcategories: [
       { name: "Fundraising & Donor Management", favicon: "", website: "" },
       { name: "Program Impact Analysis", favicon: "", website: "" },
       { name: "Volunteer Coordination", favicon: "", website: "" },
       { name: "Grant Writing & Management", favicon: "", website: "" },
       { name: "Social Impact Measurement", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Education",
+    icon: "🎓",
+    toolCount: 3,
+    subcategories: [
+      { name: "Personalized Learning", favicon: "", website: "" },
+      { name: "Assessment & Grading", favicon: "", website: "" },
+      { name: "Student Engagement", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Healthcare",
+    icon: "🩺",
+    toolCount: 4,
+    subcategories: [
+      { name: "Patient Care", favicon: "", website: "" },
+      { name: "Medical Research", favicon: "", website: "" },
+      { name: "Healthcare Administration", favicon: "", website: "" },
+      { name: "Telemedicine", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Business",
+    icon: "💼",
+    toolCount: 4,
+    subcategories: [
+      { name: "Customer Service", favicon: "", website: "" },
+      { name: "Sales & Marketing", favicon: "", website: "" },
+      { name: "Supply Chain Management", favicon: "", website: "" },
+      { name: "Financial Services", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Creativity",
+    icon: "🎨",
+    toolCount: 3,
+    subcategories: [
+      { name: "Content Creation", favicon: "", website: "" },
+      { name: "Design & Illustration", favicon: "", website: "" },
+      { name: "Music & Sound", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Entertainment",
+    icon: "🎬",
+    toolCount: 3,
+    subcategories: [
+      { name: "Gaming", favicon: "", website: "" },
+      { name: "Virtual Reality", favicon: "", website: "" },
+      { name: "Augmented Reality", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Science",
+    icon: "🧪",
+    toolCount: 3,
+    subcategories: [
+      { name: "Data Analysis", favicon: "", website: "" },
+      { name: "Simulation & Modeling", favicon: "", website: "" },
+      { name: "Robotics", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Government",
+    icon: "🏛️",
+    toolCount: 3,
+    subcategories: [
+      { name: "Public Services", favicon: "", website: "" },
+      { name: "Civic Engagement", favicon: "", website: "" },
+      { name: "Cybersecurity", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Environment",
+    icon: "🌍",
+    toolCount: 3,
+    subcategories: [
+      { name: "Climate Change", favicon: "", website: "" },
+      { name: "Renewable Energy", favicon: "", website: "" },
+      { name: "Sustainability", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Transportation",
+    icon: "🚗",
+    toolCount: 3,
+    subcategories: [
+      { name: "Autonomous Vehicles", favicon: "", website: "" },
+      { name: "Traffic Management", favicon: "", website: "" },
+      { name: "Logistics & Delivery", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Agriculture",
+    icon: "🌾",
+    toolCount: 3,
+    subcategories: [
+      { name: "Precision Farming", favicon: "", website: "" },
+      { name: "Crop Monitoring", favicon: "", website: "" },
+      { name: "Animal Care", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Finance",
+    icon: "💰",
+    toolCount: 3,
+    subcategories: [
+      { name: "Fraud Detection", favicon: "", website: "" },
+      { name: "Algorithmic Trading", favicon: "", website: "" },
+      { name: "Risk Management", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Legal",
+    icon: "⚖️",
+    toolCount: 3,
+    subcategories: [
+      { name: "Legal Research", favicon: "", website: "" },
+      { name: "Contract Analysis", favicon: "", website: "" },
+      { name: "Dispute Resolution", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Real Estate",
+    icon: "🏠",
+    toolCount: 3,
+    subcategories: [
+      { name: "Property Valuation", favicon: "", website: "" },
+      { name: "Tenant Screening", favicon: "", website: "" },
+      { name: "Maintenance Management", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Manufacturing",
+    icon: "โรงงาน",
+    toolCount: 3,
+    subcategories: [
+      { name: "Quality Control", favicon: "", website: "" },
+      { name: "Predictive Maintenance", favicon: "", website: "" },
+      { name: "Supply Chain Optimization", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Retail",
+    icon: "🛍️",
+    toolCount: 3,
+    subcategories: [
+      { name: "Personalized Recommendations", favicon: "", website: "" },
+      { name: "Inventory Management", favicon: "", website: "" },
+      { name: "Customer Experience", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Media",
+    icon: "📺",
+    toolCount: 3,
+    subcategories: [
+      { name: "Content Generation", favicon: "", website: "" },
+      { name: "Audience Analysis", favicon: "", website: "" },
+      { name: "Advertising Optimization", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Sports",
+    icon: "🏆",
+    toolCount: 3,
+    subcategories: [
+      { name: "Performance Analysis", favicon: "", website: "" },
+      { name: "Fan Engagement", favicon: "", website: "" },
+      { name: "Game Strategy", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Gaming",
+    icon: "🎮",
+    toolCount: 3,
+    subcategories: [
+      { name: "Game Design", favicon: "", website: "" },
+      { name: "Player Behavior Analysis", favicon: "", website: "" },
+      { name: "Virtual Assistants", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Robotics",
+    icon: "🦾",
+    toolCount: 3,
+    subcategories: [
+      { name: "Robot Design", favicon: "", website: "" },
+      { name: "Robot Control", favicon: "", website: "" },
+      { name: "Robot Navigation", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Cybersecurity",
+    icon: "🔒",
+    toolCount: 3,
+    subcategories: [
+      { name: "Threat Detection", favicon: "", website: "" },
+      { name: "Vulnerability Assessment", favicon: "", website: "" },
+      { name: "Incident Response", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Language",
+    icon: "💬",
+    toolCount: 3,
+    subcategories: [
+      { name: "Translation", favicon: "", website: "" },
+      { name: "Sentiment Analysis", favicon: "", website: "" },
+      { name: "Text Generation", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Accessibility",
+    icon: "♿",
+    toolCount: 3,
+    subcategories: [
+      { name: "Speech Recognition", favicon: "", website: "" },
+      { name: "Visual Recognition", favicon: "", website: "" },
+      { name: "Haptic Feedback", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Ethics",
+    icon: "⚖️",
+    toolCount: 3,
+    subcategories: [
+      { name: "Bias Detection", favicon: "", website: "" },
+      { name: "Fairness Analysis", favicon: "", website: "" },
+      { name: "Transparency", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Privacy",
+    icon: "🔒",
+    toolCount: 3,
+    subcategories: [
+      { name: "Data Anonymization", favicon: "", website: "" },
+      { name: "Access Control", favicon: "", website: "" },
+      { name: "Data Encryption", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Sustainability",
+    icon: "🌱",
+    toolCount: 3,
+    subcategories: [
+      { name: "Resource Management", favicon: "", website: "" },
+      { name: "Waste Reduction", favicon: "", website: "" },
+      { name: "Energy Efficiency", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Space",
+    icon: "🚀",
+    toolCount: 3,
+    subcategories: [
+      { name: "Mission Planning", favicon: "", website: "" },
+      { name: "Data Analysis", favicon: "", website: "" },
+      { name: "Robotics", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Transportation",
+    icon: "🚗",
+    toolCount: 3,
+    subcategories: [
+      { name: "Autonomous Vehicles", favicon: "", website: "" },
+      { name: "Traffic Management", favicon: "", website: "" },
+      { name: "Logistics & Delivery", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Agriculture",
+    icon: "🌾",
+    toolCount: 3,
+    subcategories: [
+      { name: "Precision Farming", favicon: "", website: "" },
+      { name: "Crop Monitoring", favicon: "", website: "" },
+      { name: "Animal Care", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Finance",
+    icon: "💰",
+    toolCount: 3,
+    subcategories: [
+      { name: "Fraud Detection", favicon: "", website: "" },
+      { name: "Algorithmic Trading", favicon: "", website: "" },
+      { name: "Risk Management", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Legal",
+    icon: "⚖️",
+    toolCount: 3,
+    subcategories: [
+      { name: "Legal Research", favicon: "", website: "" },
+      { name: "Contract Analysis", favicon: "", website: "" },
+      { name: "Dispute Resolution", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Real Estate",
+    icon: "🏠",
+    toolCount: 3,
+    subcategories: [
+      { name: "Property Valuation", favicon: "", website: "" },
+      { name: "Tenant Screening", favicon: "", website: "" },
+      { name: "Maintenance Management", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Manufacturing",
+    icon: "โรงงาน",
+    toolCount: 3,
+    subcategories: [
+      { name: "Quality Control", favicon: "", website: "" },
+      { name: "Predictive Maintenance", favicon: "", website: "" },
+      { name: "Supply Chain Optimization", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Retail",
+    icon: "🛍️",
+    toolCount: 3,
+    subcategories: [
+      { name: "Personalized Recommendations", favicon: "", website: "" },
+      { name: "Inventory Management", favicon: "", website: "" },
+      { name: "Customer Experience", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Media",
+    icon: "📺",
+    toolCount: 3,
+    subcategories: [
+      { name: "Content Generation", favicon: "", website: "" },
+      { name: "Audience Analysis", favicon: "", website: "" },
+      { name: "Advertising Optimization", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Sports",
+    icon: "🏆",
+    toolCount: 3,
+    subcategories: [
+      { name: "Performance Analysis", favicon: "", website: "" },
+      { name: "Fan Engagement", favicon: "", website: "" },
+      { name: "Game Strategy", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Gaming",
+    icon: "🎮",
+    toolCount: 3,
+    subcategories: [
+      { name: "Game Design", favicon: "", website: "" },
+      { name: "Player Behavior Analysis", favicon: "", website: "" },
+      { name: "Virtual Assistants", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Robotics",
+    icon: "🦾",
+    toolCount: 3,
+    subcategories: [
+      { name: "Robot Design", favicon: "", website: "" },
+      { name: "Robot Control", favicon: "", website: "" },
+      { name: "Robot Navigation", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Cybersecurity",
+    icon: "🔒",
+    toolCount: 3,
+    subcategories: [
+      { name: "Threat Detection", favicon: "", website: "" },
+      { name: "Vulnerability Assessment", favicon: "", website: "" },
+      { name: "Incident Response", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Language",
+    icon: "💬",
+    toolCount: 3,
+    subcategories: [
+      { name: "Translation", favicon: "", website: "" },
+      { name: "Sentiment Analysis", favicon: "", website: "" },
+      { name: "Text Generation", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Accessibility",
+    icon: "♿",
+    toolCount: 3,
+    subcategories: [
+      { name: "Speech Recognition", favicon: "", website: "" },
+      { name: "Visual Recognition", favicon: "", website: "" },
+      { name: "Haptic Feedback", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Ethics",
+    icon: "⚖️",
+    toolCount: 3,
+    subcategories: [
+      { name: "Bias Detection", favicon: "", website: "" },
+      { name: "Fairness Analysis", favicon: "", website: "" },
+      { name: "Transparency", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Privacy",
+    icon: "🔒",
+    toolCount: 3,
+    subcategories: [
+      { name: "Data Anonymization", favicon: "", website: "" },
+      { name: "Access Control", favicon: "", website: "" },
+      { name: "Data Encryption", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Sustainability",
+    icon: "🌱",
+    toolCount: 3,
+    subcategories: [
+      { name: "Resource Management", favicon: "", website: "" },
+      { name: "Waste Reduction", favicon: "", website: "" },
+      { name: "Energy Efficiency", favicon: "", website: "" }
+    ]
+  },
+  {
+    name: "AI for Space",
+    icon: "🚀",
+    toolCount: 3,
+    subcategories: [
+      { name: "Mission Planning", favicon: "", website: "" },
+      { name: "Data Analysis", favicon: "", website: "" },
+      { name: "Robotics", favicon: "", website: "" }
     ]
   },
   {
@@ -1076,7 +1518,7 @@ export const categories = [
   {
     name: "Travel & Hospitality",
     icon: "✈️",
-    toolCount: 0,
+    toolCount: 8,
     subcategories: [
       { name: "Trip Planning", favicon: "https://www.tripit.com/favicon.ico", website: "https://www.tripit.com" },
       { name: "Hotel Management", favicon: "https://www.opera.com/favicon.ico", website: "https://www.opera.com/hotel-management" },
@@ -1091,7 +1533,7 @@ export const categories = [
   {
     name: "HR & Recruitment",
     icon: "🧑‍💼",
-    toolCount: 0,
+    toolCount: 8,
     subcategories: [
       { name: "Resume Screening", favicon: "https://www.hirevue.com/favicon.ico", website: "https://www.hirevue.com" },
       { name: "Candidate Matching", favicon: "https://www.indeed.com/favicon.ico", website: "https://www.indeed.com" },
@@ -1278,7 +1720,7 @@ export const categories = [
   {
     name: "Supply Chain & Logistics",
     icon: "🚚",
-    toolCount: 0,
+    toolCount: 8,
     subcategories: [
       { name: "Inventory Management", favicon: "https://www.netsuite.com/favicon.ico", website: "https://www.netsuite.com" },
       { name: "Route Optimization", favicon: "https://www.routific.com/favicon.ico", website: "https://www.routific.com" },
@@ -1293,7 +1735,7 @@ export const categories = [
   {
     name: "Cybersecurity & Threat Detection",
     icon: "🛡️",
-    toolCount: 0,
+    toolCount: 8,
     subcategories: [
       { name: "Security Monitoring", favicon: "https://www.splunk.com/favicon.ico", website: "https://www.splunk.com" },
       { name: "Threat Analysis", favicon: "https://www.crowdstrike.com/favicon.ico", website: "https://www.crowdstrike.com" },
@@ -1308,7 +1750,7 @@ export const categories = [
   {
     name: "Personal Finance & Budgeting",
     icon: "💸",
-    toolCount: 0,
+    toolCount: 8,
     subcategories: [
       { name: "Expense Tracking", favicon: "https://www.mint.com/favicon.ico", website: "https://www.mint.com" },
       { name: "Investment Advice", favicon: "https://www.betterment.com/favicon.ico", website: "https://www.betterment.com" },
@@ -2005,7 +2447,7 @@ export const categories = [
   {
     name: "AI for Agriculture & Food Tech",
     icon: "🌾",
-    toolCount: 0,
+    toolCount: 10,
     subcategories: [
       { name: "Precision Agriculture", favicon: "/favicons/precision-ag.png", website: "https://www.climate.com" },
       { name: "Crop Monitoring", favicon: "/favicons/crop-monitoring.png", website: "https://www.taranis.ag" },
@@ -2022,7 +2464,7 @@ export const categories = [
   {
     name: "AI in Sports & Fitness Tech",
     icon: "🏅",
-    toolCount: 0,
+    toolCount: 10,
     subcategories: [
       { name: "Performance Analytics", favicon: "/favicons/performance-analytics.png", website: "https://www.catapultsports.com" },
       { name: "Injury Prevention", favicon: "/favicons/injury-prevention.png", website: "https://www.zone7.ai" },
@@ -2039,7 +2481,7 @@ export const categories = [
   {
     name: "AI for Smart Cities & IoT",
     icon: "🏙️",
-    toolCount: 0,
+    toolCount: 10,
     subcategories: [
       { name: "Urban Mobility", favicon: "/favicons/urban-mobility.png", website: "https://www.viavan.com" },
       { name: "Smart Grids", favicon: "/favicons/smart-grids.png", website: "https://www.siemens.com" },
@@ -2051,6 +2493,2659 @@ export const categories = [
       { name: "Water Management", favicon: "/favicons/water-management.png", website: "https://www.xylem.com" },
       { name: "Noise Monitoring", favicon: "/favicons/noise-monitoring.png", website: "https://www.bruitparif.fr" },
       { name: "Citizen Engagement", favicon: "/favicons/citizen-engagement.png", website: "https://www.citizenlab.co" }
+    ]
+  },
+  {
+    name: "AI for Education Technology",
+    icon: "📚",
+    toolCount: 10,
+    subcategories: [
+      { name: "Personalized Learning", favicon: "/favicons/personalized-learning.png", website: "https://www.khanacademy.org" },
+      { name: "Intelligent Tutoring", favicon: "/favicons/intelligent-tutoring.png", website: "https://www.carnegielearning.com" },
+      { name: "Automated Assessment", favicon: "/favicons/automated-assessment.png", website: "https://www.gradecam.com" },
+      { name: "Learning Analytics", favicon: "/favicons/learning-analytics.png", website: "https://www.brightspace.com" },
+      { name: "Curriculum Development", favicon: "/favicons/curriculum-development.png", website: "https://www.teacherspayteachers.com" },
+      { name: "Virtual Classrooms", favicon: "/favicons/virtual-classrooms.png", website: "https://www.zoom.us" },
+      { name: "Student Engagement", favicon: "/favicons/student-engagement.png", website: "https://www.kahoot.com" },
+      { name: "Educational Games", favicon: "/favicons/educational-games.png", website: "https://www.mindresearch.org" },
+      { name: "Language Learning", favicon: "/favicons/language-learning.png", website: "https://www.duolingo.com" },
+      { name: "Special Education", favicon: "/favicons/special-education.png", website: "https://www.sonday.com" }
+    ]
+  },
+  {
+    name: "AI for Mental Health & Wellness",
+    icon: "🧠",
+    toolCount: 10,
+    subcategories: [
+      { name: "Therapy Chatbots", favicon: "/favicons/therapy-chatbots.png", website: "https://www.woebot.io" },
+      { name: "Mood Tracking", favicon: "/favicons/mood-tracking.png", website: "https://www.headspace.com" },
+      { name: "Stress Management", favicon: "/favicons/stress-management.png", website: "https://www.calm.com" },
+      { name: "Sleep Optimization", favicon: "/favicons/sleep-optimization.png", website: "https://www.sleepcycle.com" },
+      { name: "Mindfulness Training", favicon: "/favicons/mindfulness-training.png", website: "https://www.tenpercent.com" },
+      { name: "Anxiety Relief", favicon: "/favicons/anxiety-relief.png", website: "https://www.sanvello.com" },
+      { name: "Depression Support", favicon: "/favicons/depression-support.png", website: "https://www.talkspace.com" },
+      { name: "Crisis Intervention", favicon: "/favicons/crisis-intervention.png", website: "https://www.crisistextline.org" },
+      { name: "Behavioral Coaching", favicon: "/favicons/behavioral-coaching.png", website: "https://www.happify.com" },
+      { name: "Emotional Intelligence", favicon: "/favicons/emotional-intelligence.png", website: "https://www.ei.com" }
+    ]
+  },
+  {
+    name: "AI for Creative Industries",
+    icon: "🎭",
+    toolCount: 10,
+    subcategories: [
+      { name: "Creative Ideation", favicon: "/favicons/creative-ideation.png", website: "https://www.openai.com" },
+      { name: "Design Assistance", favicon: "/favicons/design-assistance.png", website: "https://www.adobe.com" },
+      { name: "Music Composition", favicon: "/favicons/music-composition.png", website: "https://www.aiva.ai" },
+      { name: "Script Writing", favicon: "/favicons/script-writing.png", website: "https://www.jasper.ai" },
+      { name: "Visual Storytelling", favicon: "/favicons/visual-storytelling.png", website: "https://www.runwayml.com" },
+      { name: "Brand Identity", favicon: "/favicons/brand-identity.png", website: "https://www.canva.com" },
+      { name: "Content Curation", favicon: "/favicons/content-curation.png", website: "https://www.pinterest.com" },
+      { name: "Audience Insights", favicon: "/favicons/audience-insights.png", website: "https://www.socialstudio.com" },
+      { name: "Creative Collaboration", favicon: "/favicons/creative-collaboration.png", website: "https://www.figma.com" },
+      { name: "Intellectual Property", favicon: "/favicons/intellectual-property.png", website: "https://www.ip.com" }
+    ]
+  },
+  {
+    name: "AI for Renewable Energy",
+    icon: "⚡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Solar Optimization", favicon: "/favicons/solar-optimization.png", website: "https://www.solarai.com" },
+      { name: "Wind Forecasting", favicon: "/favicons/wind-forecasting.png", website: "https://www.windai.com" },
+      { name: "Energy Storage", favicon: "/favicons/energy-storage.png", website: "https://www.storageai.com" },
+      { name: "Grid Management", favicon: "/favicons/grid-management.png", website: "https://www.gridai.com" },
+      { name: "Energy Trading", favicon: "/favicons/energy-trading.png", website: "https://www.tradingai.com" },
+      { name: "Efficiency Monitoring", favicon: "/favicons/efficiency-monitoring.png", website: "https://www.efficiencyai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/predictive-maintenance.png", website: "https://www.maintenanceai.com" },
+      { name: "Carbon Footprint", favicon: "/favicons/carbon-footprint.png", website: "https://www.carbonai.com" },
+      { name: "Smart Meters", favicon: "/favicons/smart-meters.png", website: "https://www.metersai.com" },
+      { name: "Energy Consumption", favicon: "/favicons/energy-consumption.png", website: "https://www.consumptionai.com" }
+    ]
+  },
+  {
+    name: "AI for Disaster Response",
+    icon: "🌪️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Early Warning", favicon: "/favicons/early-warning.png", website: "https://www.warningai.com" },
+      { name: "Damage Assessment", favicon: "/favicons/damage-assessment.png", website: "https://www.damageai.com" },
+      { name: "Resource Allocation", favicon: "/favicons/resource-allocation.png", website: "https://www.resourceai.com" },
+      { name: "Evacuation Planning", favicon: "/favicons/evacuation-planning.png", website: "https://www.evacuationai.com" },
+      { name: "Search & Rescue", favicon: "/favicons/search-rescue.png", website: "https://www.rescueai.com" },
+      { name: "Communication Systems", favicon: "/favicons/communication-systems.png", website: "https://www.communicationai.com" },
+      { name: "Supply Chain", favicon: "/favicons/supply-chain-disaster.png", website: "https://www.supplyai.com" },
+      { name: "Volunteer Coordination", favicon: "/favicons/volunteer-coordination.png", website: "https://www.volunteerai.com" },
+      { name: "Medical Response", favicon: "/favicons/medical-response.png", website: "https://www.medicalai.com" },
+      { name: "Recovery Planning", favicon: "/favicons/recovery-planning.png", website: "https://www.recoveryai.com" }
+    ]
+  },
+  {
+    name: "AI for Space Exploration",
+    icon: "🚀",
+    toolCount: 10,
+    subcategories: [
+      { name: "Mission Planning", favicon: "/favicons/mission-planning.png", website: "https://www.missionai.com" },
+      { name: "Trajectory Optimization", favicon: "/favicons/trajectory-optimization.png", website: "https://www.trajectoryai.com" },
+      { name: "Satellite Operations", favicon: "/favicons/satellite-operations.png", website: "https://www.satelliteai.com" },
+      { name: "Astronaut Health", favicon: "/favicons/astronaut-health.png", website: "https://www.healthai.com" },
+      { name: "Spacecraft Autonomy", favicon: "/favicons/spacecraft-autonomy.png", website: "https://www.autonomyai.com" },
+      { name: "Planetary Analysis", favicon: "/favicons/planetary-analysis.png", website: "https://www.planetariyai.com" },
+      { name: "Communication Systems", favicon: "/favicons/space-communication.png", website: "https://www.spacecomai.com" },
+      { name: "Resource Management", favicon: "/favicons/space-resource.png", website: "https://www.resourcemgmtai.com" },
+      { name: "Scientific Instruments", favicon: "/favicons/scientific-instruments.png", website: "https://www.instrumentai.com" },
+      { name: "Deep Space Navigation", favicon: "/favicons/deep-space-nav.png", website: "https://www.navigationai.com" }
+    ]
+  },
+  {
+    name: "AI for Ocean Conservation",
+    icon: "🌊",
+    toolCount: 10,
+    subcategories: [
+      { name: "Marine Monitoring", favicon: "/favicons/marine-monitoring.png", website: "https://www.marineai.com" },
+      { name: "Coral Reef Protection", favicon: "/favicons/coral-protection.png", website: "https://www.coralai.com" },
+      { name: "Pollution Tracking", favicon: "/favicons/pollution-tracking.png", website: "https://www.pollutionai.com" },
+      { name: "Fish Population", favicon: "/favicons/fish-population.png", website: "https://www.fishai.com" },
+      { name: "Ocean Currents", favicon: "/favicons/ocean-currents.png", website: "https://www.currentsai.com" },
+      { name: "Marine Mammals", favicon: "/favicons/marine-mammals.png", website: "https://www.mammalsai.com" },
+      { name: "Coastal Erosion", favicon: "/favicons/coastal-erosion.png", website: "https://www.erosionai.com" },
+      { name: "Plastic Detection", favicon: "/favicons/plastic-detection.png", website: "https://www.plasticai.com" },
+      { name: "Marine Acoustics", favicon: "/favicons/marine-acoustics.png", website: "https://www.acousticsai.com" },
+      { name: "Ocean Chemistry", favicon: "/favicons/ocean-chemistry.png", website: "https://www.chemistryai.com" }
+    ]
+  },
+  {
+    name: "AI for Wildlife Protection",
+    icon: "🐾",
+    toolCount: 10,
+    subcategories: [
+      { name: "Animal Tracking", favicon: "/favicons/animal-tracking.png", website: "https://www.trackingai.com" },
+      { name: "Poaching Prevention", favicon: "/favicons/poaching-prevention.png", website: "https://www.poachingai.com" },
+      { name: "Habitat Monitoring", favicon: "/favicons/habitat-monitoring.png", website: "https://www.habitatai.com" },
+      { name: "Species Identification", favicon: "/favicons/species-identification.png", website: "https://www.speciesai.com" },
+      { name: "Migration Patterns", favicon: "/favicons/migration-patterns.png", website: "https://www.migrationai.com" },
+      { name: "Ecosystem Health", favicon: "/favicons/ecosystem-health.png", website: "https://www.ecosystemai.com" },
+      { name: "Wildlife Corridors", favicon: "/favicons/wildlife-corridors.png", website: "https://www.corridorsai.com" },
+      { name: "Endangered Species", favicon: "/favicons/endangered-species.png", website: "https://www.endangeredai.com" },
+      { name: "Human-Wildlife Conflict", favicon: "/favicons/human-wildlife.png", website: "https://www.conflictai.com" },
+      { name: "Conservation Planning", favicon: "/favicons/conservation-planning.png", website: "https://www.conservationai.com" }
+    ]
+  },
+  {
+    name: "AI for Urban Planning",
+    icon: "🏙️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Traffic Flow", favicon: "/favicons/traffic-flow.png", website: "https://www.trafficai.com" },
+      { name: "Land Use Optimization", favicon: "/favicons/land-use.png", website: "https://www.landuseai.com" },
+      { name: "Infrastructure Planning", favicon: "/favicons/infrastructure-planning.png", website: "https://www.infrastructureai.com" },
+      { name: "Housing Demand", favicon: "/favicons/housing-demand.png", website: "https://www.housingai.com" },
+      { name: "Public Transportation", favicon: "/favicons/public-transportation.png", website: "https://www.transportationai.com" },
+      { name: "Environmental Impact", favicon: "/favicons/environmental-impact.png", website: "https://www.environmentalai.com" },
+      { name: "Urban Growth", favicon: "/favicons/urban-growth.png", website: "https://www.growthai.com" },
+      { name: "Energy Efficiency", favicon: "/favicons/urban-energy.png", website: "https://www.urbanenergyai.com" },
+      { name: "Disaster Resilience", favicon: "/favicons/disaster-resilience.png", website: "https://www.resilienceai.com" },
+      { name: "Community Engagement", favicon: "/favicons/community-engagement.png", website: "https://www.communityai.com" }
+    ]
+  },
+  {
+    name: "AI for Climate Modeling",
+    icon: "🌡️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Weather Prediction", favicon: "/favicons/weather-prediction.png", website: "https://www.weatherai.com" },
+      { name: "Climate Simulation", favicon: "/favicons/climate-simulation.png", website: "https://www.climateai.com" },
+      { name: "Carbon Sequestration", favicon: "/favicons/carbon-sequestration.png", website: "https://www.carbonai.com" },
+      { name: "Sea Level Rise", favicon: "/favicons/sea-level.png", website: "https://www.sealevelai.com" },
+      { name: "Extreme Events", favicon: "/favicons/extreme-events.png", website: "https://www.extremeeventsai.com" },
+      { name: "Ecosystem Impact", favicon: "/favicons/ecosystem-impact.png", website: "https://www.ecosystemimpactai.com" },
+      { name: "Agricultural Forecasting", favicon: "/favicons/agricultural-forecasting.png", website: "https://www.agricultureai.com" },
+      { name: "Renewable Energy", favicon: "/favicons/climate-renewable.png", website: "https://www.renewableclimateai.com" },
+      { name: "Urban Heat Islands", favicon: "/favicons/urban-heat.png", website: "https://www.urbanheatiai.com" },
+      { name: "Climate Policy", favicon: "/favicons/climate-policy.png", website: "https://www.climatepolicyai.com" }
+    ]
+  },
+  {
+    name: "AI for Precision Medicine",
+    icon: "💊",
+    toolCount: 10,
+    subcategories: [
+      { name: "Genomic Analysis", favicon: "/favicons/genomic-analysis.png", website: "https://www.genomicsai.com" },
+      { name: "Drug Discovery", favicon: "/favicons/drug-discovery.png", website: "https://www.drugdiscoveryai.com" },
+      { name: "Personalized Treatment", favicon: "/favicons/personalized-treatment.png", website: "https://www.treatmentai.com" },
+      { name: "Disease Prediction", favicon: "/favicons/disease-prediction.png", website: "https://www.diseaseai.com" },
+      { name: "Medical Imaging", favicon: "/favicons/medical-imaging.png", website: "https://www.imagingai.com" },
+      { name: "Clinical Trials", favicon: "/favicons/clinical-trials.png", website: "https://www.clinicaltrialsai.com" },
+      { name: "Pharmacovigilance", favicon: "/favicons/pharmacovigilance.png", website: "https://www.pharmacovigilanceai.com" },
+      { name: "Patient Monitoring", favicon: "/favicons/patient-monitoring.png", website: "https://www.patientmonitoringai.com" },
+      { name: "Healthcare Analytics", favicon: "/favicons/healthcare-analytics.png", website: "https://www.healthcareanalyticsai.com" },
+      { name: "Telemedicine", favicon: "/favicons/telemedicine.png", website: "https://www.telemedicineai.com" }
+    ]
+  },
+  {
+    name: "AI for Autonomous Vehicles",
+    icon: "🚗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Self-Driving Cars", favicon: "/favicons/self-driving.png", website: "https://www.selfdrivingai.com" },
+      { name: "Sensor Fusion", favicon: "/favicons/sensor-fusion.png", website: "https://www.sensorfusionai.com" },
+      { name: "Path Planning", favicon: "/favicons/path-planning.png", website: "https://www.pathplanningai.com" },
+      { name: "Object Detection", favicon: "/favicons/object-detection.png", website: "https://www.objectdetectionai.com" },
+      { name: "Traffic Prediction", favicon: "/favicons/traffic-prediction.png", website: "https://www.trafficipredictionai.com" },
+      { name: "Vehicle-to-Vehicle", favicon: "/favicons/v2v.png", website: "https://www.v2vai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+      { name: "Route Optimization", favicon: "/favicons/route-optimization.png", website: "https://www.routeoptimizationai.com" },
+      { name: "Safety Systems", favicon: "/favicons/safety-systems.png", website: "https://www.safetyai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/vehicle-maintenance.png", website: "https://www.vehiclemaintenanceai.com" }
+    ]
+  },
+  {
+    name: "AI for Smart Cities & Infrastructure",
+    icon: "🏙️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Urban Planning", favicon: "/favicons/urban-planning.png", website: "https://www.urbanplanningai.com" },
+      { name: "Traffic Management", favicon: "/favicons/traffic-management.png", website: "https://www.trafficmanagementai.com" },
+      { name: "Public Transportation", favicon: "/favicons/public-transportation.png", website: "https://www.publictransportationai.com" },
+      { name: "Energy Grid Optimization", favicon: "/favicons/energy-grid.png", website: "https://www.energygridai.com" },
+      { name: "Waste Management", favicon: "/favicons/waste-management.png", website: "https://www.wastemanagementai.com" },
+      { name: "Water Management", favicon: "/favicons/water-management.png", website: "https://www.watermanagementai.com" },
+      { name: "Public Safety", favicon: "/favicons/public-safety.png", website: "https://www.publicsafetyai.com" },
+      { name: "Building Management", favicon: "/favicons/building-management.png", website: "https://www.buildingmanagementai.com" },
+      { name: "Environmental Monitoring", favicon: "/favicons/environmental-monitoring.png", website: "https://www.environmentalmonitoringai.com" },
+      { name: "Citizen Services", favicon: "/favicons/citizen-services.png", website: "https://www.citizenservicesai.com" }
+    ]
+  },
+  {
+    name: "AI for Water Management",
+    icon: "💧",
+    toolCount: 10,
+    subcategories: [
+      { name: "Water Quality Monitoring", favicon: "/favicons/water-quality.png", website: "https://www.waterqualityai.com" },
+      { name: "Leak Detection", favicon: "/favicons/leak-detection.png", website: "https://www.leakdetectionai.com" },
+      { name: "Water Treatment", favicon: "/favicons/water-treatment.png", website: "https://www.watertreatmentai.com" },
+      { name: "Flood Prediction", favicon: "/favicons/flood-prediction.png", website: "https://www.floodpredictionai.com" },
+      { name: "Irrigation Optimization", favicon: "/favicons/irrigation-optimization.png", website: "https://www.irrigationoptimizationai.com" },
+      { name: "Water Distribution", favicon: "/favicons/water-distribution.png", website: "https://www.waterdistributionai.com" },
+      { name: "Desalination", favicon: "/favicons/desalination.png", website: "https://www.desalinationai.com" },
+      { name: "Water Conservation", favicon: "/favicons/water-conservation.png", website: "https://www.waterconservationai.com" },
+      { name: "Aquifer Management", favicon: "/favicons/aquifer-management.png", website: "https://www.aquifermanagementai.com" },
+      { name: "Stormwater Management", favicon: "/favicons/stormwater-management.png", website: "https://www.stormwatermanagementai.com" }
+    ]
+  },
+  {
+    name: "AI for Waste Management",
+    icon: "🗑️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Waste Sorting", favicon: "/favicons/waste-sorting.png", website: "https://www.wastesorringai.com" },
+      { name: "Recycling Optimization", favicon: "/favicons/recycling-optimization.png", website: "https://www.recyclingoptimizationai.com" },
+      { name: "Landfill Management", favicon: "/favicons/landfill-management.png", website: "https://www.landfillmanagementai.com" },
+      { name: "Waste Collection", favicon: "/favicons/waste-collection.png", website: "https://www.wastecollectionai.com" },
+      { name: "Composting", favicon: "/favicons/composting.png", website: "https://www.compostingai.com" },
+      { name: "Waste-to-Energy", favicon: "/favicons/waste-to-energy.png", website: "https://www.wastetoenergyai.com" },
+      { name: "Hazardous Waste", favicon: "/favicons/hazardous-waste.png", website: "https://www.hazardouswasteai.com" },
+      { name: "E-Waste Management", favicon: "/favicons/e-waste-management.png", website: "https://www.ewastemanagementai.com" },
+      { name: "Waste Reduction", favicon: "/favicons/waste-reduction.png", website: "https://www.wastereductionai.com" },
+      { name: "Circular Economy", favicon: "/favicons/circular-economy.png", website: "https://www.circulareconomyai.com" }
+    ]
+  },
+  {
+    name: "AI for Air Quality Monitoring",
+    icon: "🌫️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Pollution Detection", favicon: "/favicons/pollution-detection.png", website: "https://www.pollutiondetectionai.com" },
+      { name: "Emission Tracking", favicon: "/favicons/emission-tracking.png", website: "https://www.emissiontrackingai.com" },
+      { name: "Air Quality Index", favicon: "/favicons/air-quality-index.png", website: "https://www.airqualityindexai.com" },
+      { name: "Air Quality Forecasting", favicon: "/favicons/air-quality-forecasting.png", website: "https://www.airqualityforecastingai.com" },
+      { name: "Air Quality Improvement", favicon: "/favicons/air-quality-improvement.png", website: "https://www.airqualityimprovementai.com" },
+      { name: "Air Quality Compliance", favicon: "/favicons/air-quality-compliance.png", website: "https://www.airqualitycomplianceai.com" },
+      { name: "Air Quality Data Analysis", favicon: "/favicons/air-quality-data-analysis.png", website: "https://www.airqualitydataanalysisai.com" },
+      { name: "Landslide Prediction", favicon: "/favicons/landslide-prediction.png", website: "https://www.landslidepredictionai.com" },
+      { name: "Emergency Response", favicon: "/favicons/emergency-response.png", website: "https://www.emergencyresponseai.com" },
+      { name: "Disaster Recovery", favicon: "/favicons/disaster-recovery.png", website: "https://www.disasterrecoveryai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" }
+    ]
+  },
+  {
+    name: "AI for Elderly Care & Aging Population",
+    icon: "👵",
+    toolCount: 10,
+    subcategories: [
+      { name: "Health Monitoring", favicon: "/favicons/health-monitoring.png", website: "https://www.healthmonitoringai.com" },
+      { name: "Fall Detection", favicon: "/favicons/fall-detection.png", website: "https://www.falldetectionai.com" },
+      { name: "Medication Management", favicon: "/favicons/medication-management.png", website: "https://www.medicationmanagementai.com" },
+      { name: "Cognitive Support", favicon: "/favicons/cognitive-support.png", website: "https://www.cognitivesupportai.com" },
+      { name: "Social Engagement", favicon: "/favicons/social-engagement.png", website: "https://www.socialengagementai.com" },
+      { name: "Mobility Assistance", favicon: "/favicons/mobility-assistance.png", website: "https://www.mobilityassistanceai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/nutrition-planning.png", website: "https://www.nutritionplanningai.com" },
+      { name: "Caregiver Support", favicon: "/favicons/caregiver-support.png", website: "https://www.caregiversupportai.com" },
+      { name: "Emergency Response", favicon: "/favicons/emergency-response.png", website: "https://www.emergencyresponseai.com" },
+      { name: "Memory Care", favicon: "/favicons/memory-care.png", website: "https://www.memorycareai.com" }
+    ]
+  },
+  {
+    name: "AI for Child Education & Development",
+    icon: "👶",
+    toolCount: 10,
+    subcategories: [
+      { name: "Early Learning", favicon: "/favicons/early-learning.png", website: "https://www.earlylearningai.com" },
+      { name: "Developmental Assessment", favicon: "/favicons/developmental-assessment.png", website: "https://www.developmentalassessmentai.com" },
+      { name: "Special Needs Support", favicon: "/favicons/special-needs-support.png", website: "https://www.specialneedssupportai.com" },
+      { name: "Interactive Storytelling", favicon: "/favicons/interactive-storytelling.png", website: "https://www.interactivestorytellingai.com" },
+      { name: "Creative Expression", favicon: "/favicons/creative-expression.png", website: "https://www.creativeexpressionai.com" },
+      { name: "Social Skills Development", favicon: "/favicons/social-skills-development.png", website: "https://www.socialskillsdevelopmentai.com" },
+      { name: "Language Acquisition", favicon: "/favicons/language-acquisition.png", website: "https://www.languageacquisitionai.com" },
+      { name: "Mathematics Learning", favicon: "/favicons/mathematics-learning.png", website: "https://www.mathematicslearningai.com" },
+      { name: "Science Exploration", favicon: "/favicons/science-exploration.png", website: "https://www.scienceexplorationai.com" },
+      { name: "Parental Guidance", favicon: "/favicons/parental-guidance.png", website: "https://www.parentalguidanceai.com" }
+    ]
+  },
+  {
+    name: "AI for Pet Care & Animal Health",
+    icon: "🐾",
+    toolCount: 10,
+    subcategories: [
+      { name: "Pet Health Monitoring", favicon: "/favicons/pet-health-monitoring.png", website: "https://www.pethealthmonitoringai.com" },
+      { name: "Behavior Analysis", favicon: "/favicons/behavior-analysis.png", website: "https://www.behavioranalysisai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/pet-nutrition-planning.png", website: "https://www.petnutritionplanningai.com" },
+      { name: "Training Assistance", favicon: "/favicons/training-assistance.png", website: "https://www.trainingassistanceai.com" },
+      { name: "Veterinary Support", favicon: "/favicons/veterinary-support.png", website: "https://www.veterinarysupportai.com" },
+      { name: "Lost Pet Recovery", favicon: "/favicons/lost-pet-recovery.png", website: "https://www.lostpetrecoveryai.com" },
+      { name: "Pet Safety", favicon: "/favicons/pet-safety.png", website: "https://www.petsafetyai.com" },
+      { name: "Grooming Assistance", favicon: "/favicons/grooming-assistance.png", website: "https://www.groomingassistanceai.com" },
+      { name: "Breeding Management", favicon: "/favicons/breeding-management.png", website: "https://www.breedingmanagementai.com" },
+      { name: "Pet Socialization", favicon: "/favicons/pet-socialization.png", website: "https://www.petsocializationai.com" }
+    ]
+  },
+  {
+    name: "AI for Event Planning & Management",
+    icon: "🎉",
+    toolCount: 10,
+    subcategories: [
+      { name: "Venue Selection", favicon: "/favicons/venue-selection.png", website: "https://www.venueselectionai.com" },
+      { name: "Guest Management", favicon: "/favicons/guest-management.png", website: "https://www.guestmanagementai.com" },
+      { name: "Budget Planning", favicon: "/favicons/budget-planning.png", website: "https://www.budgetplanningai.com" },
+      { name: "Schedule Optimization", favicon: "/favicons/schedule-optimization.png", website: "https://www.scheduleoptimizationai.com" },
+      { name: "Vendor Coordination", favicon: "/favicons/vendor-coordination.png", website: "https://www.vendorcoordinationai.com" },
+      { name: "Marketing Automation", favicon: "/favicons/event-marketing-automation.png", website: "https://www.eventmarketingautomationai.com" },
+      { name: "Real-time Updates", favicon: "/favicons/real-time-updates.png", website: "https://www.realtimeupdatesai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/event-risk-assessment.png", website: "https://www.eventriskassessmentai.com" },
+      { name: "Feedback Collection", favicon: "/favicons/feedback-collection.png", website: "https://www.feedbackcollectionai.com" },
+      { name: "Post-Event Analysis", favicon: "/favicons/post-event-analysis.png", website: "https://www.posteventanalysisai.com" }
+    ]
+  },
+  {
+    name: "AI for Legal Tech & Compliance",
+    icon: "⚖️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Document Review", favicon: "/favicons/document-review.png", website: "https://www.documentreviewai.com" },
+      { name: "Legal Research", favicon: "/favicons/legal-research.png", website: "https://www.legalresearchai.com" },
+      { name: "Contract Analysis", favicon: "/favicons/contract-analysis.png", website: "https://www.contractanalysisai.com" },
+      { name: "Compliance Monitoring", favicon: "/favicons/compliance-monitoring.png", website: "https://www.compliancemonitoringai.com" },
+      { name: "Case Prediction", favicon: "/favicons/case-prediction.png", website: "https://www.casepredictionai.com" },
+      { name: "Evidence Analysis", favicon: "/favicons/evidence-analysis.png", website: "https://www.evidenceanalysisai.com" },
+      { name: "Regulatory Tracking", favicon: "/favicons/regulatory-tracking.png", website: "https://www.regulatorytrackingai.com" },
+      { name: "Intellectual Property", favicon: "/favicons/intellectual-property.png", website: "https://www.intellectualpropertyai.com" },
+      { name: "Dispute Resolution", favicon: "/favicons/dispute-resolution.png", website: "https://www.disputeresolutionai.com" },
+      { name: "Legal Process Automation", favicon: "/favicons/legal-process-automation.png", website: "https://www.legalprocessautomationai.com" }
+    ]
+  },
+  {
+    name: "AI for Cybersecurity",
+    icon: "🔒",
+    toolCount: 10,
+    subcategories: [
+      { name: "Threat Detection", favicon: "/favicons/threat-detection.png", website: "https://www.threatdetectionai.com" },
+      { name: "Network Security", favicon: "/favicons/network-security.png", website: "https://www.networksecurityai.com" },
+      { name: "Endpoint Protection", favicon: "/favicons/endpoint-protection.png", website: "https://www.endpointprotectionai.com" },
+      { name: "Identity Management", favicon: "/favicons/identity-management.png", website: "https://www.identitymanagementai.com" },
+      { name: "Data Loss Prevention", favicon: "/favicons/data-loss-prevention.png", website: "https://www.datalosspreventionai.com" },
+      { name: "Security Analytics", favicon: "/favicons/security-analytics.png", website: "https://www.securityanalyticsai.com" },
+      { name: "Incident Response", favicon: "/favicons/incident-response.png", website: "https://www.incidentresponseai.com" },
+      { name: "Vulnerability Management", favicon: "/favicons/vulnerability-management.png", website: "https://www.vulnerabilitymanagementai.com" },
+      { name: "Compliance Monitoring", favicon: "/favicons/compliance-monitoring.png", website: "https://www.compliancemonitoringai.com" },
+      { name: "Forensic Analysis", favicon: "/favicons/forensic-analysis.png", website: "https://www.forensicanalysisai.com" },
+    ]
+  },
+  {
+    name: "AI for Human Resources",
+    icon: "👥",
+    toolCount: 10,
+    subcategories: [
+      { name: "Recruitment Automation", favicon: "/favicons/recruitment-automation.png", website: "https://www.recruitmentautomationai.com" },
+      { name: "Employee Engagement", favicon: "/favicons/employee-engagement.png", website: "https://www.employeeengagementai.com" },
+      { name: "Performance Management", favicon: "/favicons/performance-management.png", website: "https://www.performancemanagementai.com" },
+      { name: "Learning & Development", favicon: "/favicons/learning-development.png", website: "https://www.learningdevelopmentai.com" },
+      { name: "Workforce Analytics", favicon: "/favicons/workforce-analytics.png", website: "https://www.workforceanalyticsai.com" },
+      { name: "Talent Management", favicon: "/favicons/talent-management.png", website: "https://www.talentmanagementai.com" },
+      { name: "Compensation Planning", favicon: "/favicons/compensation-planning.png", website: "https://www.compensationplanningai.com" },
+      { name: "Diversity & Inclusion", favicon: "/favicons/diversity-inclusion.png", website: "https://www.diversityinclusionai.com" },
+      { name: "HR Compliance", favicon: "/favicons/hr-compliance.png", website: "https://www.hrcomplianceai.com" },
+      { name: "Employee Wellness", favicon: "/favicons/employee-wellness.png", website: "https://www.employeewellnessai.com" },
+    ]
+  },
+  {
+    name: "AI for Marketing & Advertising",
+    icon: "📢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Customer Segmentation", favicon: "/favicons/customer-segmentation.png", website: "https://www.customersegmentationai.com" },
+      { name: "Campaign Optimization", favicon: "/favicons/campaign-optimization.png", website: "https://www.campaignoptimizationai.com" },
+      { name: "Content Personalization", favicon: "/favicons/content-personalization.png", website: "https://www.contentpersonalizationai.com" },
+      { name: "Brand Monitoring", favicon: "/favicons/brand-monitoring.png", website: "https://www.brandmonitoringai.com" },
+      { name: "Social Media Analytics", favicon: "/favicons/social-media-analytics.png", website: "https://www.socialmediaanalyticsai.com" },
+      { name: "Ad Targeting", favicon: "/favicons/ad-targeting.png", website: "https://www.adtargetingai.com" },
+      { name: "Marketing Automation", favicon: "/favicons/marketing-automation.png", website: "https://www.marketingautomationai.com" },
+      { name: "ROI Analytics", favicon: "/favicons/roi-analytics.png", website: "https://www.roianalyticsai.com" },
+      { name: "Influencer Marketing", favicon: "/favicons/influencer-marketing.png", website: "https://www.influencermarketingai.com" },
+      { name: "Customer Journey Mapping", favicon: "/favicons/customer-journey-mapping.png", website: "https://www.customerjourneymappingai.com" },
+    ]
+  },
+  {
+    name: "AI for Customer Service",
+    icon: "🎧",
+    toolCount: 10,
+    subcategories: [
+      { name: "Chatbots", favicon: "/favicons/chatbots.png", website: "https://www.chatbotsai.com" },
+      { name: "Voice Assistants", favicon: "/favicons/voice-assistants.png", website: "https://www.voiceassistantsai.com" },
+      { name: "Sentiment Analysis", favicon: "/favicons/sentiment-analysis.png", website: "https://www.sentimentanalysisai.com" },
+      { name: "Ticket Routing", favicon: "/favicons/ticket-routing.png", website: "https://www.ticketroutingai.com" },
+      { name: "Customer Feedback", favicon: "/favicons/customer-feedback.png", website: "https://www.customerfeedbackai.com" },
+      { name: "Knowledge Management", favicon: "/favicons/knowledge-management.png", website: "https://www.knowledgemanagementai.com" },
+      { name: "Quality Assurance", favicon: "/favicons/quality-assurance.png", website: "https://www.qualityassuranceai.com" },
+      { name: "Omnichannel Support", favicon: "/favicons/omnichannel-support.png", website: "https://www.omnichannelsupportai.com" },
+      { name: "Predictive Support", favicon: "/favicons/predictive-support.png", website: "https://www.predictivesupportai.com" },
+      { name: "Self-Service Portals", favicon: "/favicons/self-service-portals.png", website: "https://www.selfserviceportalsai.com" },
+    ]
+  },
+  {
+    name: "AI for Project Management",
+    icon: "📋",
+    toolCount: 10,
+    subcategories: [
+      { name: "Task Automation", favicon: "/favicons/task-automation.png", website: "https://www.taskautomationai.com" },
+      { name: "Resource Allocation", favicon: "/favicons/resource-allocation.png", website: "https://www.resourceallocationai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Timeline Optimization", favicon: "/favicons/timeline-optimization.png", website: "https://www.timelineoptimizationai.com" },
+      { name: "Budget Management", favicon: "/favicons/budget-management.png", website: "https://www.budgetmanagementai.com" },
+      { name: "Team Collaboration", favicon: "/favicons/team-collaboration.png", website: "https://www.teamcollaborationai.com" },
+      { name: "Performance Tracking", favicon: "/favicons/performance-tracking.png", website: "https://www.performancetrackingai.com" },
+      { name: "Document Management", favicon: "/favicons/document-management.png", website: "https://www.documentmanagementai.com" },
+      { name: "Stakeholder Communication", favicon: "/favicons/stakeholder-communication.png", website: "https://www.stakeholdercommunicationai.com" },
+      { name: "Project Analytics", favicon: "/favicons/project-analytics.png", website: "https://www.projectanalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Automotive",
+    icon: "🚗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Autonomous Driving", favicon: "/favicons/autonomous-driving.png", website: "https://www.autonomousdrivingai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/predictive-maintenance.png", website: "https://www.predictivemaintenanceai.com" },
+      { name: "Vehicle Diagnostics", favicon: "/favicons/vehicle-diagnostics.png", website: "https://www.vehiclediagnosticsai.com" },
+      { name: "Traffic Optimization", favicon: "/favicons/traffic-optimization.png", website: "https://www.trafficoptimizationai.com" },
+      { name: "Driver Behavior Analysis", favicon: "/favicons/driver-behavior-analysis.png", website: "https://www.driverbehavioranalysisai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/automotive-supply-chain.png", website: "https://www.automotivesupplychainai.com" },
+      { name: "Quality Control", favicon: "/favicons/quality-control.png", website: "https://www.qualitycontrolai.com" },
+      { name: "Design & Engineering", favicon: "/favicons/design-engineering.png", website: "https://www.designengineeringai.com" },
+      { name: "Manufacturing Optimization", favicon: "/favicons/manufacturing-optimization.png", website: "https://www.manufacturingoptimizationai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Aviation & Aerospace",
+    icon: "✈️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Flight Path Optimization", favicon: "/favicons/flight-path-optimization.png", website: "https://www.flightpathoptimizationai.com" },
+      { name: "Aircraft Maintenance", favicon: "/favicons/aircraft-maintenance.png", website: "https://www.aircraftmaintenanceai.com" },
+      { name: "Air Traffic Control", favicon: "/favicons/air-traffic-control.png", website: "https://www.airtrafficcontrolai.com" },
+      { name: "Pilot Training", favicon: "/favicons/pilot-training.png", website: "https://www.pilottrainingai.com" },
+      { name: "Fuel Efficiency", favicon: "/favicons/fuel-efficiency.png", website: "https://www.fuelefficiencyai.com" },
+      { name: "Safety Monitoring", favicon: "/favicons/safety-monitoring.png", website: "https://www.safetymonitoringai.com" },
+      { name: "Passenger Experience", favicon: "/favicons/passenger-experience.png", website: "https://www.passengerexperienceai.com" },
+      { name: "Cargo Management", favicon: "/favicons/cargo-management.png", website: "https://www.cargomanagementai.com" },
+      { name: "Weather Analysis", favicon: "/favicons/weather-analysis.png", website: "https://www.weatheranalysisai.com" },
+      { name: "Satellite Operations", favicon: "/favicons/satellite-operations.png", website: "https://www.satelliteoperationsai.com" },
+    ]
+  },
+  {
+    name: "AI for Energy & Utilities",
+    icon: "⚡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Smart Grid Management", favicon: "/favicons/smart-grid-management.png", website: "https://www.smartgridmanagementai.com" },
+      { name: "Renewable Energy Optimization", favicon: "/favicons/renewable-energy-optimization.png", website: "https://www.renewableenergyoptimizationai.com" },
+      { name: "Energy Storage", favicon: "/favicons/energy-storage.png", website: "https://www.energystorageai.com" },
+      { name: "Demand Response", favicon: "/favicons/demand-response.png", website: "https://www.demandresponseai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/energy-predictive-maintenance.png", website: "https://www.energypredictivemaintenanceai.com" },
+      { name: "Energy Trading", favicon: "/favicons/energy-trading.png", website: "https://www.energytradingai.com" },
+      { name: "Grid Stability", favicon: "/favicons/grid-stability.png", website: "https://www.gridstabilityai.com" },
+      { name: "Energy Consumption Analytics", favicon: "/favicons/energy-consumption-analytics.png", website: "https://www.energyconsumptionanalyticsai.com" },
+      { name: "Carbon Footprint Tracking", favicon: "/favicons/carbon-footprint-tracking.png", website: "https://www.carbonfootprinttrackingai.com" },
+      { name: "Infrastructure Management", favicon: "/favicons/infrastructure-management.png", website: "https://www.infrastructuremanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Pharmaceuticals & Biotech",
+    icon: "💊",
+    toolCount: 10,
+    subcategories: [
+      { name: "Drug Discovery", favicon: "/favicons/drug-discovery.png", website: "https://www.drugdiscoveryai.com" },
+      { name: "Clinical Trials", favicon: "/favicons/clinical-trials.png", website: "https://www.clinicaltrialsai.com" },
+      { name: "Regulatory Compliance", favicon: "/favicons/regulatory-compliance.png", website: "https://www.regulatorycomplianceai.com" },
+      { name: "Manufacturing Optimization", favicon: "/favicons/pharma-manufacturing-optimization.png", website: "https://www.pharmamanufacturingoptimizationai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/pharma-supply-chain.png", website: "https://www.pharmasupplychainai.com" },
+      { name: "Quality Control", favicon: "/favicons/pharma-quality-control.png", website: "https://www.pharmaqualitycontrolai.com" },
+      { name: "Personalized Medicine", favicon: "/favicons/personalized-medicine.png", website: "https://www.personalizedmedicineai.com" },
+      { name: "Pharmacovigilance", favicon: "/favicons/pharmacovigilance.png", website: "https://www.pharmacovigilanceai.com" },
+      { name: "Drug Repurposing", favicon: "/favicons/drug-repurposing.png", website: "https://www.drugrepurposingai.com" },
+      { name: "Patient Adherence", favicon: "/favicons/patient-adherence.png", website: "https://www.patientadherenceai.com" },
+    ]
+  },
+  {
+    name: "AI for Sports & Fitness",
+    icon: "⚽",
+    toolCount: 10,
+    subcategories: [
+      { name: "Performance Analytics", favicon: "/favicons/performance-analytics.png", website: "https://www.performanceanalyticsai.com" },
+      { name: "Injury Prevention", favicon: "/favicons/injury-prevention.png", website: "https://www.injurypreventionai.com" },
+      { name: "Training Optimization", favicon: "/favicons/training-optimization.png", website: "https://www.trainingoptimizationai.com" },
+      { name: "Fan Engagement", favicon: "/favicons/fan-engagement.png", website: "https://www.fanengagementai.com" },
+      { name: "Tactical Analysis", favicon: "/favicons/tactical-analysis.png", website: "https://www.tacticalanalysisai.com" },
+      { name: "Athlete Monitoring", favicon: "/favicons/athlete-monitoring.png", website: "https://www.athletemonitoringai.com" },
+      { name: "Sports Broadcasting", favicon: "/favicons/sports-broadcasting.png", website: "https://www.sportsbroadcastingai.com" },
+      { name: "Equipment Optimization", favicon: "/favicons/equipment-optimization.png", website: "https://www.equipmentoptimizationai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/nutrition-planning.png", website: "https://www.nutritionplanningai.com" },
+      { name: "Recovery Management", favicon: "/favicons/recovery-management.png", website: "https://www.recoverymanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Automotive",
+    icon: "🚗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Autonomous Driving", favicon: "/favicons/autonomous-driving.png", website: "https://www.autonomousdrivingai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/predictive-maintenance.png", website: "https://www.predictivemaintenanceai.com" },
+      { name: "Vehicle Diagnostics", favicon: "/favicons/vehicle-diagnostics.png", website: "https://www.vehiclediagnosticsai.com" },
+      { name: "Traffic Optimization", favicon: "/favicons/traffic-optimization.png", website: "https://www.trafficoptimizationai.com" },
+      { name: "Driver Behavior Analysis", favicon: "/favicons/driver-behavior-analysis.png", website: "https://www.driverbehavioranalysisai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/automotive-supply-chain.png", website: "https://www.automotivesupplychainai.com" },
+      { name: "Quality Control", favicon: "/favicons/quality-control.png", website: "https://www.qualitycontrolai.com" },
+      { name: "Design & Engineering", favicon: "/favicons/design-engineering.png", website: "https://www.designengineeringai.com" },
+      { name: "Manufacturing Optimization", favicon: "/favicons/manufacturing-optimization.png", website: "https://www.manufacturingoptimizationai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Aviation & Aerospace",
+    icon: "✈️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Flight Path Optimization", favicon: "/favicons/flight-path-optimization.png", website: "https://www.flightpathoptimizationai.com" },
+      { name: "Aircraft Maintenance", favicon: "/favicons/aircraft-maintenance.png", website: "https://www.aircraftmaintenanceai.com" },
+      { name: "Air Traffic Control", favicon: "/favicons/air-traffic-control.png", website: "https://www.airtrafficcontrolai.com" },
+      { name: "Pilot Training", favicon: "/favicons/pilot-training.png", website: "https://www.pilottrainingai.com" },
+      { name: "Fuel Efficiency", favicon: "/favicons/fuel-efficiency.png", website: "https://www.fuelefficiencyai.com" },
+      { name: "Safety Monitoring", favicon: "/favicons/safety-monitoring.png", website: "https://www.safetymonitoringai.com" },
+      { name: "Passenger Experience", favicon: "/favicons/passenger-experience.png", website: "https://www.passengerexperienceai.com" },
+      { name: "Cargo Management", favicon: "/favicons/cargo-management.png", website: "https://www.cargomanagementai.com" },
+      { name: "Weather Analysis", favicon: "/favicons/weather-analysis.png", website: "https://www.weatheranalysisai.com" },
+      { name: "Satellite Operations", favicon: "/favicons/satellite-operations.png", website: "https://www.satelliteoperationsai.com" },
+    ]
+  },
+  {
+    name: "AI for Energy & Utilities",
+    icon: "⚡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Smart Grid Management", favicon: "/favicons/smart-grid-management.png", website: "https://www.smartgridmanagementai.com" },
+      { name: "Renewable Energy Optimization", favicon: "/favicons/renewable-energy-optimization.png", website: "https://www.renewableenergyoptimizationai.com" },
+      { name: "Energy Storage", favicon: "/favicons/energy-storage.png", website: "https://www.energystorageai.com" },
+      { name: "Demand Response", favicon: "/favicons/demand-response.png", website: "https://www.demandresponseai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/energy-predictive-maintenance.png", website: "https://www.energypredictivemaintenanceai.com" },
+      { name: "Energy Trading", favicon: "/favicons/energy-trading.png", website: "https://www.energytradingai.com" },
+      { name: "Grid Stability", favicon: "/favicons/grid-stability.png", website: "https://www.gridstabilityai.com" },
+      { name: "Energy Consumption Analytics", favicon: "/favicons/energy-consumption-analytics.png", website: "https://www.energyconsumptionanalyticsai.com" },
+      { name: "Carbon Footprint Tracking", favicon: "/favicons/carbon-footprint-tracking.png", website: "https://www.carbonfootprinttrackingai.com" },
+      { name: "Infrastructure Management", favicon: "/favicons/infrastructure-management.png", website: "https://www.infrastructuremanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Pharmaceuticals & Biotech",
+    icon: "💊",
+    toolCount: 10,
+    subcategories: [
+      { name: "Drug Discovery", favicon: "/favicons/drug-discovery.png", website: "https://www.drugdiscoveryai.com" },
+      { name: "Clinical Trials", favicon: "/favicons/clinical-trials.png", website: "https://www.clinicaltrialsai.com" },
+      { name: "Regulatory Compliance", favicon: "/favicons/regulatory-compliance.png", website: "https://www.regulatorycomplianceai.com" },
+      { name: "Manufacturing Optimization", favicon: "/favicons/pharma-manufacturing-optimization.png", website: "https://www.pharmamanufacturingoptimizationai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/pharma-supply-chain.png", website: "https://www.pharmasupplychainai.com" },
+      { name: "Quality Control", favicon: "/favicons/pharma-quality-control.png", website: "https://www.pharmaqualitycontrolai.com" },
+      { name: "Personalized Medicine", favicon: "/favicons/personalized-medicine.png", website: "https://www.personalizedmedicineai.com" },
+      { name: "Pharmacovigilance", favicon: "/favicons/pharmacovigilance.png", website: "https://www.pharmacovigilanceai.com" },
+      { name: "Drug Repurposing", favicon: "/favicons/drug-repurposing.png", website: "https://www.drugrepurposingai.com" },
+      { name: "Patient Adherence", favicon: "/favicons/patient-adherence.png", website: "https://www.patientadherenceai.com" },
+    ]
+  },
+  {
+    name: "AI for Sports & Fitness",
+    icon: "⚽",
+    toolCount: 10,
+    subcategories: [
+      { name: "Performance Analytics", favicon: "/favicons/performance-analytics.png", website: "https://www.performanceanalyticsai.com" },
+      { name: "Injury Prevention", favicon: "/favicons/injury-prevention.png", website: "https://www.injurypreventionai.com" },
+      { name: "Training Optimization", favicon: "/favicons/training-optimization.png", website: "https://www.trainingoptimizationai.com" },
+      { name: "Fan Engagement", favicon: "/favicons/fan-engagement.png", website: "https://www.fanengagementai.com" },
+      { name: "Tactical Analysis", favicon: "/favicons/tactical-analysis.png", website: "https://www.tacticalanalysisai.com" },
+      { name: "Athlete Monitoring", favicon: "/favicons/athlete-monitoring.png", website: "https://www.athletemonitoringai.com" },
+      { name: "Sports Broadcasting", favicon: "/favicons/sports-broadcasting.png", website: "https://www.sportsbroadcastingai.com" },
+      { name: "Equipment Optimization", favicon: "/favicons/equipment-optimization.png", website: "https://www.equipmentoptimizationai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/nutrition-planning.png", website: "https://www.nutritionplanningai.com" },
+      { name: "Recovery Management", favicon: "/favicons/recovery-management.png", website: "https://www.recoverymanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Mental Health Support",
+    icon: "🧠",
+    toolCount: 10,
+    subcategories: [
+      { name: "Therapy Assistance", favicon: "/favicons/therapy-assistance.png", website: "https://www.therapyassistanceai.com" },
+      { name: "Cognitive Enhancement", favicon: "/favicons/cognitive-enhancement.png", website: "https://www.cognitiveenhancementai.com" },
+      { name: "Sleep Optimization", favicon: "/favicons/sleep-optimization.png", website: "https://www.sleepoptimizationai.com" },
+      { name: "Stress Management", favicon: "/favicons/stress-management.png", website: "https://www.stressmanagementai.com" },
+      { name: "Emotional Intelligence", favicon: "/favicons/emotional-intelligence.png", website: "https://www.emotionalintelligenceai.com" },
+      { name: "Trauma Recovery", favicon: "/favicons/trauma-recovery.png", website: "https://www.traumarecoveryai.com" },
+      { name: "Eating Disorder Support", favicon: "/favicons/eating-disorder-support.png", website: "https://www.eatingdisordersupportai.com" },
+      { name: "Social Anxiety", favicon: "/favicons/social-anxiety.png", website: "https://www.socialanxietyai.com" },
+      { name: "Addiction Support", favicon: "/favicons/addiction-support.png", website: "https://www.addictionsupportai.com" },
+      { name: "Mood Tracking", favicon: "/favicons/mood-tracking.png", website: "https://www.moodtrackingai.com" },
+    ]
+  },
+  {
+    name: "AI for Financial Planning",
+    icon: "💰",
+    toolCount: 10,
+    subcategories: [
+      { name: "Investment Strategy", favicon: "/favicons/investment-strategy.png", website: "https://www.investmentstrategyai.com" },
+      { name: "Retirement Planning", favicon: "/favicons/retirement-planning.png", website: "https://www.retirementplanningai.com" },
+      { name: "Tax Strategy", favicon: "/favicons/tax-strategy.png", website: "https://www.taxstrategyai.com" },
+      { name: "Debt Management", favicon: "/favicons/debt-management.png", website: "https://www.debtmanagementai.com" },
+      { name: "Education Financing", favicon: "/favicons/education-financing.png", website: "https://www.educationfinancingai.com" },
+      { name: "Risk Management", favicon: "/favicons/risk-management.png", website: "https://www.riskmanagementai.com" },
+      { name: "Estate Planning", favicon: "/favicons/estate-planning.png", website: "https://www.estateplanningai.com" },
+      { name: "Business Finance", favicon: "/favicons/business-finance.png", website: "https://www.businessfinanceai.com" },
+      { name: "Credit Management", favicon: "/favicons/credit-management.png", website: "https://www.creditmanagementai.com" },
+      { name: "Savings Strategy", favicon: "/favicons/savings-strategy.png", website: "https://www.savingsstrategyai.com" },
+    ]
+  },
+  {
+    name: "AI for Home Automation",
+    icon: "🏠",
+    toolCount: 10,
+    subcategories: [
+      { name: "Whole Home Control", favicon: "/favicons/whole-home-control.png", website: "https://www.wholehomecontrolai.com" },
+      { name: "HVAC Optimization", favicon: "/favicons/hvac-optimization.png", website: "https://www.hvacoptimizationai.com" },
+      { name: "Home Security", favicon: "/favicons/home-security.png", website: "https://www.homecurityai.com" },
+      { name: "Ambient Lighting", favicon: "/favicons/ambient-lighting.png", website: "https://www.ambientlightingai.com" },
+      { name: "Smart Kitchen", favicon: "/favicons/smart-kitchen.png", website: "https://www.smartkitchenai.com" },
+      { name: "Media Control", favicon: "/favicons/media-control.png", website: "https://www.mediacontrolai.com" },
+      { name: "Appliance Management", favicon: "/favicons/appliance-management.png", website: "https://www.appliancemanagementai.com" },
+      { name: "Outdoor Automation", favicon: "/favicons/outdoor-automation.png", website: "https://www.outdoorautomationai.com" },
+      { name: "Utility Management", favicon: "/favicons/utility-management.png", website: "https://www.utilitymanagementai.com" },
+      { name: "Communication & Coordination", favicon: "/favicons/communication-coordination.png", website: "https://www.communicationcoordinationai.com" },
+    ]
+  },
+  {
+    name: "AI for Travel Planning",
+    icon: "✈️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Trip Planning", favicon: "/favicons/trip-planning.png", website: "https://www.tripplanningai.com" },
+      { name: "Airfare Booking", favicon: "/favicons/airfare-booking.png", website: "https://www.airfarebookingai.com" },
+      { name: "Hotel & Lodging", favicon: "/favicons/hotel-lodging.png", website: "https://www.hotellodgingai.com" },
+      { name: "Activity Booking", favicon: "/favicons/activity-booking.png", website: "https://www.activitybookingai.com" },
+      { name: "Expense Management", favicon: "/favicons/expense-management.png", website: "https://www.expensemanagementai.com" },
+      { name: "Documentation & Compliance", favicon: "/favicons/documentation-compliance.png", website: "https://www.documentationcomplianceai.com" },
+      { name: "Weather Planning", favicon: "/favicons/weather-planning.png", website: "https://www.weatherplanningai.com" },
+      { name: "Ground Transportation", favicon: "/favicons/ground-transportation.png", website: "https://www.groundtransportationai.com" },
+      { name: "Cultural Preparation", favicon: "/favicons/cultural-preparation.png", website: "https://www.culturalpreparationai.com" },
+      { name: "Safety & Insurance", favicon: "/favicons/safety-insurance.png", website: "https://www.safetyinsuranceai.com" },
+    ]
+  },
+  {
+    name: "AI for Fitness & Wellness",
+    icon: "💪",
+    toolCount: 10,
+    subcategories: [
+      { name: "Exercise Planning", favicon: "/favicons/exercise-planning.png", website: "https://www.exerciseplanningai.com" },
+      { name: "Nutrition Guidance", favicon: "/favicons/nutrition-guidance.png", website: "https://www.nutritionguidanceai.com" },
+      { name: "Rest & Recovery", favicon: "/favicons/rest-recovery.png", website: "https://www.restrecoveryai.com" },
+      { name: "Wellness Monitoring", favicon: "/favicons/wellness-monitoring.png", website: "https://www.wellnessmonitoringai.com" },
+      { name: "Holistic Health", favicon: "/favicons/holistic-health.png", website: "https://www.holistichealthai.com" },
+      { name: "Progress Tracking", favicon: "/favicons/progress-tracking.png", website: "https://www.progresstrackingai.com" },
+      { name: "Health Safety", favicon: "/favicons/health-safety.png", website: "https://www.healthsafetyai.com" },
+      { name: "Athletic Performance", favicon: "/favicons/athletic-performance.png", website: "https://www.athleticperformanceai.com" },
+      { name: "Age-Specific Training", favicon: "/favicons/age-specific-training.png", website: "https://www.agespecifictainingai.com" },
+      { name: "Group Training", favicon: "/favicons/group-training.png", website: "https://www.grouptrainingai.com" },
+    ]
+  },
+  {
+    name: "AI for Smart Manufacturing",
+    icon: "🏭",
+    toolCount: 10,
+    subcategories: [
+      { name: "Predictive Maintenance", favicon: "/favicons/predictive-maintenance.png", website: "https://www.predictivemaintenanceai.com" },
+      { name: "Quality Control", favicon: "/favicons/quality-control.png", website: "https://www.qualitycontrolai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/supply-chain-optimization.png", website: "https://www.supplychainoptimizationai.com" },
+      { name: "Inventory Management", favicon: "/favicons/inventory-management.png", website: "https://www.inventorymanagementai.com" },
+      { name: "Production Planning", favicon: "/favicons/production-planning.png", website: "https://www.productionplanningai.com" },
+      { name: "Energy Efficiency", favicon: "/favicons/energy-efficiency.png", website: "https://www.energyefficiencyai.com" },
+      { name: "Robotics Integration", favicon: "/favicons/robotics-integration.png", website: "https://www.roboticsintegrationai.com" },
+      { name: "Process Automation", favicon: "/favicons/process-automation.png", website: "https://www.processautomationai.com" },
+      { name: "Digital Twins", favicon: "/favicons/digital-twins.png", website: "https://www.digitaltwinsai.com" },
+      { name: "Workforce Safety", favicon: "/favicons/workforce-safety.png", website: "https://www.workforcesafetyai.com" },
+    ]
+  },
+  {
+    name: "AI for Renewable Energy",
+    icon: "⚡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Solar Optimization", favicon: "/favicons/solar-optimization.png", website: "https://www.solaroptimizationai.com" },
+      { name: "Wind Farm Management", favicon: "/favicons/wind-farm-management.png", website: "https://www.windfarmmanagementai.com" },
+      { name: "Energy Storage", favicon: "/favicons/energy-storage.png", website: "https://www.energystorageai.com" },
+      { name: "Grid Integration", favicon: "/favicons/grid-integration.png", website: "https://www.gridintegrationai.com" },
+      { name: "Energy Forecasting", favicon: "/favicons/energy-forecasting.png", website: "https://www.energyforecastingai.com" },
+      { name: "Smart Grids", favicon: "/favicons/smart-grids.png", website: "https://www.smartgridsai.com" },
+      { name: "Energy Trading", favicon: "/favicons/energy-trading.png", website: "https://www.energytradingai.com" },
+      { name: "Microgrids", favicon: "/favicons/microgrids.png", website: "https://www.microgridsai.com" },
+      { name: "Energy Efficiency", favicon: "/favicons/energy-efficiency.png", website: "https://www.energyefficiencyai.com" },
+      { name: "Carbon Footprint", favicon: "/favicons/carbon-footprint.png", website: "https://www.carbonfootprintai.com" },
+    ]
+  },
+  {
+    name: "AI for Cybersecurity Defense",
+    icon: "🛡️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Threat Detection", favicon: "/favicons/threat-detection.png", website: "https://www.threatdetectionai.com" },
+      { name: "Intrusion Prevention", favicon: "/favicons/intrusion-prevention.png", website: "https://www.intrusionpreventionai.com" },
+      { name: "Malware Analysis", favicon: "/favicons/malware-analysis.png", website: "https://www.malwareanalysisai.com" },
+      { name: "Network Security", favicon: "/favicons/network-security.png", website: "https://www.networksecurityai.com" },
+      { name: "Identity Management", favicon: "/favicons/identity-management.png", website: "https://www.identitymanagementai.com" },
+      { name: "Data Protection", favicon: "/favicons/data-protection.png", website: "https://www.dataprotectionai.com" },
+      { name: "Security Analytics", favicon: "/favicons/security-analytics.png", website: "https://www.securityanalyticsai.com" },
+      { name: "Incident Response", favicon: "/favicons/incident-response.png", website: "https://www.incidentresponseai.com" },
+      { name: "Vulnerability Management", favicon: "/favicons/vulnerability-management.png", website: "https://www.vulnerabilitymanagementai.com" },
+      { name: "Compliance Monitoring", favicon: "/favicons/compliance-monitoring.png", website: "https://www.compliancemonitoringai.com" },
+    ]
+  },
+  {
+    name: "AI for Digital Marketing",
+    icon: "📱",
+    toolCount: 10,
+    subcategories: [
+      { name: "Customer Segmentation", favicon: "/favicons/customer-segmentation.png", website: "https://www.customersegmentationai.com" },
+      { name: "Personalized Content", favicon: "/favicons/personalized-content.png", website: "https://www.personalizedcontentai.com" },
+      { name: "Ad Campaign Optimization", favicon: "/favicons/ad-campaign-optimization.png", website: "https://www.adcampaignoptimizationai.com" },
+      { name: "Social Media Analytics", favicon: "/favicons/social-media-analytics.png", website: "https://www.socialmediaanalyticsai.com" },
+      { name: "Email Marketing", favicon: "/favicons/email-marketing.png", website: "https://www.emailmarketingai.com" },
+      { name: "Conversion Rate Optimization", favicon: "/favicons/conversion-rate-optimization.png", website: "https://www.conversionrateoptimizationai.com" },
+      { name: "Brand Monitoring", favicon: "/favicons/brand-monitoring.png", website: "https://www.brandmonitoringai.com" },
+      { name: "Influencer Marketing", favicon: "/favicons/influencer-marketing.png", website: "https://www.influencermarketingai.com" },
+      { name: "Customer Journey Mapping", favicon: "/favicons/customer-journey-mapping.png", website: "https://www.customerjourneymappingai.com" },
+      { name: "ROI Analytics", favicon: "/favicons/roi-analytics.png", website: "https://www.roianalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Human Resources",
+    icon: "👥",
+    toolCount: 10,
+    subcategories: [
+      { name: "Talent Acquisition", favicon: "/favicons/talent-acquisition.png", website: "https://www.talentacquisitionai.com" },
+      { name: "Employee Engagement", favicon: "/favicons/employee-engagement.png", website: "https://www.employeeengagementai.com" },
+      { name: "Performance Management", favicon: "/favicons/performance-management.png", website: "https://www.performancemanagementai.com" },
+      { name: "Learning & Development", favicon: "/favicons/learning-development.png", website: "https://www.learningdevelopmentai.com" },
+      { name: "Workforce Planning", favicon: "/favicons/workforce-planning.png", website: "https://www.workforceplanningai.com" },
+      { name: "Diversity & Inclusion", favicon: "/favicons/diversity-inclusion.png", website: "https://www.diversityinclusionai.com" },
+      { name: "Compensation Management", favicon: "/favicons/compensation-management.png", website: "https://www.compensationmanagementai.com" },
+      { name: "Employee Wellness", favicon: "/favicons/employee-wellness.png", website: "https://www.employeewellnessai.com" },
+      { name: "Succession Planning", favicon: "/favicons/succession-planning.png", website: "https://www.successionplanningai.com" },
+      { name: "HR Analytics", favicon: "/favicons/hr-analytics.png", website: "https://www.hranalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Supply Chain Optimization",
+    icon: "🔗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Demand Forecasting", favicon: "/favicons/demand-forecasting.png", website: "https://www.demandforecastingai.com" },
+      { name: "Inventory Management", favicon: "/favicons/inventory-management.png", website: "https://www.inventorymanagementai.com" },
+      { name: "Logistics Planning", favicon: "/favicons/logistics-planning.png", website: "https://www.logisticsplanningai.com" },
+      { name: "Supplier Risk Assessment", favicon: "/favicons/supplier-risk.png", website: "https://www.supplerriskai.com" },
+      { name: "Quality Control", favicon: "/favicons/quality-control.png", website: "https://www.qualitycontrolai.com" },
+      { name: "Route Optimization", favicon: "/favicons/route-optimization.png", website: "https://www.routeoptimizationai.com" },
+      { name: "Warehouse Automation", favicon: "/favicons/warehouse-automation.png", website: "https://www.warehouseautomationai.com" },
+      { name: "Shipment Tracking", favicon: "/favicons/shipment-tracking.png", website: "https://www.shipmenttrackingai.com" },
+      { name: "Cost Reduction", favicon: "/favicons/cost-reduction.png", website: "https://www.costreductionai.com" },
+      { name: "Sustainability Metrics", favicon: "/favicons/sustainability-metrics.png", website: "https://www.sustainabilitymetricsai.com" },
+    ]
+  },
+  {
+    name: "AI for Customer Service Excellence",
+    icon: "客户服务",
+    toolCount: 10,
+    subcategories: [
+      { name: "Chatbot Automation", favicon: "/favicons/chatbot-automation.png", website: "https://www.chatbotautomationai.com" },
+      { name: "Sentiment Analysis", favicon: "/favicons/sentiment-analysis.png", website: "https://www.sentimentanalysisai.com" },
+      { name: "Ticket Routing", favicon: "/favicons/ticket-routing.png", website: "https://www.ticketroutingai.com" },
+      { name: "Response Time Optimization", favicon: "/favicons/response-time.png", website: "https://www.responsetimeai.com" },
+      { name: "Knowledge Base Management", favicon: "/favicons/knowledge-base.png", website: "https://www.knowledgebaseai.com" },
+      { name: "Customer Feedback Analysis", favicon: "/favicons/feedback-analysis.png", website: "https://www.feedbackanalysisai.com" },
+      { name: "Voice Recognition", favicon: "/favicons/voice-recognition.png", website: "https://www.voicerecognitionai.com" },
+      { name: "Personalized Recommendations", favicon: "/favicons/personalized-recommendations.png", website: "https://www.personalizedrecommendationsai.com" },
+      { name: "Escalation Management", favicon: "/favicons/escalation-management.png", website: "https://www.escalationmanagementai.com" },
+      { name: "Performance Analytics", favicon: "/favicons/performance-analytics.png", website: "https://www.performanceanalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Data Science & Analytics",
+    icon: "📊",
+    toolCount: 10,
+    subcategories: [
+      { name: "Predictive Modeling", favicon: "/favicons/predictive-modeling.png", website: "https://www.predictivemodelingai.com" },
+      { name: "Data Visualization", favicon: "/favicons/data-visualization.png", website: "https://www.datavisualizationai.com" },
+      { name: "Anomaly Detection", favicon: "/favicons/anomaly-detection.png", website: "https://www.anomalydetectionai.com" },
+      { name: "Statistical Analysis", favicon: "/favicons/statistical-analysis.png", website: "https://www.statisticalanalysisai.com" },
+      { name: "Data Cleaning", favicon: "/favicons/data-cleaning.png", website: "https://www.datacleaningai.com" },
+      { name: "Machine Learning", favicon: "/favicons/machine-learning.png", website: "https://www.machinelearningai.com" },
+      { name: "Data Mining", favicon: "/favicons/data-mining.png", website: "https://www.dataminingai.com" },
+      { name: "Business Intelligence", favicon: "/favicons/business-intelligence.png", website: "https://www.businessintelligenceai.com" },
+      { name: "Real-time Analytics", favicon: "/favicons/realtime-analytics.png", website: "https://www.realtimeanalyticsai.com" },
+      { name: "Data Governance", favicon: "/favicons/data-governance.png", website: "https://www.datagovernanceai.com" },
+    ]
+  },
+  {
+    name: "AI for Project Management",
+    icon: "📋",
+    toolCount: 10,
+    subcategories: [
+      { name: "Task Prioritization", favicon: "/favicons/task-prioritization.png", website: "https://www.taskprioritizationai.com" },
+      { name: "Resource Allocation", favicon: "/favicons/resource-allocation.png", website: "https://www.resourceallocationai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Timeline Optimization", favicon: "/favicons/timeline-optimization.png", website: "https://www.timelineoptimizationai.com" },
+      { name: "Budget Forecasting", favicon: "/favicons/budget-forecasting.png", website: "https://www.budgetforecastingai.com" },
+      { name: "Team Collaboration", favicon: "/favicons/team-collaboration.png", website: "https://www.teamcollaborationai.com" },
+      { name: "Performance Tracking", favicon: "/favicons/performance-tracking.png", website: "https://www.performancetrackingai.com" },
+      { name: "Document Management", favicon: "/favicons/document-management.png", website: "https://www.documentmanagementai.com" },
+      { name: "Stakeholder Communication", favicon: "/favicons/stakeholder-communication.png", website: "https://www.stakeholdercommunicationai.com" },
+      { name: "Quality Assurance", favicon: "/favicons/quality-assurance.png", website: "https://www.qualityassuranceai.com" },
+    ]
+  },
+  {
+    name: "AI for Content Creation",
+    icon: "✍️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Text Generation", favicon: "/favicons/text-generation.png", website: "https://www.textgenerationai.com" },
+      { name: "Image Creation", favicon: "/favicons/image-creation.png", website: "https://www.imagecreationai.com" },
+      { name: "Video Editing", favicon: "/favicons/video-editing.png", website: "https://www.videoeditingai.com" },
+      { name: "Audio Synthesis", favicon: "/favicons/audio-synthesis.png", website: "https://www.audiosynthesisai.com" },
+      { name: "Copywriting", favicon: "/favicons/copywriting.png", website: "https://www.copywritingai.com" },
+      { name: "Translation", favicon: "/favicons/translation.png", website: "https://www.translationai.com" },
+      { name: "Proofreading", favicon: "/favicons/proofreading.png", website: "https://www.proofreadingai.com" },
+      { name: "Content Curation", favicon: "/favicons/content-curation.png", website: "https://www.contentcurationai.com" },
+      { name: "SEO Optimization", favicon: "/favicons/seo-optimization.png", website: "https://www.seooptimizationai.com" },
+      { name: "Plagiarism Detection", favicon: "/favicons/plagiarism-detection.png", website: "https://www.plagiarismdetectionai.com" },
+    ]
+  },
+  {
+    name: "AI for Event Management",
+    icon: "🎉",
+    toolCount: 10,
+    subcategories: [
+      { name: "Event Planning", favicon: "/favicons/event-planning.png", website: "https://www.eventplanningai.com" },
+      { name: "Guest Management", favicon: "/favicons/guest-management.png", website: "https://www.guestmanagementai.com" },
+      { name: "Venue Selection", favicon: "/favicons/venue-selection.png", website: "https://www.venueselectionai.com" },
+      { name: "Budget Tracking", favicon: "/favicons/budget-tracking.png", website: "https://www.budgettrackingai.com" },
+      { name: "Schedule Coordination", favicon: "/favicons/schedule-coordination.png", website: "https://www.schedulecoordinationai.com" },
+      { name: "Vendor Management", favicon: "/favicons/vendor-management.png", website: "https://www.vendormanagementai.com" },
+      { name: "Marketing Automation", favicon: "/favicons/marketing-automation.png", website: "https://www.marketingautomationai.com" },
+      { name: "Real-time Updates", favicon: "/favicons/real-time-updates.png", website: "https://www.realtimeupdatesai.com" },
+      { name: "Feedback Collection", favicon: "/favicons/feedback-collection.png", website: "https://www.feedbackcollectionai.com" },
+      { name: "Post-Event Analysis", favicon: "/favicons/post-event-analysis.png", website: "https://www.posteventanalysisai.com" },
+    ]
+  },
+  {
+    name: "AI for Language Learning",
+    icon: "📚",
+    toolCount: 10,
+    subcategories: [
+      { name: "Pronunciation Training", favicon: "/favicons/pronunciation-training.png", website: "https://www.pronunciationtrainingai.com" },
+      { name: "Vocabulary Building", favicon: "/favicons/vocabulary-building.png", website: "https://www.vocabularybuildingai.com" },
+      { name: "Grammar Correction", favicon: "/favicons/grammar-correction.png", website: "https://www.grammarcorrectionai.com" },
+      { name: "Conversation Practice", favicon: "/favicons/conversation-practice.png", website: "https://www.conversationpracticeai.com" },
+      { name: "Cultural Context", favicon: "/favicons/cultural-context.png", website: "https://www.culturalcontextai.com" },
+      { name: "Progress Tracking", favicon: "/favicons/progress-tracking.png", website: "https://www.progresstrackingai.com" },
+      { name: "Personalized Lessons", favicon: "/favicons/personalized-lessons.png", website: "https://www.personalizedlessonsai.com" },
+      { name: "Speech Recognition", favicon: "/favicons/speech-recognition.png", website: "https://www.speechrecognitionai.com" },
+      { name: "Interactive Exercises", favicon: "/favicons/interactive-exercises.png", website: "https://www.interactiveexercisesai.com" },
+      { name: "Language Assessment", favicon: "/favicons/language-assessment.png", website: "https://www.languageassessmentai.com" },
+    ]
+  },
+  {
+    name: "AI for Pet Care",
+    icon: "🐾",
+    toolCount: 10,
+    subcategories: [
+      { name: "Health Monitoring", favicon: "/favicons/health-monitoring.png", website: "https://www.healthmonitoringai.com" },
+      { name: "Behavior Analysis", favicon: "/favicons/behavior-analysis.png", website: "https://www.behavioranalysisai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/nutrition-planning.png", website: "https://www.nutritionplanningai.com" },
+      { name: "Training Assistance", favicon: "/favicons/training-assistance.png", website: "https://www.trainingassistanceai.com" },
+      { name: "Grooming Scheduling", favicon: "/favicons/grooming-scheduling.png", website: "https://www.groomingschedulingai.com" },
+      { name: "Veterinary Care", favicon: "/favicons/veterinary-care.png", website: "https://www.veterinarycareai.com" },
+      { name: "Activity Tracking", favicon: "/favicons/activity-tracking.png", website: "https://www.activitytrackingai.com" },
+      { name: "Social Interaction", favicon: "/favicons/social-interaction.png", website: "https://www.socialinteractionai.com" },
+      { name: "Emergency Response", favicon: "/favicons/emergency-response.png", website: "https://www.emergencyresponseai.com" },
+      { name: "Breed Information", favicon: "/favicons/breed-information.png", website: "https://www.breedinformationai.com" },
+    ]
+  },
+  {
+    name: "AI for Real Estate Investment",
+    icon: "🏢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Market Analysis", favicon: "/favicons/market-analysis.png", website: "https://www.marketalysiai.com" },
+      { name: "Property Valuation", favicon: "/favicons/property-valuation.png", website: "https://www.propertyvaluationai.com" },
+      { name: "Investment Screening", favicon: "/favicons/investment-screening.png", website: "https://www.investmentscreeningai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Portfolio Management", favicon: "/favicons/portfolio-management.png", website: "https://www.portfoliomanagementai.com" },
+      { name: "Cash Flow Projection", favicon: "/favicons/cash-flow-projection.png", website: "https://www.cashflowprojectionai.com" },
+      { name: "Tenant Screening", favicon: "/favicons/tenant-screening.png", website: "https://www.tenantscreeningai.com" },
+      { name: "Maintenance Scheduling", favicon: "/favicons/maintenance-scheduling.png", website: "https://www.maintenanceschedulingai.com" },
+      { name: "Legal Compliance", favicon: "/favicons/legal-compliance.png", website: "https://www.legalcomplianceai.com" },
+      { name: "Tax Optimization", favicon: "/favicons/tax-optimization.png", website: "https://www.taxoptimizationai.com" },
+    ]
+  },
+  {
+    name: "AI for Sports Analytics",
+    icon: "⚽",
+    toolCount: 10,
+    subcategories: [
+      { name: "Performance Tracking", favicon: "/favicons/performance-tracking.png", website: "https://www.performancetrackingai.com" },
+      { name: "Injury Prevention", favicon: "/favicons/injury-prevention.png", website: "https://www.injurypreventionai.com" },
+      { name: "Tactical Analysis", favicon: "/favicons/tactical-analysis.png", website: "https://www.tacticalanalysisai.com" },
+      { name: "Player Scouting", favicon: "/favicons/player-scouting.png", website: "https://www.playerscoutingai.com" },
+      { name: "Game Strategy", favicon: "/favicons/game-strategy.png", website: "https://www.gamestrategyai.com" },
+      { name: "Fan Engagement", favicon: "/favicons/fan-engagement.png", website: "https://www.fanengagementai.com" },
+      { name: "Training Optimization", favicon: "/favicons/training-optimization.png", website: "https://www.trainingoptimizationai.com" },
+      { name: "Biometric Monitoring", favicon: "/favicons/biometric-monitoring.png", website: "https://www.biometricmonitoringai.com" },
+      { name: "Team Chemistry", favicon: "/favicons/team-chemistry.png", website: "https://www.teamchemistryai.com" },
+      { name: "Recruitment Analytics", favicon: "/favicons/recruitment-analytics.png", website: "https://www.recruitmentanalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Mental Health",
+    icon: "🧠",
+    toolCount: 10,
+    subcategories: [
+      { name: "Therapy Assistance", favicon: "/favicons/therapy-assistance.png", website: "https://www.therapyassistanceai.com" },
+      { name: "Mood Tracking", favicon: "/favicons/mood-tracking.png", website: "https://www.moodtrackingai.com" },
+      { name: "Stress Management", favicon: "/favicons/stress-management.png", website: "https://www.stressmanagementai.com" },
+      { name: "Sleep Optimization", favicon: "/favicons/sleep-optimization.png", website: "https://www.sleepoptimizationai.com" },
+      { name: "Mindfulness Training", favicon: "/favicons/mindfulness-training.png", website: "https://www.mindfulnesstrainingai.com" },
+      { name: "Cognitive Behavioral Therapy", favicon: "/favicons/cbt.png", website: "https://www.cbtaicom" },
+      { name: "Addiction Support", favicon: "/favicons/addiction-support.png", website: "https://www.addictionsupportai.com" },
+      { name: "Anxiety Relief", favicon: "/favicons/anxiety-relief.png", website: "https://www.anxietyreliefai.com" },
+      { name: "Depression Management", favicon: "/favicons/depression-management.png", website: "https://www.depressionmanagementai.com" },
+      { name: "Emotional Intelligence", favicon: "/favicons/emotional-intelligence.png", website: "https://www.emotionalintelligenceai.com" },
+    ]
+  },
+  {
+    name: "AI for Cybersecurity",
+    icon: "🔒",
+    toolCount: 10,
+    subcategories: [
+      { name: "Threat Detection", favicon: "/favicons/threat-detection.png", website: "https://www.threatdetectionai.com" },
+      { name: "Intrusion Prevention", favicon: "/favicons/intrusion-prevention.png", website: "https://www.intrusionpreventionai.com" },
+      { name: "Vulnerability Scanning", favicon: "/favicons/vulnerability-scanning.png", website: "https://www.vulnerabilityscanningai.com" },
+      { name: "Malware Analysis", favicon: "/favicons/malware-analysis.png", website: "https://www.malwareanalysisai.com" },
+      { name: "Network Security", favicon: "/favicons/network-security.png", website: "https://www.networksecurityai.com" },
+      { name: "Data Encryption", favicon: "/favicons/data-encryption.png", website: "https://www.dataencryptionai.com" },
+      { name: "Identity Management", favicon: "/favicons/identity-management.png", website: "https://www.identitymanagementai.com" },
+      { name: "Incident Response", favicon: "/favicons/incident-response.png", website: "https://www.incidentresponseai.com" },
+      { name: "Security Analytics", favicon: "/favicons/security-analytics.png", website: "https://www.securityanalyticsai.com" },
+      { name: "Compliance Monitoring", favicon: "/favicons/compliance-monitoring.png", website: "https://www.compliancemonitoringai.com" },
+    ]
+  },
+  {
+    name: "AI for E-commerce",
+    icon: "🛒",
+    toolCount: 10,
+    subcategories: [
+      { name: "Product Recommendations", favicon: "/favicons/product-recommendations.png", website: "https://www.productrecommendationsai.com" },
+      { name: "Inventory Management", favicon: "/favicons/inventory-management.png", website: "https://www.inventorymanagementai.com" },
+      { name: "Price Optimization", favicon: "/favicons/price-optimization.png", website: "https://www.priceoptimizationai.com" },
+      { name: "Customer Segmentation", favicon: "/favicons/customer-segmentation.png", website: "https://www.customersegmentationai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/fraud-detection.png", website: "https://www.fraudetectionai.com" },
+      { name: "Chatbot Support", favicon: "/favicons/chatbot-support.png", website: "https://www.chatbotsupportai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/supply-chain-optimization.png", website: "https://www.supplychainoptimizationai.com" },
+      { name: "Personalization Engine", favicon: "/favicons/personalization-engine.png", website: "https://www.personalizationengineai.com" },
+      { name: "Conversion Rate Optimization", favicon: "/favicons/conversion-rate-optimization.png", website: "https://www.conversionrateoptimizationai.com" },
+      { name: "Order Fulfillment", favicon: "/favicons/order-fulfillment.png", website: "https://www.orderfulfillmentai.com" },
+    ]
+  },
+  {
+    name: "AI for Human Resources",
+    icon: "👥",
+    toolCount: 10,
+    subcategories: [
+      { name: "Recruitment Automation", favicon: "/favicons/recruitment-automation.png", website: "https://www.recruitmentautomationai.com" },
+      { name: "Employee Engagement", favicon: "/favicons/employee-engagement.png", website: "https://www.employeeengagementai.com" },
+      { name: "Performance Management", favicon: "/favicons/performance-management.png", website: "https://www.performancemanagementai.com" },
+      { name: "Learning & Development", favicon: "/favicons/learning-development.png", website: "https://www.learningdevelopmentai.com" },
+      { name: "Workforce Analytics", favicon: "/favicons/workforce-analytics.png", website: "https://www.workforceanalyticsai.com" },
+      { name: "Diversity & Inclusion", favicon: "/favicons/diversity-inclusion.png", website: "https://www.diversityinclusionai.com" },
+      { name: "Compensation Planning", favicon: "/favicons/compensation-planning.png", website: "https://www.compensationplanningai.com" },
+      { name: "Employee Wellness", favicon: "/favicons/employee-wellness.png", website: "https://www.employeewellnessai.com" },
+      { name: "Succession Planning", favicon: "/favicons/succession-planning.png", website: "https://www.successionplanningai.com" },
+      { name: "Onboarding Automation", favicon: "/favicons/onboarding-automation.png", website: "https://www.onboardingautomationai.com" },
+    ]
+  },
+  {
+    name: "AI for Travel & Tourism",
+    icon: "✈️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Trip Planning", favicon: "/favicons/trip-planning.png", website: "https://www.tripplanningai.com" },
+      { name: "Hotel Booking", favicon: "/favicons/hotel-booking.png", website: "https://www.hotelbookingai.com" },
+      { name: "Flight Optimization", favicon: "/favicons/flight-optimization.png", website: "https://www.flightoptimizationai.com" },
+      { name: "Travel Recommendations", favicon: "/favicons/travel-recommendations.png", website: "https://www.travelrecommendationsai.com" },
+      { name: "Language Translation", favicon: "/favicons/language-translation.png", website: "https://www.languagetranslationai.com" },
+      { name: "Local Experiences", favicon: "/favicons/local-experiences.png", website: "https://www.localexperiencesai.com" },
+      { name: "Travel Safety", favicon: "/favicons/travel-safety.png", website: "https://www.travelsafetyai.com" },
+      { name: "Itinerary Management", favicon: "/favicons/itinerary-management.png", website: "https://www.itinerarymanagementai.com" },
+      { name: "Currency Exchange", favicon: "/favicons/currency-exchange.png", website: "https://www.currencyexchangeai.com" },
+      { name: "Travel Insurance", favicon: "/favicons/travel-insurance.png", website: "https://www.travelinsuranceai.com" },
+    ]
+  },
+  {
+    name: "AI for Agriculture & Food Security",
+    icon: "🌾",
+    toolCount: 10,
+    subcategories: [
+      { name: "Precision Farming", favicon: "/favicons/precision-farming.png", website: "https://www.precisionfarmingai.com" },
+      { name: "Crop Monitoring", favicon: "/favicons/crop-monitoring.png", website: "https://www.cropmonitoringai.com" },
+      { name: "Soil Analysis", favicon: "/favicons/soil-analysis.png", website: "https://www.soilanalysisai.com" },
+      { name: "Irrigation Management", favicon: "/favicons/irrigation-management.png", website: "https://www.irrigationmanagementai.com" },
+      { name: "Pest Detection", favicon: "/favicons/pest-detection.png", website: "https://www.pestdetectionai.com" },
+      { name: "Yield Prediction", favicon: "/favicons/yield-prediction.png", website: "https://www.yieldpredictionai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/agriculture-supply-chain.png", website: "https://www.agriculturesupplychainai.com" },
+      { name: "Livestock Management", favicon: "/favicons/livestock-management.png", website: "https://www.livestockmanagementai.com" },
+      { name: "Weather Forecasting", favicon: "/favicons/agriculture-weather.png", website: "https://www.agricultureweatherai.com" },
+      { name: "Food Safety", favicon: "/favicons/food-safety.png", website: "https://www.foodsafetyai.com" },
+    ]
+  },
+  {
+    name: "AI for Climate Change",
+    icon: "🌍",
+    toolCount: 10,
+    subcategories: [
+      { name: "Carbon Footprint Tracking", favicon: "/favicons/carbon-footprint.png", website: "https://www.carbonfootprintai.com" },
+      { name: "Climate Modeling", favicon: "/favicons/climate-modeling.png", website: "https://www.climatemodelingai.com" },
+      { name: "Renewable Energy Optimization", favicon: "/favicons/renewable-energy.png", website: "https://www.renewableenergyai.com" },
+      { name: "Emission Reduction", favicon: "/favicons/emission-reduction.png", website: "https://www.emissionreductionai.com" },
+      { name: "Sustainability Metrics", favicon: "/favicons/sustainability-metrics.png", website: "https://www.sustainabilitymetricsai.com" },
+      { name: "Disaster Prediction", favicon: "/favicons/disaster-prediction.png", website: "https://www.disasterpredictionai.com" },
+      { name: "Ecosystem Monitoring", favicon: "/favicons/ecosystem-monitoring.png", website: "https://www.ecosystemmonitoringai.com" },
+      { name: "Green Technology", favicon: "/favicons/green-technology.png", website: "https://www.greentechnologyai.com" },
+      { name: "Policy Analysis", favicon: "/favicons/climate-policy.png", website: "https://www.climatepolicyai.com" },
+      { name: "Adaptation Strategies", favicon: "/favicons/adaptation-strategies.png", website: "https://www.adaptationstrategiesai.com" },
+    ]
+  },
+  {
+    name: "AI for Education Technology",
+    icon: "🎓",
+    toolCount: 10,
+    subcategories: [
+      { name: "Personalized Learning", favicon: "/favicons/personalized-learning.png", website: "https://www.personalizedlearningai.com" },
+      { name: "Intelligent Tutoring", favicon: "/favicons/intelligent-tutoring.png", website: "https://www.intelligenttutoringai.com" },
+      { name: "Learning Analytics", favicon: "/favicons/learning-analytics.png", website: "https://www.learninganalyticsai.com" },
+      { name: "Virtual Classrooms", favicon: "/favicons/virtual-classrooms.png", website: "https://www.virtualclassroomsai.com" },
+      { name: "Educational Content", favicon: "/favicons/educational-content.png", website: "https://www.educationalcontentai.com" },
+      { name: "Student Assessment", favicon: "/favicons/student-assessment.png", website: "https://www.studentassessmentai.com" },
+      { name: "Curriculum Design", favicon: "/favicons/curriculum-design.png", website: "https://www.curriculumdesignai.com" },
+      { name: "Language Learning", favicon: "/favicons/language-learning.png", website: "https://www.languagelearningai.com" },
+      { name: "Special Education", favicon: "/favicons/special-education.png", website: "https://www.specialeducationai.com" },
+      { name: "Skills Development", favicon: "/favicons/skills-development.png", website: "https://www.skillsdevelopmentai.com" },
+    ]
+  },
+  {
+    name: "AI for Healthcare Diagnostics",
+    icon: "🩺",
+    toolCount: 10,
+    subcategories: [
+      { name: "Medical Imaging", favicon: "/favicons/medical-imaging.png", website: "https://www.medicalimagingai.com" },
+      { name: "Disease Detection", favicon: "/favicons/disease-detection.png", website: "https://www.diseasedetectionai.com" },
+      { name: "Lab Analysis", favicon: "/favicons/lab-analysis.png", website: "https://www.labanalysisai.com" },
+      { name: "Genomic Sequencing", favicon: "/favicons/genomic-sequencing.png", website: "https://www.genomicsequencingai.com" },
+      { name: "Drug Discovery", favicon: "/favicons/drug-discovery.png", website: "https://www.drugdiscoveryai.com" },
+      { name: "Patient Monitoring", favicon: "/favicons/patient-monitoring.png", website: "https://www.patientmonitoringai.com" },
+      { name: "Telemedicine", favicon: "/favicons/telemedicine.png", website: "https://www.telemedicineai.com" },
+      { name: "Mental Health", favicon: "/favicons/mental-health.png", website: "https://www.mentalhealthai.com" },
+      { name: "Preventive Care", favicon: "/favicons/preventive-care.png", website: "https://www.preventivecareai.com" },
+      { name: "Clinical Decision Support", favicon: "/favicons/clinical-decision.png", website: "https://www.clinicaldecisionai.com" },
+    ]
+  },
+  {
+    name: "AI for Financial Services",
+    icon: "💰",
+    toolCount: 10,
+    subcategories: [
+      { name: "Algorithmic Trading", favicon: "/favicons/algorithmic-trading.png", website: "https://www.algorithmictradingai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/fraud-detection.png", website: "https://www.fraudetectionai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Credit Scoring", favicon: "/favicons/credit-scoring.png", website: "https://www.creditscoringai.com" },
+      { name: "Wealth Management", favicon: "/favicons/wealth-management.png", website: "https://www.wealthmanagementai.com" },
+      { name: "Insurance Underwriting", favicon: "/favicons/insurance-underwriting.png", website: "https://www.insuranceunderwritingai.com" },
+      { name: "Payment Processing", favicon: "/favicons/payment-processing.png", website: "https://www.paymentprocessingai.com" },
+      { name: "Regulatory Compliance", favicon: "/favicons/regulatory-compliance.png", website: "https://www.regulatorycomplianceai.com" },
+      { name: "Customer Service", favicon: "/favicons/financial-customer-service.png", website: "https://www.financialcustomerserviceai.com" },
+      { name: "Investment Analysis", favicon: "/favicons/investment-analysis.png", website: "https://www.investmentanalysisai.com" },
+    ]
+  },
+  {
+    name: "AI for Smart Cities",
+    icon: "🏙️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Urban Planning", favicon: "/favicons/urban-planning.png", website: "https://www.urbanplanningai.com" },
+      { name: "Traffic Management", favicon: "/favicons/traffic-management.png", website: "https://www.trafficmanagementai.com" },
+      { name: "Public Transportation", favicon: "/favicons/public-transportation.png", website: "https://www.publictransportationai.com" },
+      { name: "Energy Grid Optimization", favicon: "/favicons/energy-grid.png", website: "https://www.energygridai.com" },
+      { name: "Waste Management", favicon: "/favicons/waste-management.png", website: "https://www.wastemanagementai.com" },
+      { name: "Water Management", favicon: "/favicons/water-management.png", website: "https://www.watermanagementai.com" },
+      { name: "Public Safety", favicon: "/favicons/public-safety.png", website: "https://www.publicsafetyai.com" },
+      { name: "Building Management", favicon: "/favicons/building-management.png", website: "https://www.buildingmanagementai.com" },
+      { name: "Environmental Monitoring", favicon: "/favicons/environmental-monitoring.png", website: "https://www.environmentalmonitoringai.com" },
+      { name: "Citizen Services", favicon: "/favicons/citizen-services.png", website: "https://www.citizenservicesai.com" },
+    ]
+  },
+  {
+    name: "AI for Entertainment & Media",
+    icon: "🎬",
+    toolCount: 10,
+    subcategories: [
+      { name: "Content Creation", favicon: "/favicons/content-creation.png", website: "https://www.contentcreationai.com" },
+      { name: "Video Editing", favicon: "/favicons/video-editing.png", website: "https://www.videoeditingai.com" },
+      { name: "Music Composition", favicon: "/favicons/music-composition.png", website: "https://www.musiccompositionai.com" },
+      { name: "Audience Analytics", favicon: "/favicons/audience-analytics.png", website: "https://www.audienceanalyticsai.com" },
+      { name: "Personalized Recommendations", favicon: "/favicons/personalized-recommendations.png", website: "https://www.personalizedrecommendationsai.com" },
+      { name: "Virtual Reality", favicon: "/favicons/virtual-reality.png", website: "https://www.virtualrealityai.com" },
+      { name: "Augmented Reality", favicon: "/favicons/augmented-reality.png", website: "https://www.arai.com" },
+      { name: "Gaming Experiences", favicon: "/favicons/gaming-experiences.png", website: "https://www.gamingexperiencesai.com" },
+      { name: "Live Streaming", favicon: "/favicons/live-streaming.png", website: "https://www.livestreamingai.com" },
+      { name: "Social Media Content", favicon: "/favicons/social-media-content.png", website: "https://www.socialmediacontentai.com" },
+    ]
+  },
+  {
+    name: "AI for Retail & E-commerce",
+    icon: "🛍️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Customer Experience", favicon: "/favicons/customer-experience.png", website: "https://www.customerexperienceai.com" },
+      { name: "Inventory Management", favicon: "/favicons/inventory-management.png", website: "https://www.inventorymanagementai.com" },
+      { name: "Supply Chain", favicon: "/favicons/retail-supply-chain.png", website: "https://www.retail-supplychainai.com" },
+      { name: "Pricing Optimization", favicon: "/favicons/pricing-optimization.png", website: "https://www.pricingoptimizationai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/retail-fraud-detection.png", website: "https://www.retail-fraudetectionai.com" },
+      { name: "Visual Search", favicon: "/favicons/visual-search.png", website: "https://www.visualsearchai.com" },
+      { name: "Chatbots", favicon: "/favicons/retail-chatbots.png", website: "https://www.retail-chatbotsai.com" },
+      { name: "Personalization", favicon: "/favicons/retail-personalization.png", website: "https://www.retail-personalizationai.com" },
+      { name: "Demand Forecasting", favicon: "/favicons/demand-forecasting.png", website: "https://www.demandforecastingai.com" },
+      { name: "Store Analytics", favicon: "/favicons/store-analytics.png", website: "https://www.storeanalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Manufacturing & Industry",
+    icon: "🏭",
+    toolCount: 10,
+    subcategories: [
+      { name: "Predictive Maintenance", favicon: "/favicons/predictive-maintenance.png", website: "https://www.predictivemaintenanceai.com" },
+      { name: "Quality Control", favicon: "/favicons/manufacturing-quality-control.png", website: "https://www.manufacturing-qualitycontrolai.com" },
+      { name: "Process Optimization", favicon: "/favicons/process-optimization.png", website: "https://www.processoptimizationai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/manufacturing-supply-chain.png", website: "https://www.manufacturing-supplychainai.com" },
+      { name: "Robotics Automation", favicon: "/favicons/robotics-automation.png", website: "https://www.roboticsautomationai.com" },
+      { name: "Energy Management", favicon: "/favicons/manufacturing-energy.png", website: "https://www.manufacturing-energyai.com" },
+      { name: "Safety Monitoring", favicon: "/favicons/safety-monitoring.png", website: "https://www.safetymonitoringai.com" },
+      { name: "Inventory Tracking", favicon: "/favicons/manufacturing-inventory.png", website: "https://www.manufacturing-inventoryai.com" },
+      { name: "Production Planning", favicon: "/favicons/production-planning.png", website: "https://www.productionplanningai.com" },
+      { name: "Digital Twins", favicon: "/favicons/digital-twins.png", website: "https://www.digitaltwinsai.com" },
+    ]
+  },
+  {
+    name: "AI for Transportation & Logistics",
+    icon: "🚗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Route Optimization", favicon: "/favicons/route-optimization.png", website: "https://www.routeoptimizationai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+      { name: "Autonomous Vehicles", favicon: "/favicons/autonomous-vehicles.png", website: "https://www.autonomousvehiclesai.com" },
+      { name: "Traffic Prediction", favicon: "/favicons/traffic-prediction.png", website: "https://www.trafficpredictionai.com" },
+      { name: "Supply Chain Visibility", favicon: "/favicons/supply-chain-visibility.png", website: "https://www.supplychainvisibilityai.com" },
+      { name: "Warehouse Automation", favicon: "/favicons/warehouse-automation.png", website: "https://www.warehouseautomationai.com" },
+      { name: "Delivery Optimization", favicon: "/favicons/delivery-optimization.png", website: "https://www.deliveryoptimizationai.com" },
+      { name: "Fuel Management", favicon: "/favicons/fuel-management.png", website: "https://www.fuelmanagementai.com" },
+      { name: "Driver Safety", favicon: "/favicons/driver-safety.png", website: "https://www.driversafetyai.com" },
+      { name: "Load Planning", favicon: "/favicons/load-planning.png", website: "https://www.loadplanningai.com" },
+    ]
+  },
+  {
+    name: "AI for Cybersecurity & Privacy",
+    icon: "🔒",
+    toolCount: 10,
+    subcategories: [
+      { name: "Threat Detection", favicon: "/favicons/threat-detection.png", website: "https://www.threatdetectionai.com" },
+      { name: "Network Security", favicon: "/favicons/network-security.png", website: "https://www.networksecurityai.com" },
+      { name: "Data Encryption", favicon: "/favicons/data-encryption.png", website: "https://www.dataencryptionai.com" },
+      { name: "Identity Management", favicon: "/favicons/identity-management.png", website: "https://www.identitymanagementai.com" },
+      { name: "Vulnerability Assessment", favicon: "/favicons/vulnerability-assessment.png", website: "https://www.vulnerabilityassessmentai.com" },
+      { name: "Incident Response", favicon: "/favicons/incident-response.png", website: "https://www.incidentresponseai.com" },
+      { name: "Compliance Monitoring", favicon: "/favicons/compliance-monitoring.png", website: "https://www.compliancemonitoringai.com" },
+      { name: "Malware Analysis", favicon: "/favicons/malware-analysis.png", website: "https://www.malwareanalysisai.com" },
+      { name: "Security Automation", favicon: "/favicons/security-automation.png", website: "https://www.securityautomationai.com" },
+      { name: "Privacy Protection", favicon: "/favicons/privacy-protection.png", website: "https://www.privacyprotectionai.com" },
+    ]
+  },
+  {
+    name: "AI for Human Resources",
+    icon: "👥",
+    toolCount: 10,
+    subcategories: [
+      { name: "Recruitment & Hiring", favicon: "/favicons/recruitment-hiring.png", website: "https://www.recruitmenthiringai.com" },
+      { name: "Employee Onboarding", favicon: "/favicons/employee-onboarding.png", website: "https://www.employeeonboardingai.com" },
+      { name: "Performance Management", favicon: "/favicons/performance-management.png", website: "https://www.performancemanagementai.com" },
+      { name: "Learning & Development", favicon: "/favicons/learning-development.png", website: "https://www.learningdevelopmentai.com" },
+      { name: "Employee Engagement", favicon: "/favicons/employee-engagement.png", website: "https://www.employeeengagementai.com" },
+      { name: "Workforce Analytics", favicon: "/favicons/workforce-analytics.png", website: "https://www.workforceanalyticsai.com" },
+      { name: "Compensation Planning", favicon: "/favicons/compensation-planning.png", website: "https://www.compensationplanningai.com" },
+      { name: "Talent Management", favicon: "/favicons/talent-management.png", website: "https://www.talentmanagementai.com" },
+      { name: "Diversity & Inclusion", favicon: "/favicons/diversity-inclusion.png", website: "https://www.diversityinclusionai.com" },
+      { name: "HR Compliance", favicon: "/favicons/hr-compliance.png", website: "https://www.hrcomplianceai.com" },
+    ]
+  },
+  {
+    name: "AI for Customer Service",
+    icon: "客户服务",
+    toolCount: 10,
+    subcategories: [
+      { name: "Chatbots & Virtual Assistants", favicon: "/favicons/chatbots-virtual-assistants.png", website: "https://www.chatbotsvirtualassistantsai.com" },
+      { name: "Voice Assistants", favicon: "/favicons/voice-assistants.png", website: "https://www.voiceassistantsai.com" },
+      { name: "Ticket Management", favicon: "/favicons/ticket-management.png", website: "https://www.ticketmanagementai.com" },
+      { name: "Sentiment Analysis", favicon: "/favicons/sentiment-analysis.png", website: "https://www.sentimentanalysisai.com" },
+      { name: "Knowledge Management", favicon: "/favicons/knowledge-management.png", website: "https://www.knowledgemanagementai.com" },
+      { name: "Customer Feedback", favicon: "/favicons/customer-feedback.png", website: "https://www.customerfeedbackai.com" },
+      { name: "Omnichannel Support", favicon: "/favicons/omnichannel-support.png", website: "https://www.omnichannelsupportai.com" },
+      { name: "Self-Service Portals", favicon: "/favicons/self-service-portals.png", website: "https://www.selfserviceportalsai.com" },
+      { name: "Quality Assurance", favicon: "/favicons/quality-assurance.png", website: "https://www.qualityassuranceai.com" },
+      { name: "Customer Analytics", favicon: "/favicons/customer-analytics.png", website: "https://www.customeranalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Marketing & Advertising",
+    icon: "📢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Campaign Optimization", favicon: "/favicons/campaign-optimization.png", website: "https://www.campaignoptimizationai.com" },
+      { name: "Audience Targeting", favicon: "/favicons/audience-targeting.png", website: "https://www.audiencetargetingai.com" },
+      { name: "Content Personalization", favicon: "/favicons/content-personalization.png", website: "https://www.contentpersonalizationai.com" },
+      { name: "Lead Generation", favicon: "/favicons/lead-generation.png", website: "https://www.leadgenerationai.com" },
+      { name: "Social Media Management", favicon: "/favicons/social-media-management.png", website: "https://www.socialmediamanagementai.com" },
+      { name: "Email Marketing", favicon: "/favicons/email-marketing.png", website: "https://www.emailmarketingai.com" },
+      { name: "Brand Monitoring", favicon: "/favicons/brand-monitoring.png", website: "https://www.brandmonitoringai.com" },
+      { name: "Marketing Analytics", favicon: "/favicons/marketing-analytics.png", website: "https://www.marketinganalyticsai.com" },
+      { name: "Ad Performance", favicon: "/favicons/ad-performance.png", website: "https://www.adperformanceai.com" },
+      { name: "Customer Segmentation", favicon: "/favicons/customer-segmentation.png", website: "https://www.customersegmentationai.com" },
+    ]
+  },
+  {
+    name: "AI for Research & Development",
+    icon: "🔬",
+    toolCount: 10,
+    subcategories: [
+      { name: "Drug Discovery", favicon: "/favicons/drug-discovery.png", website: "https://www.drugdiscoveryai.com" },
+      { name: "Material Science", favicon: "/favicons/material-science.png", website: "https://www.materialscienceai.com" },
+      { name: "Hypothesis Testing", favicon: "/favicons/hypothesis-testing.png", website: "https://www.hypothesistestingai.com" },
+      { name: "Experimental Design", favicon: "/favicons/experimental-design.png", website: "https://www.experimentaldesignai.com" },
+      { name: "Data Analysis", favicon: "/favicons/research-data-analysis.png", website: "https://www.researchdataanalysisai.com" },
+      { name: "Literature Review", favicon: "/favicons/literature-review.png", website: "https://www.literaturereviewai.com" },
+      { name: "Patent Analysis", favicon: "/favicons/patent-analysis.png", website: "https://www.patentanalysisai.com" },
+      { name: "Research Collaboration", favicon: "/favicons/research-collaboration.png", website: "https://www.researchcollaborationai.com" },
+      { name: "Simulation & Modeling", favicon: "/favicons/research-simulation.png", website: "https://www.researchsimulationai.com" },
+      { name: "Innovation Management", favicon: "/favicons/innovation-management.png", website: "https://www.innovationmanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Sports & Fitness",
+    icon: "⚽",
+    toolCount: 10,
+    subcategories: [
+      { name: "Performance Analytics", favicon: "/favicons/performance-analytics.png", website: "https://www.performanceanalyticsai.com" },
+      { name: "Injury Prevention", favicon: "/favicons/injury-prevention.png", website: "https://www.injurypreventionai.com" },
+      { name: "Training Optimization", favicon: "/favicons/training-optimization.png", website: "https://www.trainingoptimizationai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/nutrition-planning.png", website: "https://www.nutritionplanningai.com" },
+      { name: "Fan Engagement", favicon: "/favicons/fan-engagement.png", website: "https://www.fanengagementai.com" },
+      { name: "Sports Broadcasting", favicon: "/favicons/sports-broadcasting.png", website: "https://www.sportsbroadcastingai.com" },
+      { name: "Team Strategy", favicon: "/favicons/team-strategy.png", website: "https://www.teamstrategyai.com" },
+      { name: "Athlete Recruitment", favicon: "/favicons/athlete-recruitment.png", website: "https://www.athleterecruitmentai.com" },
+      { name: "Wearable Technology", favicon: "/favicons/wearable-technology.png", website: "https://www.wearabletechnologyai.com" },
+      { name: "Sports Medicine", favicon: "/favicons/sports-medicine.png", website: "https://www.sportsmedicineai.com" },
+    ]
+  },
+  {
+    name: "AI for Travel & Tourism",
+    icon: "✈️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Personalized Travel Planning", favicon: "/favicons/personalized-travel.png", website: "https://www.personalizedtravelai.com" },
+      { name: "Dynamic Pricing", favicon: "/favicons/dynamic-pricing.png", website: "https://www.dynamicpricingai.com" },
+      { name: "Customer Service Chatbots", favicon: "/favicons/travel-chatbots.png", website: "https://www.travelchatbotsai.com" },
+      { name: "Destination Recommendations", favicon: "/favicons/destination-recommendations.png", website: "https://www.destinationrecommendationsai.com" },
+      { name: "Tourist Behavior Analysis", favicon: "/favicons/tourist-behavior.png", website: "https://www.touristbehaviorai.com" },
+      { name: "Language Translation", favicon: "/favicons/language-translation.png", website: "https://www.languagetranslationai.com" },
+      { name: "Travel Safety", favicon: "/favicons/travel-safety.png", website: "https://www.travelsafetyai.com" },
+      { name: "Luggage Tracking", favicon: "/favicons/luggage-tracking.png", website: "https://www.luggagetrackingai.com" },
+      { name: "Local Experience Curation", favicon: "/favicons/local-experience.png", website: "https://www.localexperienceai.com" },
+      { name: "Sustainable Tourism", favicon: "/favicons/sustainable-tourism.png", website: "https://www.sustainabletourismai.com" },
+    ]
+  },
+  {
+    name: "AI for Real Estate & Construction",
+    icon: "🏗️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Property Valuation", favicon: "/favicons/property-valuation.png", website: "https://www.propertyvaluationai.com" },
+      { name: "Virtual Property Tours", favicon: "/favicons/virtual-tours.png", website: "https://www.virtualtoursai.com" },
+      { name: "Construction Planning", favicon: "/favicons/construction-planning.png", website: "https://www.constructionplanningai.com" },
+      { name: "Building Design Optimization", favicon: "/favicons/design-optimization.png", website: "https://www.designoptimizationai.com" },
+      { name: "Facility Management", favicon: "/favicons/facility-management.png", website: "https://www.facilitymanagementai.com" },
+      { name: "Energy Efficiency", favicon: "/favicons/real-estate-energy.png", website: "https://www.realestateenergyai.com" },
+      { name: "Tenant Screening", favicon: "/favicons/tenant-screening.png", website: "https://www.tenantscreeningai.com" },
+      { name: "Market Analysis", favicon: "/favicons/market-analysis.png", website: "https://www.marketalysiai.com" },
+      { name: "Smart Building Automation", favicon: "/favicons/building-automation.png", website: "https://www.buildingautomationai.com" },
+      { name: "Property Management", favicon: "/favicons/property-management.png", website: "https://www.propertymanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Event Management",
+    icon: "🎉",
+    toolCount: 10,
+    subcategories: [
+      { name: "Event Planning", favicon: "/favicons/event-planning.png", website: "https://www.eventplanningai.com" },
+      { name: "Attendee Registration", favicon: "/favicons/attendee-registration.png", website: "https://www.attendeeregistrationai.com" },
+      { name: "Venue Selection", favicon: "/favicons/venue-selection.png", website: "https://www.venueselectionai.com" },
+      { name: "Guest Experience", favicon: "/favicons/guest-experience.png", website: "https://www.guestexperienceai.com" },
+      { name: "Event Marketing", favicon: "/favicons/event-marketing.png", website: "https://www.eventmarketingai.com" },
+      { name: "Live Event Support", favicon: "/favicons/live-event-support.png", website: "https://www.liveeventsupportai.com" },
+      { name: "Networking Facilitation", favicon: "/favicons/networking-facilitation.png", website: "https://www.networkingfacilitationai.com" },
+      { name: "Event Analytics", favicon: "/favicons/event-analytics.png", website: "https://www.eventanalyticsai.com" },
+      { name: "Crowd Management", favicon: "/favicons/crowd-management.png", website: "https://www.crowdmanagementai.com" },
+      { name: "Post-Event Follow-up", favicon: "/favicons/post-event-followup.png", website: "https://www.posteventfollowupai.com" },
+    ]
+  },
+  {
+    name: "AI for Personal Finance",
+    icon: "💰",
+    toolCount: 10,
+    subcategories: [
+      { name: "Budget Planning", favicon: "/favicons/budget-planning.png", website: "https://www.budgetplanningai.com" },
+      { name: "Investment Advice", favicon: "/favicons/investment-advice.png", website: "https://www.investmentadviceai.com" },
+      { name: "Expense Tracking", favicon: "/favicons/expense-tracking.png", website: "https://www.expensetrackingai.com" },
+      { name: "Credit Score Monitoring", favicon: "/favicons/credit-score-monitoring.png", website: "https://www.creditscoremonitoringai.com" },
+      { name: "Financial Goal Setting", favicon: "/favicons/financial-goal-setting.png", website: "https://www.financialgoalsettingai.com" },
+      { name: "Tax Optimization", favicon: "/favicons/tax-optimization.png", website: "https://www.taxoptimizationai.com" },
+      { name: "Insurance Comparison", favicon: "/favicons/insurance-comparison.png", website: "https://www.insurancecomparisonai.com" },
+      { name: "Retirement Planning", favicon: "/favicons/retirement-planning.png", website: "https://www.retirementplanningai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/personal-finance-fraud.png", website: "https://www.personalfinancefraudai.com" },
+      { name: "Financial Education", favicon: "/favicons/financial-education.png", website: "https://www.financialeducationai.com" },
+    ]
+  },
+  {
+    name: "AI for Mental Health & Wellness",
+    icon: "🧠",
+    toolCount: 10,
+    subcategories: [
+      { name: "Therapy Assistance", favicon: "/favicons/therapy-assistance.png", website: "https://www.therapyassistanceai.com" },
+      { name: "Mood Tracking", favicon: "/favicons/mood-tracking.png", website: "https://www.moodtrackingai.com" },
+      { name: "Stress Management", favicon: "/favicons/stress-management.png", website: "https://www.stressmanagementai.com" },
+      { name: "Sleep Optimization", favicon: "/favicons/sleep-optimization.png", website: "https://www.sleepoptimizationai.com" },
+      { name: "Mindfulness & Meditation", favicon: "/favicons/mindfulness-meditation.png", website: "https://www.mindfulnessmeditationai.com" },
+      { name: "Cognitive Behavioral Therapy", favicon: "/favicons/cbt.png", website: "https://www.cbtaicom" },
+      { name: "Addiction Recovery", favicon: "/favicons/addiction-recovery.png", website: "https://www.addictionrecoveryai.com" },
+      { name: "Anxiety Management", favicon: "/favicons/anxiety-management.png", website: "https://www.anxietymgmtai.com" },
+      { name: "Depression Support", favicon: "/favicons/depression-support.png", website: "https://www.depressionsupportai.com" },
+      { name: "Emotional Intelligence", favicon: "/favicons/emotional-intelligence.png", website: "https://www.emotionalintelligenceai.com" },
+    ]
+  },
+  {
+    name: "AI for Automotive & Vehicles",
+    icon: "🚗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Autonomous Driving", favicon: "/favicons/autonomous-driving.png", website: "https://www.autonomousdrivingai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/vehicle-predictive-maintenance.png", website: "https://www.vehiclepredictivemaintenanceai.com" },
+      { name: "Fuel Efficiency Optimization", favicon: "/favicons/fuel-efficiency.png", website: "https://www.fuelefficiencyai.com" },
+      { name: "Driver Behavior Analysis", favicon: "/favicons/driver-behavior.png", website: "https://www.driverbehaviorai.com" },
+      { name: "Vehicle Diagnostics", favicon: "/favicons/vehicle-diagnostics.png", website: "https://www.vehiclediagnosticsai.com" },
+      { name: "Traffic Pattern Analysis", favicon: "/favicons/traffic-analysis.png", website: "https://www.trafficanalysisai.com" },
+      { name: "Route Optimization", favicon: "/favicons/vehicle-route-optimization.png", website: "https://www.vehiclerouteoptimizationai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+      { name: "Car Insurance Optimization", favicon: "/favicons/car-insurance.png", website: "https://www.carinsuranceai.com" },
+      { name: "Vehicle Security", favicon: "/favicons/vehicle-security.png", website: "https://www.vehiclesecurityai.com" },
+    ]
+  },
+  {
+    name: "AI for Energy & Utilities",
+    icon: "⚡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Smart Grid Management", favicon: "/favicons/smart-grid.png", website: "https://www.smartgridai.com" },
+      { name: "Renewable Energy Optimization", favicon: "/favicons/renewable-energy-optimization.png", website: "https://www.renewableenergyoptimizationai.com" },
+      { name: "Energy Consumption Analytics", favicon: "/favicons/energy-analytics.png", website: "https://www.energyanalyticsai.com" },
+      { name: "Predictive Equipment Maintenance", favicon: "/favicons/energy-predictive-maintenance.png", website: "https://www.energypredictivemaintenanceai.com" },
+      { name: "Demand Response Management", favicon: "/favicons/demand-response.png", website: "https://www.demandresponseai.com" },
+      { name: "Energy Storage Optimization", favicon: "/favicons/energy-storage.png", website: "https://www.energystorageai.com" },
+      { name: "Utility Customer Service", favicon: "/favicons/utility-customer-service.png", website: "https://www.utilitycustomerserviceai.com" },
+      { name: "Grid Stability Monitoring", favicon: "/favicons/grid-stability.png", website: "https://www.gridstabilityai.com" },
+      { name: "Energy Trading", favicon: "/favicons/energy-trading.png", website: "https://www.energytradingai.com" },
+      { name: "Carbon Footprint Tracking", favicon: "/favicons/carbon-footprint-tracking.png", website: "https://www.carbonfootprinttrackingai.com" },
+    ]
+  },
+  {
+    name: "AI for Telecommunications",
+    icon: "📡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Network Optimization", favicon: "/favicons/network-optimization.png", website: "https://www.networkoptimizationai.com" },
+      { name: "Customer Experience Management", favicon: "/favicons/telecom-customer-experience.png", website: "https://www.telecomcustomerexperienceai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/telecom-fraud-detection.png", website: "https://www.telecomfrauddetectionai.com" },
+      { name: "Predictive Network Maintenance", favicon: "/favicons/network-maintenance.png", website: "https://www.networkmaintenanceai.com" },
+      { name: "Quality of Service Monitoring", favicon: "/favicons/qos-monitoring.png", website: "https://www.qosmonitoringai.com" },
+      { name: "Bandwidth Management", favicon: "/favicons/bandwidth-management.png", website: "https://www.bandwidthmanagementai.com" },
+      { name: "5G Network Management", favicon: "/favicons/5g-management.png", website: "https://www.5gmanagementai.com" },
+      { name: "IoT Device Management", favicon: "/favicons/telecom-iot-management.png", website: "https://www.telecomiotmanagementai.com" },
+      { name: "Voice & Data Analytics", favicon: "/favicons/voice-data-analytics.png", website: "https://www.voicedataanalyticsai.com" },
+      { name: "Network Security", favicon: "/favicons/telecom-network-security.png", website: "https://www.telecomnetworksecurityai.com" },
+    ]
+  },
+  {
+    name: "AI for Fashion & Apparel",
+    icon: "👗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Personalized Styling", favicon: "/favicons/personalized-styling.png", website: "https://www.personalizedstylingai.com" },
+      { name: "Trend Forecasting", favicon: "/favicons/trend-forecasting.png", website: "https://www.trendforecastingai.com" },
+      { name: "Virtual Fitting Rooms", favicon: "/favicons/virtual-fitting.png", website: "https://www.virtualfittingai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/fashion-supply-chain.png", website: "https://www.fashionsupplychainai.com" },
+      { name: "Inventory Management", favicon: "/favicons/fashion-inventory.png", website: "https://www.fashioninventoryai.com" },
+      { name: "Sustainable Fashion", favicon: "/favicons/sustainable-fashion.png", website: "https://www.sustainablefashionai.com" },
+      { name: "Customer Size Prediction", favicon: "/favicons/size-prediction.png", website: "https://www.sizepredictionai.com" },
+      { name: "Fashion Design Assistance", favicon: "/favicons/design-assistance.png", website: "https://www.designassistanceai.com" },
+      { name: "Brand Protection", favicon: "/favicons/brand-protection.png", website: "https://www.brandprotectionai.com" },
+      { name: "Social Media Analytics", favicon: "/favicons/fashion-social-analytics.png", website: "https://www.fashionsocialanalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Food & Beverage",
+    icon: "🍔",
+    toolCount: 10,
+    subcategories: [
+      { name: "Recipe Development", favicon: "/favicons/recipe-development.png", website: "https://www.recipedevelopmentai.com" },
+      { name: "Food Safety Monitoring", favicon: "/favicons/food-safety.png", website: "https://www.foodsafetyai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/food-supply-chain.png", website: "https://www.foodsupplychainai.com" },
+      { name: "Quality Control", favicon: "/favicons/food-quality-control.png", website: "https://www.foodqualitycontrolai.com" },
+      { name: "Nutritional Analysis", favicon: "/favicons/nutritional-analysis.png", website: "https://www.nutritionalanalysisai.com" },
+      { name: "Restaurant Management", favicon: "/favicons/restaurant-management.png", website: "https://www.restaurantmanagementai.com" },
+      { name: "Customer Preference Analysis", favicon: "/favicons/customer-preference.png", website: "https://www.customerpreferenceai.com" },
+      { name: "Waste Reduction", favicon: "/favicons/waste-reduction.png", website: "https://www.wastereductionai.com" },
+      { name: "Flavor Profiling", favicon: "/favicons/flavor-profiling.png", website: "https://www.flavorprofilingai.com" },
+      { name: "Dietary Planning", favicon: "/favicons/dietary-planning.png", website: "https://www.dietaryplanningai.com" },
+    ]
+  },
+  {
+    name: "AI for Pharmaceuticals",
+    icon: "💊",
+    toolCount: 10,
+    subcategories: [
+      { name: "Drug Discovery", favicon: "/favicons/drug-discovery.png", website: "https://www.drugdiscoveryai.com" },
+      { name: "Clinical Trials", favicon: "/favicons/clinical-trials.png", website: "https://www.clinicaltrialsai.com" },
+      { name: "Regulatory Compliance", favicon: "/favicons/regulatory-compliance.png", website: "https://www.regulatorycomplianceai.com" },
+      { name: "Manufacturing Optimization", favicon: "/favicons/pharma-manufacturing.png", website: "https://www.pharmamanufacturingai.com" },
+      { name: "Supply Chain Security", favicon: "/favicons/pharma-supply-chain.png", website: "https://www.pharmasupplychainai.com" },
+      { name: "Patient Adherence", favicon: "/favicons/patient-adherence.png", website: "https://www.patientadherenceai.com" },
+      { name: "Pharmacovigilance", favicon: "/favicons/pharmacovigilance.png", website: "https://www.pharmacovigilanceai.com" },
+      { name: "Personalized Medicine", favicon: "/favicons/personalized-medicine.png", website: "https://www.personalizedmedicineai.com" },
+      { name: "Drug Repurposing", favicon: "/favicons/drug-repurposing.png", website: "https://www.drugrepurposingai.com" },
+      { name: "Quality Assurance", favicon: "/favicons/pharma-quality.png", website: "https://www.pharmaqualityai.com" },
+    ]
+  },
+  {
+    name: "AI for Insurance",
+    icon: "📋",
+    toolCount: 10,
+    subcategories: [
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Claims Processing", favicon: "/favicons/claims-processing.png", website: "https://www.claimsprocessingai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/insurance-fraud.png", website: "https://www.insurancefraudai.com" },
+      { name: "Premium Calculation", favicon: "/favicons/premium-calculation.png", website: "https://www.premiumcalculationai.com" },
+      { name: "Customer Service", favicon: "/favicons/insurance-customer-service.png", website: "https://www.insurancecustomerserviceai.com" },
+      { name: "Underwriting Automation", favicon: "/favicons/underwriting-automation.png", website: "https://www.underwritingautomationai.com" },
+      { name: "Policy Management", favicon: "/favicons/policy-management.png", website: "https://www.policymanagementai.com" },
+      { name: "Actuarial Analysis", favicon: "/favicons/actuarial-analysis.png", website: "https://www.actuarialanalysisai.com" },
+      { name: "Loss Prevention", favicon: "/favicons/loss-prevention.png", website: "https://www.losspreventionai.com" },
+      { name: "Customer Retention", favicon: "/favicons/customer-retention.png", website: "https://www.customerretentionai.com" },
+    ]
+  },
+  {
+    name: "AI for Aerospace & Defense",
+    icon: "🚀",
+    toolCount: 10,
+    subcategories: [
+      { name: "Autonomous Systems", favicon: "/favicons/autonomous-systems.png", website: "https://www.autonomoussystemsai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/aerospace-maintenance.png", website: "https://www.aerospacemaintenanceai.com" },
+      { name: "Flight Optimization", favicon: "/favicons/flight-optimization.png", website: "https://www.flightoptimizationai.com" },
+      { name: "Surveillance & Reconnaissance", favicon: "/favicons/surveillance-reconnaissance.png", website: "https://www.surveillancereconnaissanceai.com" },
+      { name: "Cybersecurity", favicon: "/favicons/aerospace-cybersecurity.png", website: "https://www.aerospacybersecurityai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/aerospace-supply-chain.png", website: "https://www.aerospacesupplychainai.com" },
+      { name: "Mission Planning", favicon: "/favicons/mission-planning.png", website: "https://www.missionplanningai.com" },
+      { name: "Satellite Operations", favicon: "/favicons/satellite-operations.png", website: "https://www.satelliteoperationsai.com" },
+      { name: "Threat Detection", favicon: "/favicons/threat-detection.png", website: "https://www.threatdetectionai.com" },
+      { name: "Training Simulation", favicon: "/favicons/training-simulation.png", website: "https://www.trainingsimulationai.com" },
+    ]
+  },
+  {
+    name: "AI for Maritime & Shipping",
+    icon: "🚢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Route Optimization", favicon: "/favicons/maritime-route-optimization.png", website: "https://www.maritimerouteoptimizationai.com" },
+      { name: "Port Operations", favicon: "/favicons/port-operations.png", website: "https://www.portoperationsai.com" },
+      { name: "Cargo Tracking", favicon: "/favicons/cargo-tracking.png", website: "https://www.cargotrackingai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/maritime-maintenance.png", website: "https://www.maritimagemaintenanceai.com" },
+      { name: "Weather Navigation", favicon: "/favicons/weather-navigation.png", website: "https://www.weathernavigationai.com" },
+      { name: "Fuel Efficiency", favicon: "/favicons/maritime-fuel-efficiency.png", website: "https://www.maritimefuelefficiencyai.com" },
+      { name: "Safety Monitoring", favicon: "/favicons/maritime-safety.png", website: "https://www.maritimesafetyai.com" },
+      { name: "Crew Management", favicon: "/favicons/crew-management.png", website: "https://www.crewmanagementai.com" },
+      { name: "Customs Compliance", favicon: "/favicons/customs-compliance.png", website: "https://www.customscomplianceai.com" },
+      { name: "Environmental Monitoring", favicon: "/favicons/maritime-environmental.png", website: "https://www.maritimeenvironmentalai.com" },
+    ]
+  },
+  {
+    name: "AI for Biotechnology",
+    icon: "🧬",
+    toolCount: 10,
+    subcategories: [
+      { name: "Genomic Analysis", favicon: "/favicons/genomic-analysis.png", website: "https://www.genomicanalysisai.com" },
+      { name: "Protein Engineering", favicon: "/favicons/protein-engineering.png", website: "https://www.proteinengineeringai.com" },
+      { name: "Drug Target Identification", favicon: "/favicons/drug-target.png", website: "https://www.drugtargetai.com" },
+      { name: "Biomarker Discovery", favicon: "/favicons/biomarker-discovery.png", website: "https://www.biomarkerdiscoveryai.com" },
+      { name: "Molecular Modeling", favicon: "/favicons/molecular-modeling.png", website: "https://www.molecularmodelingai.com" },
+      { name: "Gene Therapy", favicon: "/favicons/gene-therapy.png", website: "https://www.genetherapyai.com" },
+      { name: "Synthetic Biology", favicon: "/favicons/synthetic-biology.png", website: "https://www.syntheticbiologyai.com" },
+      { name: "Bioinformatics", favicon: "/favicons/bioinformatics.png", website: "https://www.bioinformaticsai.com" },
+      { name: "Clinical Diagnostics", favicon: "/favicons/clinical-diagnostics.png", website: "https://www.clinicaldiagnosticsai.com" },
+      { name: "Bioprocess Optimization", favicon: "/favicons/bioprocess-optimization.png", website: "https://www.bioprocessoptimizationai.com" },
+    ]
+  },
+  {
+    name: "AI for Construction & Engineering",
+    icon: "🏗️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Project Planning", favicon: "/favicons/project-planning.png", website: "https://www.projectplanningai.com" },
+      { name: "Structural Analysis", favicon: "/favicons/structural-analysis.png", website: "https://www.structuralanalysisai.com" },
+      { name: "Safety Monitoring", favicon: "/favicons/construction-safety.png", website: "https://www.constructionsafetyai.com" },
+      { name: "Quality Control", favicon: "/favicons/construction-quality.png", website: "https://www.constructionqualityai.com" },
+      { name: "Resource Management", favicon: "/favicons/resource-management.png", website: "https://www.resourcemanagementai.com" },
+      { name: "Cost Estimation", favicon: "/favicons/cost-estimation.png", website: "https://www.costestimationai.com" },
+      { name: "Equipment Maintenance", favicon: "/favicons/equipment-maintenance.png", website: "https://www.equipmentmaintenanceai.com" },
+      { name: "Site Surveying", favicon: "/favicons/site-surveying.png", website: "https://www.sitesurveyingai.com" },
+      { name: "Environmental Impact", favicon: "/favicons/environmental-impact.png", website: "https://www.environmentalimpactai.com" },
+      { name: "Building Information Modeling", favicon: "/favicons/bim.png", website: "https://www.bimai.com" },
+    ]
+  },
+  {
+    name: "AI for Logistics & Supply Chain",
+    icon: "📦",
+    toolCount: 10,
+    subcategories: [
+      { name: "Demand Forecasting", favicon: "/favicons/demand-forecasting.png", website: "https://www.demandforecastingai.com" },
+      { name: "Inventory Optimization", favicon: "/favicons/inventory-optimization.png", website: "https://www.inventoryoptimizationai.com" },
+      { name: "Warehouse Automation", favicon: "/favicons/warehouse-automation.png", website: "https://www.warehouseautomationai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+      { name: "Last Mile Delivery", favicon: "/favicons/last-mile-delivery.png", website: "https://www.lastmiledeliveryai.com" },
+      { name: "Supplier Risk Management", favicon: "/favicons/supplier-risk.png", website: "https://www.supplierriskai.com" },
+      { name: "Customs Compliance", favicon: "/favicons/customs-compliance.png", website: "https://www.customscomplianceai.com" },
+      { name: "Reverse Logistics", favicon: "/favicons/reverse-logistics.png", website: "https://www.reverselogisticsai.com" },
+      { name: "Cold Chain Management", favicon: "/favicons/cold-chain.png", website: "https://www.coldchainai.com" },
+      { name: "Supply Chain Visibility", favicon: "/favicons/supply-chain-visibility.png", website: "https://www.supplychainvisibilityai.com" },
+    ]
+  },
+  {
+    name: "AI for Utilities & Public Services",
+    icon: "🏢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Water Management", favicon: "/favicons/water-management.png", website: "https://www.watermanagementai.com" },
+      { name: "Waste Management", favicon: "/favicons/waste-management.png", website: "https://www.wastemanagementai.com" },
+      { name: "Electric Grid Optimization", favicon: "/favicons/electric-grid.png", website: "https://www.electricgridai.com" },
+      { name: "Public Transportation", favicon: "/favicons/public-transportation.png", website: "https://www.publictransportationai.com" },
+      { name: "Emergency Services", favicon: "/favicons/emergency-services.png", website: "https://www.emergencyservicesai.com" },
+      { name: "Street Lighting", favicon: "/favicons/street-lighting.png", website: "https://www.streetlightingai.com" },
+      { name: "Public Safety", favicon: "/favicons/public-safety.png", website: "https://www.publicsafetyai.com" },
+      { name: "Municipal Planning", favicon: "/favicons/municipal-planning.png", website: "https://www.municipalplanningai.com" },
+      { name: "Energy Distribution", favicon: "/favicons/energy-distribution.png", website: "https://www.energydistributionai.com" },
+      { name: "Infrastructure Maintenance", favicon: "/favicons/infrastructure-maintenance.png", website: "https://www.infrastructuremaintenanceai.com" },
+    ]
+  },
+  {
+    name: "AI for Art & Design",
+    icon: "🎨",
+    toolCount: 10,
+    subcategories: [
+      { name: "Digital Art Creation", favicon: "/favicons/digital-art.png", website: "https://www.digitalartai.com" },
+      { name: "Graphic Design", favicon: "/favicons/graphic-design.png", website: "https://www.graphicdesignai.com" },
+      { name: "3D Modeling", favicon: "/favicons/3d-modeling.png", website: "https://www.3dmodelingai.com" },
+      { name: "Animation", favicon: "/favicons/animation.png", website: "https://www.animationai.com" },
+      { name: "Typography", favicon: "/favicons/typography.png", website: "https://www.typographyai.com" },
+      { name: "Color Palette Generation", favicon: "/favicons/color-palette.png", website: "https://www.colorpaletteai.com" },
+      { name: "UI/UX Design", favicon: "/favicons/ui-ux-design.png", website: "https://www.uiuxdesignai.com" },
+      { name: "Photography Enhancement", favicon: "/favicons/photography-enhancement.png", website: "https://www.photographyenhancementai.com" },
+      { name: "Fashion Design", favicon: "/favicons/fashion-design.png", website: "https://www.fashiondesignai.com" },
+      { name: "Interior Design", favicon: "/favicons/interior-design.png", website: "https://www.interiordesignai.com" },
+    ]
+  },
+  {
+    name: "AI for Space Exploration",
+    icon: "🚀",
+    toolCount: 10,
+    subcategories: [
+      { name: "Satellite Operations", favicon: "/favicons/satellite-operations.png", website: "https://www.satelliteoperationsai.com" },
+      { name: "Mission Planning", favicon: "/favicons/mission-planning.png", website: "https://www.missionplanningai.com" },
+      { name: "Spacecraft Autonomy", favicon: "/favicons/spacecraft-autonomy.png", website: "https://www.spacecraftautonomyai.com" },
+      { name: "Astronomical Data Analysis", favicon: "/favicons/astronomical-data.png", website: "https://www.astronomicaldataai.com" },
+      { name: "Planetary Science", favicon: "/favicons/planetary-science.png", website: "https://www.planetaryscienceai.com" },
+      { name: "Space Communications", favicon: "/favicons/space-communications.png", website: "https://www.spacecommunicationsai.com" },
+      { name: "Orbital Mechanics", favicon: "/favicons/orbital-mechanics.png", website: "https://www.orbitalmechanicsai.com" },
+      { name: "Astrobiology", favicon: "/favicons/astrobiology.png", website: "https://www.astrobiologyai.com" },
+      { name: "Space Weather Monitoring", favicon: "/favicons/space-weather.png", website: "https://www.spaceweatherai.com" },
+      { name: "Exoplanet Discovery", favicon: "/favicons/exoplanet-discovery.png", website: "https://www.exoplanetdiscoveryai.com" },
+    ]
+  },
+  {
+    name: "AI for Quantum Computing",
+    icon: "⚛️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Quantum Algorithm Design", favicon: "/favicons/quantum-algorithm.png", website: "https://www.quantumalgorithmAI.com" },
+      { name: "Quantum Error Correction", favicon: "/favicons/quantum-error.png", website: "https://www.quantumerrorai.com" },
+      { name: "Quantum Simulation", favicon: "/favicons/quantum-simulation.png", website: "https://www.quantumsimulationai.com" },
+      { name: "Quantum Cryptography", favicon: "/favicons/quantum-cryptography.png", website: "https://www.quantumcryptographyai.com" },
+      { name: "Quantum Machine Learning", favicon: "/favicons/quantum-ml.png", website: "https://www.quantummlai.com" },
+      { name: "Quantum Hardware Development", favicon: "/favicons/quantum-hardware.png", website: "https://www.quantumhardwareai.com" },
+      { name: "Quantum Software Development", favicon: "/favicons/quantum-software.png", website: "https://www.quantumsoftwareai.com" },
+      { name: "Quantum Networking", favicon: "/favicons/quantum-networking.png", website: "https://www.quantumnetworkingai.com" },
+      { name: "Quantum Optimization", favicon: "/favicons/quantum-optimization.png", website: "https://www.quantumoptimizationai.com" },
+      { name: "Quantum Sensing", favicon: "/favicons/quantum-sensing.png", website: "https://www.quantumsensingai.com" },
+    ]
+  },
+  {
+    name: "AI for Nanotechnology",
+    icon: "🔬",
+    toolCount: 10,
+    subcategories: [
+      { name: "Nanomaterial Design", favicon: "/favicons/nanomaterial-design.png", website: "https://www.nanomaterialdesignai.com" },
+      { name: "Nanofabrication", favicon: "/favicons/nanofabrication.png", website: "https://www.nanofabricationai.com" },
+      { name: "Nanomedicine", favicon: "/favicons/nanomedicine.png", website: "https://www.nanomedicineai.com" },
+      { name: "Nanosensors", favicon: "/favicons/nanosensors.png", website: "https://www.nanosensorsai.com" },
+      { name: "Nanorobotics", favicon: "/favicons/nanorobotics.png", website: "https://www.nanoroboticsai.com" },
+      { name: "Molecular Manufacturing", favicon: "/favicons/molecular-manufacturing.png", website: "https://www.molecularmanufacturingai.com" },
+      { name: "Nanoelectronics", favicon: "/favicons/nanoelectronics.png", website: "https://www.nanoelectronicsai.com" },
+      { name: "Nanotoxicology", favicon: "/favicons/nanotoxicology.png", website: "https://www.nanotoxicologyai.com" },
+      { name: "Nanoenergy", favicon: "/favicons/nanoenergy.png", website: "https://www.nanoenergyai.com" },
+      { name: "Nanophotonics", favicon: "/favicons/nanophotonics.png", website: "https://www.nanophotonicsai.com" },
+    ]
+  },
+  {
+    name: "AI for Renewable Energy",
+    icon: "♻️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Solar Power Optimization", favicon: "/favicons/solar-power.png", website: "https://www.solarpowerai.com" },
+      { name: "Wind Energy Management", favicon: "/favicons/wind-energy.png", website: "https://www.windenergyai.com" },
+      { name: "Hydroelectric Systems", favicon: "/favicons/hydroelectric.png", website: "https://www.hydroelectricsai.com" },
+      { name: "Geothermal Energy", favicon: "/favicons/geothermal.png", website: "https://www.geothermalai.com" },
+      { name: "Bioenergy Production", favicon: "/favicons/bioenergy.png", website: "https://www.bioenergyai.com" },
+      { name: "Energy Storage", favicon: "/favicons/energy-storage.png", website: "https://www.energystorageai.com" },
+      { name: "Smart Grids", favicon: "/favicons/smart-grids.png", website: "https://www.smartgridsai.com" },
+      { name: "Energy Efficiency", favicon: "/favicons/energy-efficiency.png", website: "https://www.energyefficiencyai.com" },
+      { name: "Carbon Capture", favicon: "/favicons/carbon-capture.png", website: "https://www.carboncaptureai.com" },
+      { name: "Sustainable Materials", favicon: "/favicons/sustainable-materials.png", website: "https://www.sustainablematerialsai.com" },
+    ]
+  },
+  {
+    name: "AI for Disaster Management",
+    icon: "🌪️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Early Warning Systems", favicon: "/favicons/early-warning.png", website: "https://www.earlywarningai.com" },
+      { name: "Emergency Response", favicon: "/favicons/emergency-response.png", website: "https://www.emergencyresponseai.com" },
+      { name: "Disaster Recovery", favicon: "/favicons/disaster-recovery.png", website: "https://www.disasterrecoveryai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Crisis Communication", favicon: "/favicons/crisis-communication.png", website: "https://www.crisiscommunicationai.com" },
+      { name: "Resource Allocation", favicon: "/favicons/resource-allocation.png", website: "https://www.resourceallocationai.com" },
+      { name: "Damage Assessment", favicon: "/favicons/damage-assessment.png", website: "https://www.damageassessmentai.com" },
+      { name: "Evacuation Planning", favicon: "/favicons/evacuation-planning.png", website: "https://www.evacuationplanningai.com" },
+      { name: "Infrastructure Resilience", favicon: "/favicons/infrastructure-resilience.png", website: "https://www.infrastuctureresilienceai.com" },
+      { name: "Humanitarian Aid", favicon: "/favicons/humanitarian-aid.png", website: "https://www.humanitarianaidai.com" },
+    ]
+  },
+  {
+    name: "AI for Wildlife Conservation",
+    icon: "🐘",
+    toolCount: 10,
+    subcategories: [
+      { name: "Animal Tracking", favicon: "/favicons/animal-tracking.png", website: "https://www.animaltrackingai.com" },
+      { name: "Habitat Monitoring", favicon: "/favicons/habitat-monitoring.png", website: "https://www.habitatmonitoringai.com" },
+      { name: "Poaching Prevention", favicon: "/favicons/poaching-prevention.png", website: "https://www.poachingpreventionai.com" },
+      { name: "Species Identification", favicon: "/favicons/species-identification.png", website: "https://www.speciesidentificationai.com" },
+      { name: "Ecosystem Health", favicon: "/favicons/ecosystem-health.png", website: "https://www.ecosystemhealthai.com" },
+      { name: "Wildlife Corridors", favicon: "/favicons/wildlife-corridors.png", website: "https://www.wildlifecorridorsai.com" },
+      { name: "Population Dynamics", favicon: "/favicons/population-dynamics.png", website: "https://www.populationdynamicsai.com" },
+      { name: "Conservation Planning", favicon: "/favicons/conservation-planning.png", website: "https://www.conservationplanningai.com" },
+      { name: "Anti-Trafficking", favicon: "/favicons/anti-trafficking.png", website: "https://www.antitraffickingai.com" },
+      { name: "Biodiversity Assessment", favicon: "/favicons/biodiversity-assessment.png", website: "https://www.biodiversityassessmentai.com" },
+    ]
+  },
+  {
+    name: "AI for Ocean Exploration",
+    icon: "🌊",
+    toolCount: 10,
+    subcategories: [
+      { name: "Deep Sea Mapping", favicon: "/favicons/deep-sea-mapping.png", website: "https://www.deepseamappingai.com" },
+      { name: "Marine Life Tracking", favicon: "/favicons/marine-life-tracking.png", website: "https://www.marinelifetrackingai.com" },
+      { name: "Ocean Current Analysis", favicon: "/favicons/ocean-current-analysis.png", website: "https://www.oceancurrentanalysisai.com" },
+      { name: "Coral Reef Monitoring", favicon: "/favicons/coral-reef-monitoring.png", website: "https://www.coralreefmonitoringai.com" },
+      { name: "Pollution Detection", favicon: "/favicons/pollution-detection.png", website: "https://www.pollutiondetectionai.com" },
+      { name: "Submarine Navigation", favicon: "/favicons/submarine-navigation.png", website: "https://www.submarinenavigationai.com" },
+      { name: "Marine Species Classification", favicon: "/favicons/marine-species-classification.png", website: "https://www.marinespeciesclassificationai.com" },
+      { name: "Underwater Robotics", favicon: "/favicons/underwater-robotics.png", website: "https://www.underwaterroboticsai.com" },
+      { name: "Oceanographic Research", favicon: "/favicons/oceanographic-research.png", website: "https://www.oceanographicresearchai.com" },
+      { name: "Marine Conservation", favicon: "/favicons/marine-conservation.png", website: "https://www.marineconservationai.com" },
+    ]
+  },
+  {
+    name: "AI for Archaeology",
+    icon: "🏺",
+    toolCount: 10,
+    subcategories: [
+      { name: "Site Discovery", favicon: "/favicons/site-discovery.png", website: "https://www.sitediscoveryai.com" },
+      { name: "Artifact Analysis", favicon: "/favicons/artifact-analysis.png", website: "https://www.artifactanalysisai.com" },
+      { name: "Dating Techniques", favicon: "/favicons/dating-techniques.png", website: "https://www.datingtechniquesai.com" },
+      { name: "3D Reconstruction", favicon: "/favicons/3d-reconstruction.png", website: "https://www.3dreconstructionai.com" },
+      { name: "Excavation Planning", favicon: "/favicons/excavation-planning.png", website: "https://www.excavationplanningai.com" },
+      { name: "Cultural Heritage Preservation", favicon: "/favicons/cultural-heritage-preservation.png", website: "https://www.culturalheritagepreservationai.com" },
+      { name: "Ancient Text Deciphering", favicon: "/favicons/ancient-text-deciphering.png", website: "https://www.ancienttextdecipheringai.com" },
+      { name: "Geoarchaeology", favicon: "/favicons/geoarchaeology.png", website: "https://www.geoarchaeologyai.com" },
+      { name: "Remote Sensing", favicon: "/favicons/remote-sensing.png", website: "https://www.remotesensingai.com" },
+      { name: "Museum Curation", favicon: "/favicons/museum-curation.png", website: "https://www.museumcurationai.com" },
+    ]
+  },
+  {
+    name: "AI for Meteorology",
+    icon: "🌦️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Weather Prediction", favicon: "/favicons/weather-prediction.png", website: "https://www.weatherpredictionai.com" },
+      { name: "Climate Modeling", favicon: "/favicons/climate-modeling.png", website: "https://www.climatemodelingai.com" },
+      { name: "Severe Storm Tracking", favicon: "/favicons/severe-storm-tracking.png", website: "https://www.severestormtrackingai.com" },
+      { name: "Atmospheric Analysis", favicon: "/favicons/atmospheric-analysis.png", website: "https://www.atmosphericanalysisai.com" },
+      { name: "Satellite Data Processing", favicon: "/favicons/satellite-data-processing.png", website: "https://www.satellitedataprocessingai.com" },
+      { name: "Precipitation Forecasting", favicon: "/favicons/precipitation-forecasting.png", website: "https://www.precipitationforecastingai.com" },
+      { name: "Air Quality Monitoring", favicon: "/favicons/air-quality-monitoring.png", website: "https://www.airqualitymonitoringai.com" },
+      { name: "Drought Prediction", favicon: "/favicons/drought-prediction.png", website: "https://www.droughtpredictionai.com" },
+      { name: "Flood Risk Assessment", favicon: "/favicons/flood-risk-assessment.png", website: "https://www.floodriskassessmentai.com" },
+      { name: "Seasonal Forecasting", favicon: "/favicons/seasonal-forecasting.png", website: "https://www.seasonalforecastingai.com" },
+    ]
+  },
+  {
+    name: "AI for Veterinary Medicine",
+    icon: "🐾",
+    toolCount: 10,
+    subcategories: [
+      { name: "Animal Diagnostics", favicon: "/favicons/animal-diagnostics.png", website: "https://www.animaldiagnosticsai.com" },
+      { name: "Treatment Planning", favicon: "/favicons/treatment-planning.png", website: "https://www.treatmentplanningai.com" },
+      { name: "Surgical Assistance", favicon: "/favicons/surgical-assistance.png", website: "https://www.surgicalassistanceai.com" },
+      { name: "Preventive Care", favicon: "/favicons/preventive-care.png", website: "https://www.preventivecareai.com" },
+      { name: "Behavioral Analysis", favicon: "/favicons/behavioral-analysis.png", website: "https://www.behavioralanalysisai.com" },
+      { name: "Genetic Testing", favicon: "/favicons/genetic-testing.png", website: "https://www.genetictestingai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/nutrition-planning.png", website: "https://www.nutritionplanningai.com" },
+      { name: "Rehabilitation", favicon: "/favicons/rehabilitation.png", website: "https://www.rehabilitationai.com" },
+      { name: "Telemedicine", favicon: "/favicons/veterinary-telemedicine.png", website: "https://www.veterinarytelemedicineai.com" },
+      { name: "Population Health", favicon: "/favicons/population-health.png", website: "https://www.populationhealthai.com" },
+    ]
+  },
+  {
+    name: "AI for Mental Health",
+    icon: "🧠",
+    toolCount: 10,
+    subcategories: [
+      { name: "Therapy Assistance", favicon: "/favicons/therapy-assistance.png", website: "https://www.therapyassistanceai.com" },
+      { name: "Mood Tracking", favicon: "/favicons/mood-tracking.png", website: "https://www.moodtrackingai.com" },
+      { name: "Crisis Intervention", favicon: "/favicons/crisis-intervention.png", website: "https://www.crisisinterventionai.com" },
+      { name: "Stress Management", favicon: "/favicons/stress-management.png", website: "https://www.stressmanagementai.com" },
+      { name: "Sleep Optimization", favicon: "/favicons/sleep-optimization.png", website: "https://www.sleepoptimizationai.com" },
+      { name: "Addiction Recovery", favicon: "/favicons/addiction-recovery.png", website: "https://www.addictionrecoveryai.com" },
+      { name: "Cognitive Behavioral Therapy", favicon: "/favicons/cbt.png", website: "https://www.cbtaI.com" },
+      { name: "Mindfulness Training", favicon: "/favicons/mindfulness-training.png", website: "https://www.mindfulnesstrainingai.com" },
+      { name: "Social Anxiety Support", favicon: "/favicons/social-anxiety-support.png", website: "https://www.socialanxietysupportai.com" },
+      { name: "Depression Management", favicon: "/favicons/depression-management.png", website: "https://www.depressionmanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Sports Analytics",
+    icon: "⚽",
+    toolCount: 10,
+    subcategories: [
+      { name: "Player Performance", favicon: "/favicons/player-performance.png", website: "https://www.playerperformanceai.com" },
+      { name: "Team Strategy", favicon: "/favicons/team-strategy.png", website: "https://www.teamstrategyai.com" },
+      { name: "Injury Prevention", favicon: "/favicons/injury-prevention.png", website: "https://www.injurypreventionai.com" },
+      { name: "Game Simulation", favicon: "/favicons/game-simulation.png", website: "https://www.gamesimulationai.com" },
+      { name: "Fan Engagement", favicon: "/favicons/fan-engagement.png", website: "https://www.fanengagementai.com" },
+      { name: "Talent Scouting", favicon: "/favicons/talent-scouting.png", website: "https://www.talentscoutingai.com" },
+      { name: "Training Optimization", favicon: "/favicons/training-optimization.png", website: "https://www.trainingoptimizationai.com" },
+      { name: "Sports Betting", favicon: "/favicons/sports-betting.png", website: "https://www.sportsbettingai.com" },
+      { name: "Broadcast Enhancement", favicon: "/favicons/broadcast-enhancement.png", website: "https://www.broadcastenhancementai.com" },
+      { name: "Equipment Analytics", favicon: "/favicons/equipment-analytics.png", website: "https://www.equipmentanalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for Cybersecurity",
+    icon: "🔒",
+    toolCount: 10,
+    subcategories: [
+      { name: "Threat Detection", favicon: "/favicons/threat-detection.png", website: "https://www.threatdetectionai.com" },
+      { name: "Incident Response", favicon: "/favicons/incident-response.png", website: "https://www.incidentresponseai.com" },
+      { name: "Vulnerability Assessment", favicon: "/favicons/vulnerability-assessment.png", website: "https://www.vulnerabilityassessmentai.com" },
+      { name: "Identity Management", favicon: "/favicons/identity-management.png", website: "https://www.identitymanagementai.com" },
+      { name: "Network Security", favicon: "/favicons/network-security.png", website: "https://www.networksecurityai.com" },
+      { name: "Data Protection", favicon: "/favicons/data-protection.png", website: "https://www.dataprotectionai.com" },
+      { name: "Fraud Prevention", favicon: "/favicons/fraud-prevention.png", website: "https://www.fraudpreventionai.com" },
+      { name: "Security Monitoring", favicon: "/favicons/security-monitoring.png", website: "https://www.securitymonitoringai.com" },
+      { name: "Compliance Management", favicon: "/favicons/compliance-management.png", website: "https://www.compliancemanagementai.com" },
+      { name: "Penetration Testing", favicon: "/favicons/penetration-testing.png", website: "https://www.penetrationtestingai.com" },
+    ]
+  },
+  {
+    name: "AI for Human Resources",
+    icon: "👥",
+    toolCount: 10,
+    subcategories: [
+      { name: "Recruitment Automation", favicon: "/favicons/recruitment-automation.png", website: "https://www.recruitmentautomationai.com" },
+      { name: "Employee Engagement", favicon: "/favicons/employee-engagement.png", website: "https://www.employeeengagementai.com" },
+      { name: "Performance Management", favicon: "/favicons/performance-management.png", website: "https://www.performancemanagementai.com" },
+      { name: "Learning & Development", favicon: "/favicons/learning-development.png", website: "https://www.learningdevelopmentai.com" },
+      { name: "Workforce Analytics", favicon: "/favicons/workforce-analytics.png", website: "https://www.workforceanalyticsai.com" },
+      { name: "Diversity & Inclusion", favicon: "/favicons/diversity-inclusion.png", website: "https://www.diversityinclusionai.com" },
+      { name: "Compensation Planning", favicon: "/favicons/compensation-planning.png", website: "https://www.compensationplanningai.com" },
+      { name: "Succession Planning", favicon: "/favicons/succession-planning.png", website: "https://www.successionplanningai.com" },
+      { name: "Onboarding Automation", favicon: "/favicons/onboarding-automation.png", website: "https://www.onboardingautomationai.com" },
+      { name: "Workplace Safety", favicon: "/favicons/workplace-safety.png", website: "https://www.workplacesafetyai.com" },
+    ]
+  },
+  {
+    name: "AI for Event Management",
+    icon: "🎉",
+    toolCount: 10,
+    subcategories: [
+      { name: "Event Planning", favicon: "/favicons/event-planning.png", website: "https://www.eventplanningai.com" },
+      { name: "Attendee Registration", favicon: "/favicons/attendee-registration.png", website: "https://www.attendeeregistrationai.com" },
+      { name: "Venue Selection", favicon: "/favicons/venue-selection.png", website: "https://www.venueselectionai.com" },
+      { name: "Guest Experience", favicon: "/favicons/guest-experience.png", website: "https://www.guestexperienceai.com" },
+      { name: "Marketing Automation", favicon: "/favicons/marketing-automation.png", website: "https://www.marketingautomationai.com" },
+      { name: "Budget Management", favicon: "/favicons/budget-management.png", website: "https://www.budgetmanagementai.com" },
+      { name: "Speaker Coordination", favicon: "/favicons/speaker-coordination.png", website: "https://www.speakercoordinationai.com" },
+      { name: "Real-time Analytics", favicon: "/favicons/realtime-analytics.png", website: "https://www.realtimeanalyticsai.com" },
+      { name: "Post-event Follow-up", favicon: "/favicons/postevent-followup.png", website: "https://www.posteventfollowupai.com" },
+      { name: "Virtual Events", favicon: "/favicons/virtual-events.png", website: "https://www.virtualeventsai.com" },
+    ]
+  },
+  {
+    name: "AI for Travel & Tourism",
+    icon: "✈️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Trip Planning", favicon: "/favicons/trip-planning.png", website: "https://www.tripplanningai.com" },
+      { name: "Hotel Booking", favicon: "/favicons/hotel-booking.png", website: "https://www.hotelbookingai.com" },
+      { name: "Flight Optimization", favicon: "/favicons/flight-optimization.png", website: "https://www.flightoptimizationai.com" },
+      { name: "Local Experiences", favicon: "/favicons/local-experiences.png", website: "https://www.localexperiencesai.com" },
+      { name: "Travel Safety", favicon: "/favicons/travel-safety.png", website: "https://www.travelsafetyai.com" },
+      { name: "Language Translation", favicon: "/favicons/language-translation.png", website: "https://www.languagetranslationai.com" },
+      { name: "Currency Exchange", favicon: "/favicons/currency-exchange.png", website: "https://www.currencyexchangeai.com" },
+      { name: "Travel Insurance", favicon: "/favicons/travel-insurance.png", website: "https://www.travelinsuranceai.com" },
+      { name: "Luggage Management", favicon: "/favicons/luggage-management.png", website: "https://www.luggagemanagementai.com" },
+      { name: "Cultural Adaptation", favicon: "/favicons/cultural-adaptation.png", website: "https://www.culturaladaptationai.com" },
+    ]
+  },
+  {
+    name: "AI for Pet Care",
+    icon: "🐶",
+    toolCount: 10,
+    subcategories: [
+      { name: "Pet Health Monitoring", favicon: "/favicons/pet-health-monitoring.png", website: "https://www.pethealthmonitoringai.com" },
+      { name: "Behavioral Analysis", favicon: "/favicons/pet-behavioral-analysis.png", website: "https://www.petbehavioralanalysisai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/pet-nutrition-planning.png", website: "https://www.petnutritionplanningai.com" },
+      { name: "Training Assistance", favicon: "/favicons/pet-training-assistance.png", website: "https://www.pettrainingassistanceai.com" },
+      { name: "Grooming Scheduling", favicon: "/favicons/pet-grooming-scheduling.png", website: "https://www.petgroomingschedulingai.com" },
+      { name: "Veterinary Care", favicon: "/favicons/pet-veterinary-care.png", website: "https://www.petveterinarycareai.com" },
+      { name: "Pet Safety", favicon: "/favicons/pet-safety.png", website: "https://www.petsafetyai.com" },
+      { name: "Pet Socialization", favicon: "/favicons/pet-socialization.png", website: "https://www.petsocializationai.com" },
+      { name: "Pet Insurance", favicon: "/favicons/pet-insurance.png", website: "https://www.petinsuranceai.com" },
+      { name: "Pet Adoption", favicon: "/favicons/pet-adoption.png", website: "https://www.petadoptionai.com" },
+    ]
+  },
+  {
+    name: "AI for Home Improvement",
+    icon: "🏠",
+    toolCount: 10,
+    subcategories: [
+      { name: "Design Planning", favicon: "/favicons/design-planning.png", website: "https://www.designplanningai.com" },
+      { name: "Material Selection", favicon: "/favicons/material-selection.png", website: "https://www.materialselectionai.com" },
+      { name: "Contractor Matching", favicon: "/favicons/contractor-matching.png", website: "https://www.contractormatchingai.com" },
+      { name: "Budget Management", favicon: "/favicons/budget-management.png", website: "https://www.budgetmanagementai.com" },
+      { name: "Permit Assistance", favicon: "/favicons/permit-assistance.png", website: "https://www.permitassistanceai.com" },
+      { name: "Project Scheduling", favicon: "/favicons/project-scheduling.png", website: "https://www.projectschedulingai.com" },
+      { name: "Quality Inspection", favicon: "/favicons/quality-inspection.png", website: "https://www.qualityinspectionai.com" },
+      { name: "Energy Efficiency", favicon: "/favicons/energy-efficiency.png", website: "https://www.energyefficiencyai.com" },
+      { name: "Safety Compliance", favicon: "/favicons/safety-compliance.png", website: "https://www.safetycomplianceai.com" },
+      { name: "Home Valuation", favicon: "/favicons/home-valuation.png", website: "https://www.homevaluationai.com" },
+    ]
+  },
+  {
+    name: "AI for Personal Finance",
+    icon: "💰",
+    toolCount: 10,
+    subcategories: [
+      { name: "Budget Tracking", favicon: "/favicons/budget-tracking.png", website: "https://www.budgettrackingai.com" },
+      { name: "Investment Management", favicon: "/favicons/investment-management.png", website: "https://www.investmentmanagementai.com" },
+      { name: "Debt Reduction", favicon: "/favicons/debt-reduction.png", website: "https://www.debtreductionai.com" },
+      { name: "Retirement Planning", favicon: "/favicons/retirement-planning.png", website: "https://www.retirementplanningai.com" },
+      { name: "Tax Optimization", favicon: "/favicons/tax-optimization.png", website: "https://www.taxoptimizationai.com" },
+      { name: "Credit Monitoring", favicon: "/favicons/credit-monitoring.png", website: "https://www.creditmonitoringai.com" },
+      { name: "Insurance Comparison", favicon: "/favicons/insurance-comparison.png", website: "https://www.insurancecomparisonai.com" },
+      { name: "Financial Education", favicon: "/favicons/financial-education.png", website: "https://www.financialeducationai.com" },
+      { name: "Expense Analysis", favicon: "/favicons/expense-analysis.png", website: "https://www.expenseanalysisai.com" },
+      { name: "Savings Optimization", favicon: "/favicons/savings-optimization.png", website: "https://www.savingsoptimizationai.com" },
+    ]
+  },
+  {
+    name: "AI for Parenting",
+    icon: "👨‍👩‍👧‍👦",
+    toolCount: 10,
+    subcategories: [
+      { name: "Child Development", favicon: "/favicons/child-development.png", website: "https://www.childdevelopmentai.com" },
+      { name: "Education Planning", favicon: "/favicons/education-planning.png", website: "https://www.educationplanningai.com" },
+      { name: "Health Monitoring", favicon: "/favicons/child-health-monitoring.png", website: "https://www.childhealthmonitoringai.com" },
+      { name: "Behavioral Guidance", favicon: "/favicons/behavioral-guidance.png", website: "https://www.behavioralguidanceai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/child-nutrition-planning.png", website: "https://www.childnutritionplanningai.com" },
+      { name: "Safety Management", favicon: "/favicons/safety-management.png", website: "https://www.safetymanagementai.com" },
+      { name: "Activity Planning", favicon: "/favicons/activity-planning.png", website: "https://www.activityplanningai.com" },
+      { name: "Sleep Management", favicon: "/favicons/sleep-management.png", website: "https://www.sleepmanagementai.com" },
+      { name: "Social Development", favicon: "/favicons/social-development.png", website: "https://www.socialdevelopmentai.com" },
+      { name: "Parental Support", favicon: "/favicons/parental-support.png", website: "https://www.parentalsupportai.com" },
+    ]
+  },
+  {
+    name: "AI for Senior Care",
+    icon: "👵",
+    toolCount: 10,
+    subcategories: [
+      { name: "Health Monitoring", favicon: "/favicons/senior-health-monitoring.png", website: "https://www.seniorhealthmonitoringai.com" },
+      { name: "Medication Management", favicon: "/favicons/medication-management.png", website: "https://www.medicationmanagementai.com" },
+      { name: "Fall Prevention", favicon: "/favicons/fall-prevention.png", website: "https://www.fallpreventionai.com" },
+      { name: "Cognitive Support", favicon: "/favicons/cognitive-support.png", website: "https://www.cognitivesupportai.com" },
+      { name: "Social Engagement", favicon: "/favicons/social-engagement.png", website: "https://www.socialengagementai.com" },
+      { name: "Nutrition Planning", favicon: "/favicons/senior-nutrition-planning.png", website: "https://www.seniornutritionplanningai.com" },
+      { name: "Exercise Programs", favicon: "/favicons/exercise-programs.png", website: "https://www.exerciseprogramsai.com" },
+      { name: "Caregiver Support", favicon: "/favicons/caregiver-support.png", website: "https://www.caregiversupportai.com" },
+      { name: "Transportation Services", favicon: "/favicons/transportation-services.png", website: "https://www.transportationservicesai.com" },
+      { name: "Emergency Response", favicon: "/favicons/emergency-response.png", website: "https://www.emergencyresponseai.com" },
+    ]
+  },
+  {
+    name: "AI for Automotive",
+    icon: "🚗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Autonomous Driving", favicon: "/favicons/autonomous-driving.png", website: "https://www.autonomousdrivingai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/predictive-maintenance.png", website: "https://www.predictivemaintenanceai.com" },
+      { name: "Fuel Efficiency", favicon: "/favicons/fuel-efficiency.png", website: "https://www.fuelefficiencyai.com" },
+      { name: "Driver Assistance", favicon: "/favicons/driver-assistance.png", website: "https://www.driverassistanceai.com" },
+      { name: "Vehicle Diagnostics", favicon: "/favicons/vehicle-diagnostics.png", website: "https://www.vehiclediagnosticsai.com" },
+      { name: "Traffic Optimization", favicon: "/favicons/traffic-optimization.png", website: "https://www.trafficoptimizationai.com" },
+      { name: "Parking Solutions", favicon: "/favicons/parking-solutions.png", website: "https://www.parkingsolutionsai.com" },
+      { name: "Insurance Telematics", favicon: "/favicons/insurance-telematics.png", website: "https://www.insurancetelematicsai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+      { name: "Car Security", favicon: "/favicons/car-security.png", website: "https://www.carsecurityai.com" },
+    ]
+  },
+  {
+    name: "AI for Fashion & Apparel",
+    icon: "👗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Trend Forecasting", favicon: "/favicons/trend-forecasting.png", website: "https://www.trendforecastingai.com" },
+      { name: "Personal Styling", favicon: "/favicons/personal-styling.png", website: "https://www.personalstylingai.com" },
+      { name: "Virtual Fitting", favicon: "/favicons/virtual-fitting.png", website: "https://www.virtualfittingai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/fashion-supply-chain.png", website: "https://www.fashionsupplychainai.com" },
+      { name: "Inventory Management", favicon: "/favicons/fashion-inventory.png", website: "https://www.fashioninventoryai.com" },
+      { name: "Quality Control", favicon: "/favicons/fashion-quality-control.png", website: "https://www.fashionqualitycontrolai.com" },
+      { name: "Customer Experience", favicon: "/favicons/fashion-customer-experience.png", website: "https://www.fashioncustomerexperienceai.com" },
+      { name: "Sustainable Fashion", favicon: "/favicons/sustainable-fashion.png", website: "https://www.sustainablefashionai.com" },
+      { name: "Brand Protection", favicon: "/favicons/brand-protection.png", website: "https://www.brandprotectionai.com" },
+      { name: "Fashion Photography", favicon: "/favicons/fashion-photography.png", website: "https://www.fashionphotographyai.com" },
+    ]
+  },
+  {
+    name: "AI for Real Estate & Property Management",
+    icon: "🏢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Property Valuation", favicon: "/favicons/property-valuation.png", website: "https://www.propertyvaluationai.com" },
+      { name: "Tenant Screening", favicon: "/favicons/tenant-screening.png", website: "https://www.tenantscreeningai.com" },
+      { name: "Lease Management", favicon: "/favicons/lease-management.png", website: "https://www.leasemanagementai.com" },
+      { name: "Maintenance Scheduling", favicon: "/favicons/maintenance-scheduling.png", website: "https://www.maintenanceschedulingai.com" },
+      { name: "Energy Management", favicon: "/favicons/property-energy-management.png", website: "https://www.propertyenergymanagementai.com" },
+      { name: "Security Monitoring", favicon: "/favicons/security-monitoring.png", website: "https://www.securitymonitoringai.com" },
+      { name: "Investment Analysis", favicon: "/favicons/investment-analysis.png", website: "https://www.investmentanalysisai.com" },
+      { name: "Market Research", favicon: "/favicons/market-research.png", website: "https://www.marketresearchai.com" },
+      { name: "Virtual Tours", favicon: "/favicons/virtual-tours.png", website: "https://www.virtualtoursai.com" },
+      { name: "Property Insurance", favicon: "/favicons/property-insurance.png", website: "https://www.propertyinsuranceai.com" },
+    ]
+  },
+  {
+    name: "AI for Insurance & Risk Management",
+    icon: "🛡️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Claims Processing", favicon: "/favicons/claims-processing.png", website: "https://www.claimsprocessingai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/insurance-fraud-detection.png", website: "https://www.insurancefrauddetectionai.com" },
+      { name: "Premium Calculation", favicon: "/favicons/premium-calculation.png", website: "https://www.premiumcalculationai.com" },
+      { name: "Customer Service", favicon: "/favicons/insurance-customer-service.png", website: "https://www.insurancecustomerserviceai.com" },
+      { name: "Policy Management", favicon: "/favicons/policy-management.png", website: "https://www.policymanagementai.com" },
+      { name: "Underwriting", favicon: "/favicons/underwriting.png", website: "https://www.underwritingai.com" },
+      { name: "Disaster Response", favicon: "/favicons/disaster-response.png", website: "https://www.disasterresponseai.com" },
+      { name: "Actuarial Analysis", favicon: "/favicons/actuarial-analysis.png", website: "https://www.actuarialanalysisai.com" },
+      { name: "Regulatory Compliance", favicon: "/favicons/regulatory-compliance.png", website: "https://www.regulatorycomplianceai.com" },
+    ]
+  },
+  {
+    name: "AI for Energy & Utilities",
+    icon: "⚡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Smart Grid Management", favicon: "/favicons/smart-grid-management.png", website: "https://www.smartgridmanagementai.com" },
+      { name: "Renewable Energy Optimization", favicon: "/favicons/renewable-energy-optimization.png", website: "https://www.renewableenergyoptimizationai.com" },
+      { name: "Energy Storage Solutions", favicon: "/favicons/energy-storage-solutions.png", website: "https://www.energystoragesolutionsai.com" },
+      { name: "Demand Response Management", favicon: "/favicons/demand-response-management.png", website: "https://www.demandresponsemanagementai.com" },
+      { name: "Utility Asset Management", favicon: "/favicons/utility-asset-management.png", website: "https://www.utilityassetmanagementai.com" },
+      { name: "Energy Trading Platforms", favicon: "/favicons/energy-trading-platforms.png", website: "https://www.energytradingplatformsai.com" },
+      { name: "Grid Stability Monitoring", favicon: "/favicons/grid-stability-monitoring.png", website: "https://www.gridstabilitymonitoringai.com" },
+      { name: "Energy Consumption Analytics", favicon: "/favicons/energy-consumption-analytics.png", website: "https://www.energyconsumptionanalyticsai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/energy-predictive-maintenance.png", website: "https://www.energypredictivemaintenanceai.com" },
+      { name: "Carbon Footprint Tracking", favicon: "/favicons/carbon-footprint-tracking.png", website: "https://www.carbonfootprinttrackingai.com" },
+    ]
+  },
+  {
+    name: "AI for Telecommunications",
+    icon: "📡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Network Optimization", favicon: "/favicons/network-optimization.png", website: "https://www.networkoptimizationai.com" },
+      { name: "5G Infrastructure Management", favicon: "/favicons/5g-infrastructure-management.png", website: "https://www.5ginfrastructuremanagementai.com" },
+      { name: "Customer Experience Analytics", favicon: "/favicons/customer-experience-analytics.png", website: "https://www.customerexperienceanalyticsai.com" },
+      { name: "Network Security Monitoring", favicon: "/favicons/network-security-monitoring.png", website: "https://www.networksecuritymonitoringai.com" },
+      { name: "Service Quality Assurance", favicon: "/favicons/service-quality-assurance.png", website: "https://www.servicequalityassuranceai.com" },
+      { name: "Bandwidth Allocation", favicon: "/favicons/bandwidth-allocation.png", website: "https://www.bandwidthallocationai.com" },
+      { name: "Fault Detection & Diagnosis", favicon: "/favicons/fault-detection-diagnosis.png", website: "https://www.faultdetectiondiagnosisai.com" },
+      { name: "Predictive Network Maintenance", favicon: "/favicons/predictive-network-maintenance.png", website: "https://www.predictivenetworkmaintenanceai.com" },
+      { name: "Roaming Optimization", favicon: "/favicons/roaming-optimization.png", website: "https://www.roamingoptimizationai.com" },
+      { name: "Telecom Fraud Prevention", favicon: "/favicons/telecom-fraud-prevention.png", website: "https://www.telecomfraudpreventionai.com" },
+    ]
+  },
+  {
+    name: "AI for Mining & Resources",
+    icon: "⛏️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Exploration & Discovery", favicon: "/favicons/exploration-discovery.png", website: "https://www.explorationdiscoveryai.com" },
+      { name: "Mine Planning & Design", favicon: "/favicons/mine-planning-design.png", website: "https://www.mineplanningdesignai.com" },
+      { name: "Autonomous Equipment Operations", favicon: "/favicons/autonomous-equipment-operations.png", website: "https://www.autonomousequipmentoperationsai.com" },
+      { name: "Geological Analysis", favicon: "/favicons/geological-analysis.png", website: "https://www.geologicalanalysisai.com" },
+      { name: "Safety & Risk Management", favicon: "/favicons/safety-risk-management.png", website: "https://www.safetyriskmanagementai.com" },
+      { name: "Resource Optimization", favicon: "/favicons/resource-optimization.png", website: "https://www.resourceoptimizationai.com" },
+      { name: "Environmental Monitoring", favicon: "/favicons/environmental-monitoring.png", website: "https://www.environmentalmonitoringai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/mining-supply-chain-management.png", website: "https://www.miningsupplychainmanagementai.com" },
+      { name: "Equipment Maintenance", favicon: "/favicons/equipment-maintenance.png", website: "https://www.equipmentmaintenanceai.com" },
+      { name: "Commodity Price Forecasting", favicon: "/favicons/commodity-price-forecasting.png", website: "https://www.commoditypriceforecastingai.com" },
+    ]
+  },
+  {
+    name: "AI for Aerospace & Defense",
+    icon: "🚀",
+    toolCount: 10,
+    subcategories: [
+      { name: "Flight Path Optimization", favicon: "/favicons/flight-path-optimization.png", website: "https://www.flightpathoptimizationai.com" },
+      { name: "Satellite Operations", favicon: "/favicons/satellite-operations.png", website: "https://www.satelliteoperationsai.com" },
+      { name: "Autonomous Systems", favicon: "/favicons/autonomous-systems.png", website: "https://www.autonomoussystemsai.com" },
+      { name: "Surveillance & Reconnaissance", favicon: "/favicons/surveillance-reconnaissance.png", website: "https://www.surveillancereconnaissanceai.com" },
+      { name: "Cybersecurity Defense", favicon: "/favicons/cybersecurity-defense.png", website: "https://www.cybersecuritydefenseai.com" },
+      { name: "Logistics & Supply Chain", favicon: "/favicons/aerospace-logistics-supply-chain.png", website: "https://www.aerospacelogisticssupplychainai.com" },
+      { name: "Maintenance & Repair", favicon: "/favicons/maintenance-repair.png", website: "https://www.maintenancerepairai.com" },
+      { name: "Mission Planning", favicon: "/favicons/mission-planning.png", website: "https://www.missionplanningai.com" },
+      { name: "Threat Detection", favicon: "/favicons/threat-detection.png", website: "https://www.threatdetectionai.com" },
+      { name: "Training & Simulation", favicon: "/favicons/training-simulation.png", website: "https://www.trainingsimulationai.com" },
+    ]
+  },
+  {
+    name: "AI for Maritime & Shipping",
+    icon: "🚢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Route Optimization", favicon: "/favicons/route-optimization.png", website: "https://www.routeoptimizationai.com" },
+      { name: "Port Operations Management", favicon: "/favicons/port-operations-management.png", website: "https://www.portoperationsmanagementai.com" },
+      { name: "Cargo Tracking & Monitoring", favicon: "/favicons/cargo-tracking-monitoring.png", website: "https://www.cargotrackingmonitoringai.com" },
+      { name: "Vessel Performance Analytics", favicon: "/favicons/vessel-performance-analytics.png", website: "https://www.vesselperformanceanalyticsai.com" },
+      { name: "Maritime Safety Systems", favicon: "/favicons/maritime-safety-systems.png", website: "https://www.maritimesafetysystemsai.com" },
+      { name: "Fuel Consumption Optimization", favicon: "/favicons/fuel-consumption-optimization.png", website: "https://www.fuelconsumptionoptimizationai.com" },
+      { name: "Weather Impact Analysis", favicon: "/favicons/weather-impact-analysis.png", website: "https://www.weatherimpactanalysisai.com" },
+      { name: "Supply Chain Visibility", favicon: "/favicons/supply-chain-visibility.png", website: "https://www.supplychainvisibilityai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/maritime-predictive-maintenance.png", website: "https://www.maritimepredictivemaintenanceai.com" },
+      { name: "Customs & Compliance", favicon: "/favicons/customs-compliance.png", website: "https://www.customscomplianceai.com" },
+    ]
+  },
+  {
+    name: "AI for Pharmaceuticals",
+    icon: "💊",
+    toolCount: 10,
+    subcategories: [
+      { name: "Drug Discovery", favicon: "/favicons/drug-discovery.png", website: "https://www.drugdiscoveryai.com" },
+      { name: "Clinical Trials", favicon: "/favicons/clinical-trials.png", website: "https://www.clinicaltrialsai.com" },
+      { name: "Regulatory Compliance", favicon: "/favicons/regulatory-compliance.png", website: "https://www.regulatorycomplianceai.com" },
+      { name: "Manufacturing Optimization", favicon: "/favicons/manufacturing-optimization.png", website: "https://www.manufacturingoptimizationai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/pharma-supply-chain.png", website: "https://www.pharmasupplychainai.com" },
+      { name: "Quality Control", favicon: "/favicons/pharma-quality-control.png", website: "https://www.pharmaqualitycontrolai.com" },
+      { name: "Personalized Medicine", favicon: "/favicons/personalized-medicine.png", website: "https://www.personalizedmedicineai.com" },
+      { name: "Pharmacovigilance", favicon: "/favicons/pharmacovigilance.png", website: "https://www.pharmacovigilanceai.com" },
+      { name: "Drug Repurposing", favicon: "/favicons/drug-repurposing.png", website: "https://www.drugrepurposingai.com" },
+      { name: "Patient Adherence", favicon: "/favicons/patient-adherence.png", website: "https://www.patientadherenceai.com" },
+    ]
+  },
+  {
+    name: "AI for Insurance",
+    icon: "🛡️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Claims Processing", favicon: "/favicons/claims-processing.png", website: "https://www.claimsprocessingai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/insurance-fraud-detection.png", website: "https://www.insurancefrauddetectionai.com" },
+      { name: "Underwriting", favicon: "/favicons/underwriting.png", website: "https://www.underwritingai.com" },
+      { name: "Customer Service", favicon: "/favicons/insurance-customer-service.png", website: "https://www.insurancecustomerserviceai.com" },
+      { name: "Premium Calculation", favicon: "/favicons/premium-calculation.png", website: "https://www.premiumcalculationai.com" },
+      { name: "Policy Management", favicon: "/favicons/policy-management.png", website: "https://www.policymanagementai.com" },
+      { name: "Actuarial Analysis", favicon: "/favicons/actuarial-analysis.png", website: "https://www.actuarialanalysisai.com" },
+      { name: "Disaster Response", favicon: "/favicons/disaster-response.png", website: "https://www.disasterresponseai.com" },
+      { name: "Telematics Integration", favicon: "/favicons/telematics-integration.png", website: "https://www.telematicsintegrationai.com" },
+    ]
+  },
+  {
+    name: "AI for Food & Beverage",
+    icon: "🍔",
+    toolCount: 10,
+    subcategories: [
+      { name: "Recipe Development", favicon: "/favicons/recipe-development.png", website: "https://www.recipedevelopmentai.com" },
+      { name: "Quality Assurance", favicon: "/favicons/food-quality-assurance.png", website: "https://www.foodqualityassuranceai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/food-supply-chain.png", website: "https://www.foodsupplychainai.com" },
+      { name: "Flavor Profiling", favicon: "/favicons/flavor-profiling.png", website: "https://www.flavorprofilingai.com" },
+      { name: "Nutritional Analysis", favicon: "/favicons/nutritional-analysis.png", website: "https://www.nutritionalanalysisai.com" },
+      { name: "Food Safety Monitoring", favicon: "/favicons/food-safety-monitoring.png", website: "https://www.foodsafetymonitoringai.com" },
+      { name: "Waste Reduction", favicon: "/favicons/waste-reduction.png", website: "https://www.wastereductionai.com" },
+      { name: "Consumer Insights", favicon: "/favicons/consumer-insights.png", website: "https://www.consumerinsightsai.com" },
+      { name: "Packaging Optimization", favicon: "/favicons/packaging-optimization.png", website: "https://www.packagingoptimizationai.com" },
+      { name: "Production Planning", favicon: "/favicons/production-planning.png", website: "https://www.productionplanningai.com" },
+    ]
+  },
+  {
+    name: "AI for Construction & Engineering",
+    icon: "🏗️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Project Planning", favicon: "/favicons/project-planning.png", website: "https://www.projectplanningai.com" },
+      { name: "Structural Analysis", favicon: "/favicons/structural-analysis.png", website: "https://www.structuralanalysisai.com" },
+      { name: "Safety Monitoring", favicon: "/favicons/construction-safety-monitoring.png", website: "https://www.constructionsafetymonitoringai.com" },
+      { name: "Quality Control", favicon: "/favicons/construction-quality-control.png", website: "https://www.constructionqualitycontrolai.com" },
+      { name: "Resource Management", favicon: "/favicons/resource-management.png", website: "https://www.resourcemanagementai.com" },
+      { name: "Cost Estimation", favicon: "/favicons/cost-estimation.png", website: "https://www.costestimationai.com" },
+      { name: "Equipment Maintenance", favicon: "/favicons/equipment-maintenance.png", website: "https://www.equipmentmaintenanceai.com" },
+      { name: "Site Surveying", favicon: "/favicons/site-surveying.png", website: "https://www.sitesurveyingai.com" },
+      { name: "Environmental Impact", favicon: "/favicons/environmental-impact.png", website: "https://www.environmentalimpactai.com" },
+      { name: "Building Information Modeling", favicon: "/favicons/bim.png", website: "https://www.bimai.com" },
+    ]
+  },
+  {
+    name: "AI for Logistics & Supply Chain",
+    icon: "📦",
+    toolCount: 10,
+    subcategories: [
+      { name: "Demand Forecasting", favicon: "/favicons/demand-forecasting.png", website: "https://www.demandforecastingai.com" },
+      { name: "Inventory Optimization", favicon: "/favicons/inventory-optimization.png", website: "https://www.inventoryoptimizationai.com" },
+      { name: "Warehouse Automation", favicon: "/favicons/warehouse-automation.png", website: "https://www.warehouseautomationai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+      { name: "Last Mile Delivery", favicon: "/favicons/last-mile-delivery.png", website: "https://www.lastmiledeliveryai.com" },
+      { name: "Supplier Risk Management", favicon: "/favicons/supplier-risk-management.png", website: "https://www.supplierriskmanagementai.com" },
+      { name: "Customs Compliance", favicon: "/favicons/customs-compliance.png", website: "https://www.customscomplianceai.com" },
+      { name: "Reverse Logistics", favicon: "/favicons/reverse-logistics.png", website: "https://www.reverselogisticsai.com" },
+      { name: "Cold Chain Management", favicon: "/favicons/cold-chain-management.png", website: "https://www.coldchainmanagementai.com" },
+      { name: "Supply Chain Visibility", favicon: "/favicons/supply-chain-visibility.png", website: "https://www.supplychainvisibilityai.com" },
+    ]
+  },
+  {
+    name: "AI for Biotechnology",
+    icon: "🧬",
+    toolCount: 10,
+    subcategories: [
+      { name: "Genomic Analysis", favicon: "/favicons/genomic-analysis.png", website: "https://www.genomicanalysisai.com" },
+      { name: "Protein Engineering", favicon: "/favicons/protein-engineering.png", website: "https://www.proteinengineeringai.com" },
+      { name: "Drug Target Identification", favicon: "/favicons/drug-target-identification.png", website: "https://www.drugtargetidentificationai.com" },
+      { name: "Biomarker Discovery", favicon: "/favicons/biomarker-discovery.png", website: "https://www.biomarkerdiscoveryai.com" },
+      { name: "Molecular Modeling", favicon: "/favicons/molecular-modeling.png", website: "https://www.molecularmodelingai.com" },
+      { name: "Gene Therapy", favicon: "/favicons/gene-therapy.png", website: "https://www.genetherapyai.com" },
+      { name: "Synthetic Biology", favicon: "/favicons/synthetic-biology.png", website: "https://www.syntheticbiologyai.com" },
+      { name: "Bioinformatics", favicon: "/favicons/bioinformatics.png", website: "https://www.bioinformaticsai.com" },
+      { name: "Clinical Diagnostics", favicon: "/favicons/clinical-diagnostics.png", website: "https://www.clinicaldiagnosticsai.com" },
+      { name: "Bioprocess Optimization", favicon: "/favicons/bioprocess-optimization.png", website: "https://www.bioprocessoptimizationai.com" },
+    ]
+  },
+  {
+    name: "AI for Renewable Energy",
+    icon: "♻️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Solar Power Optimization", favicon: "/favicons/solar-power-optimization.png", website: "https://www.solarpoweroptimizationai.com" },
+      { name: "Wind Energy Management", favicon: "/favicons/wind-energy-management.png", website: "https://www.windenergymanagementai.com" },
+      { name: "Hydroelectric Systems", favicon: "/favicons/hydroelectric-systems.png", website: "https://www.hydroelectricsystemsai.com" },
+      { name: "Geothermal Energy", favicon: "/favicons/geothermal-energy.png", website: "https://www.geothermalenergyai.com" },
+      { name: "Bioenergy Production", favicon: "/favicons/bioenergy-production.png", website: "https://www.bioenergyproductionai.com" },
+      { name: "Energy Storage", favicon: "/favicons/energy-storage.png", website: "https://www.energystorageai.com" },
+      { name: "Smart Grids", favicon: "/favicons/smart-grids.png", website: "https://www.smartgridsai.com" },
+      { name: "Energy Efficiency", favicon: "/favicons/energy-efficiency.png", website: "https://www.energyefficiencyai.com" },
+      { name: "Carbon Capture", favicon: "/favicons/carbon-capture.png", website: "https://www.carboncaptureai.com" },
+      { name: "Sustainable Materials", favicon: "/favicons/sustainable-materials.png", website: "https://www.sustainablematerialsai.com" },
+    ]
+  },
+  {
+    name: "AI for Space Exploration",
+    icon: "🚀",
+    toolCount: 10,
+    subcategories: [
+      { name: "Satellite Operations", favicon: "/favicons/satellite-operations.png", website: "https://www.satelliteoperationsai.com" },
+      { name: "Mission Planning", favicon: "/favicons/mission-planning.png", website: "https://www.missionplanningai.com" },
+      { name: "Spacecraft Autonomy", favicon: "/favicons/spacecraft-autonomy.png", website: "https://www.spacecraftautonomyai.com" },
+      { name: "Astronomical Data Analysis", favicon: "/favicons/astronomical-data-analysis.png", website: "https://www.astronomicaldataanalysisai.com" },
+      { name: "Planetary Science", favicon: "/favicons/planetary-science.png", website: "https://www.planetaryscienceai.com" },
+      { name: "Space Communications", favicon: "/favicons/space-communications.png", website: "https://www.spacecommunicationsai.com" },
+      { name: "Orbital Mechanics", favicon: "/favicons/orbital-mechanics.png", website: "https://www.orbitalmechanicsai.com" },
+      { name: "Astrobiology", favicon: "/favicons/astrobiology.png", website: "https://www.astrobiologyai.com" },
+      { name: "Space Weather Monitoring", favicon: "/favicons/space-weather-monitoring.png", website: "https://www.spaceweathermonitoringai.com" },
+      { name: "Exoplanet Discovery", favicon: "/favicons/exoplanet-discovery.png", website: "https://www.exoplanetdiscoveryai.com" },
+    ]
+  },
+  {
+    name: "AI for Quantum Computing",
+    icon: "⚛️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Quantum Algorithm Design", favicon: "/favicons/quantum-algorithm-design.png", website: "https://www.quantumalgorithmdesignai.com" },
+      { name: "Quantum Error Correction", favicon: "/favicons/quantum-error-correction.png", website: "https://www.quantumerrorcorrectionai.com" },
+      { name: "Quantum Simulation", favicon: "/favicons/quantum-simulation.png", website: "https://www.quantumsimulationai.com" },
+      { name: "Quantum Cryptography", favicon: "/favicons/quantum-cryptography.png", website: "https://www.quantumcryptographyai.com" },
+      { name: "Quantum Machine Learning", favicon: "/favicons/quantum-machine-learning.png", website: "https://www.quantummachinelearningai.com" },
+      { name: "Quantum Hardware Development", favicon: "/favicons/quantum-hardware-development.png", website: "https://www.quantumhardwaredevelopmentai.com" },
+      { name: "Quantum Software Development", favicon: "/favicons/quantum-software-development.png", website: "https://www.quantumsoftwaredevelopmentai.com" },
+      { name: "Quantum Networking", favicon: "/favicons/quantum-networking.png", website: "https://www.quantumnetworkingai.com" },
+      { name: "Quantum Optimization", favicon: "/favicons/quantum-optimization.png", website: "https://www.quantumoptimizationai.com" },
+      { name: "Quantum Sensing", favicon: "/favicons/quantum-sensing.png", website: "https://www.quantumsensingai.com" },
+    ]
+  },
+  {
+    name: "AI for Nanotechnology",
+    icon: "🔬",
+    toolCount: 10,
+    subcategories: [
+      { name: "Nanomaterial Design", favicon: "/favicons/nanomaterial-design.png", website: "https://www.nanomaterialdesignai.com" },
+      { name: "Nanofabrication", favicon: "/favicons/nanofabrication.png", website: "https://www.nanofabricationai.com" },
+      { name: "Nanomedicine", favicon: "/favicons/nanomedicine.png", website: "https://www.nanomedicineai.com" },
+      { name: "Nanosensors", favicon: "/favicons/nanosensors.png", website: "https://www.nanosensorsai.com" },
+      { name: "Nanorobotics", favicon: "/favicons/nanorobotics.png", website: "https://www.nanoroboticsai.com" },
+      { name: "Molecular Manufacturing", favicon: "/favicons/molecular-manufacturing.png", website: "https://www.molecularmanufacturingai.com" },
+      { name: "Nanoelectronics", favicon: "/favicons/nanoelectronics.png", website: "https://www.nanoelectronicsai.com" },
+      { name: "Nanotoxicology", favicon: "/favicons/nanotoxicology.png", website: "https://www.nanotoxicologyai.com" },
+      { name: "Nanoenergy", favicon: "/favicons/nanoenergy.png", website: "https://www.nanoenergyai.com" },
+      { name: "Nanophotonics", favicon: "/favicons/nanophotonics.png", website: "https://www.nanophotonicsai.com" },
+    ]
+  },
+  {
+    name: "AI for Cybersecurity",
+    icon: "🔒",
+    toolCount: 10,
+    subcategories: [
+      { name: "Threat Detection", favicon: "/favicons/threat-detection.png", website: "https://www.threatdetectionai.com" },
+      { name: "Network Security", favicon: "/favicons/network-security.png", website: "https://www.networksecurityai.com" },
+      { name: "Endpoint Protection", favicon: "/favicons/endpoint-protection.png", website: "https://www.endpointprotectionai.com" },
+      { name: "Identity Management", favicon: "/favicons/identity-management.png", website: "https://www.identitymanagementai.com" },
+      { name: "Data Loss Prevention", favicon: "/favicons/data-loss-prevention.png", website: "https://www.datalosspreventionai.com" },
+      { name: "Security Analytics", favicon: "/favicons/security-analytics.png", website: "https://www.securityanalyticsai.com" },
+      { name: "Incident Response", favicon: "/favicons/incident-response.png", website: "https://www.incidentresponseai.com" },
+      { name: "Vulnerability Management", favicon: "/favicons/vulnerability-management.png", website: "https://www.vulnerabilitymanagementai.com" },
+      { name: "Compliance Monitoring", favicon: "/favicons/compliance-monitoring.png", website: "https://www.compliancemonitoringai.com" },
+      { name: "Forensic Analysis", favicon: "/favicons/forensic-analysis.png", website: "https://www.forensicanalysisai.com" },
+    ]
+  },
+  {
+    name: "AI for Human Resources",
+    icon: "👥",
+    toolCount: 10,
+    subcategories: [
+      { name: "Recruitment Automation", favicon: "/favicons/recruitment-automation.png", website: "https://www.recruitmentautomationai.com" },
+      { name: "Employee Engagement", favicon: "/favicons/employee-engagement.png", website: "https://www.employeeengagementai.com" },
+      { name: "Performance Management", favicon: "/favicons/performance-management.png", website: "https://www.performancemanagementai.com" },
+      { name: "Learning & Development", favicon: "/favicons/learning-development.png", website: "https://www.learningdevelopmentai.com" },
+      { name: "Workforce Analytics", favicon: "/favicons/workforce-analytics.png", website: "https://www.workforceanalyticsai.com" },
+      { name: "Talent Management", favicon: "/favicons/talent-management.png", website: "https://www.talentmanagementai.com" },
+      { name: "Compensation Planning", favicon: "/favicons/compensation-planning.png", website: "https://www.compensationplanningai.com" },
+      { name: "Diversity & Inclusion", favicon: "/favicons/diversity-inclusion.png", website: "https://www.diversityinclusionai.com" },
+      { name: "HR Compliance", favicon: "/favicons/hr-compliance.png", website: "https://www.hrcomplianceai.com" },
+      { name: "Employee Wellness", favicon: "/favicons/employee-wellness.png", website: "https://www.employeewellnessai.com" },
+    ]
+  },
+  {
+    name: "AI for Marketing & Advertising",
+    icon: "📢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Customer Segmentation", favicon: "/favicons/customer-segmentation.png", website: "https://www.customersegmentationai.com" },
+      { name: "Campaign Optimization", favicon: "/favicons/campaign-optimization.png", website: "https://www.campaignoptimizationai.com" },
+      { name: "Content Personalization", favicon: "/favicons/content-personalization.png", website: "https://www.contentpersonalizationai.com" },
+      { name: "Brand Monitoring", favicon: "/favicons/brand-monitoring.png", website: "https://www.brandmonitoringai.com" },
+      { name: "Social Media Analytics", favicon: "/favicons/social-media-analytics.png", website: "https://www.socialmediaanalyticsai.com" },
+      { name: "Ad Targeting", favicon: "/favicons/ad-targeting.png", website: "https://www.adtargetingai.com" },
+      { name: "Marketing Automation", favicon: "/favicons/marketing-automation.png", website: "https://www.marketingautomationai.com" },
+      { name: "ROI Analytics", favicon: "/favicons/roi-analytics.png", website: "https://www.roianalyticsai.com" },
+      { name: "Influencer Marketing", favicon: "/favicons/influencer-marketing.png", website: "https://www.influencermarketingai.com" },
+      { name: "Customer Journey Mapping", favicon: "/favicons/customer-journey-mapping.png", website: "https://www.customerjourneymappingai.com" },
+    ]
+  },
+  {
+    name: "AI for Customer Service",
+    icon: "🎧",
+    toolCount: 10,
+    subcategories: [
+      { name: "Chatbots", favicon: "/favicons/chatbots.png", website: "https://www.chatbotsai.com" },
+      { name: "Voice Assistants", favicon: "/favicons/voice-assistants.png", website: "https://www.voiceassistantsai.com" },
+      { name: "Sentiment Analysis", favicon: "/favicons/sentiment-analysis.png", website: "https://www.sentimentanalysisai.com" },
+      { name: "Ticket Routing", favicon: "/favicons/ticket-routing.png", website: "https://www.ticketroutingai.com" },
+      { name: "Customer Feedback", favicon: "/favicons/customer-feedback.png", website: "https://www.customerfeedbackai.com" },
+      { name: "Knowledge Management", favicon: "/favicons/knowledge-management.png", website: "https://www.knowledgemanagementai.com" },
+      { name: "Quality Assurance", favicon: "/favicons/quality-assurance.png", website: "https://www.qualityassuranceai.com" },
+      { name: "Omnichannel Support", favicon: "/favicons/omnichannel-support.png", website: "https://www.omnichannelsupportai.com" },
+      { name: "Predictive Support", favicon: "/favicons/predictive-support.png", website: "https://www.predictivesupportai.com" },
+      { name: "Self-Service Portals", favicon: "/favicons/self-service-portals.png", website: "https://www.selfserviceportalsai.com" },
+    ]
+  },
+  {
+    name: "AI for Project Management",
+    icon: "📋",
+    toolCount: 10,
+    subcategories: [
+      { name: "Task Automation", favicon: "/favicons/task-automation.png", website: "https://www.taskautomationai.com" },
+      { name: "Resource Allocation", favicon: "/favicons/resource-allocation.png", website: "https://www.resourceallocationai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Timeline Optimization", favicon: "/favicons/timeline-optimization.png", website: "https://www.timelineoptimizationai.com" },
+      { name: "Budget Management", favicon: "/favicons/budget-management.png", website: "https://www.budgetmanagementai.com" },
+      { name: "Team Collaboration", favicon: "/favicons/team-collaboration.png", website: "https://www.teamcollaborationai.com" },
+      { name: "Performance Tracking", favicon: "/favicons/performance-tracking.png", website: "https://www.performancetrackingai.com" },
+      { name: "Document Management", favicon: "/favicons/document-management.png", website: "https://www.documentmanagementai.com" },
+      { name: "Stakeholder Communication", favicon: "/favicons/stakeholder-communication.png", website: "https://www.stakeholdercommunicationai.com" },
+      { name: "Project Analytics", favicon: "/favicons/project-analytics.png", website: "https://www.projectanalyticsai.com" },
+    ]
+  },
+  {
+    name: "AI for E-commerce",
+    icon: "🛒",
+    toolCount: 10,
+    subcategories: [
+      { name: "Product Recommendations", favicon: "/favicons/product-recommendations.png", website: "https://www.productrecommendationsai.com" },
+      { name: "Inventory Management", favicon: "/favicons/inventory-management.png", website: "https://www.inventorymanagementai.com" },
+      { name: "Price Optimization", favicon: "/favicons/price-optimization.png", website: "https://www.priceoptimizationai.com" },
+      { name: "Customer Reviews Analysis", favicon: "/favicons/customer-reviews-analysis.png", website: "https://www.customerreviewsanalysisai.com" },
+      { name: "Shopping Cart Optimization", favicon: "/favicons/shopping-cart-optimization.png", website: "https://www.shoppingcartoptimizationai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/ecommerce-fraud-detection.png", website: "https://www.ecommercefrauddetectionai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/ecommerce-supply-chain.png", website: "https://www.ecommercesupplychainai.com" },
+      { name: "Personalization Engine", favicon: "/favicons/personalization-engine.png", website: "https://www.personalizationengineai.com" },
+      { name: "Search & Discovery", favicon: "/favicons/search-discovery.png", website: "https://www.searchdiscoveryai.com" },
+      { name: "Conversion Rate Optimization", favicon: "/favicons/conversion-rate-optimization.png", website: "https://www.conversionrateoptimizationai.com" },
+    ]
+  },
+  {
+    name: "AI for Travel & Tourism",
+    icon: "✈️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Route Optimization", favicon: "/favicons/route-optimization.png", website: "https://www.routeoptimizationai.com" },
+      { name: "Dynamic Pricing", favicon: "/favicons/dynamic-pricing.png", website: "https://www.dynamicpricingai.com" },
+      { name: "Personalized Recommendations", favicon: "/favicons/travel-recommendations.png", website: "https://www.travelrecommendationsai.com" },
+      { name: "Customer Service Chatbots", favicon: "/favicons/customer-service-chatbots.png", website: "https://www.customerservicechatabotsai.com" },
+      { name: "Demand Forecasting", favicon: "/favicons/demand-forecasting.png", website: "https://www.demandforecastingai.com" },
+      { name: "Revenue Management", favicon: "/favicons/revenue-management.png", website: "https://www.revenuemanagementai.com" },
+      { name: "Travel Risk Assessment", favicon: "/favicons/travel-risk-assessment.png", website: "https://www.travelriskassessmentai.com" },
+      { name: "Itinerary Planning", favicon: "/favicons/itinerary-planning.png", website: "https://www.itineraryplanningai.com" },
+      { name: "Sentiment Analysis", favicon: "/favicons/travel-sentiment-analysis.png", website: "https://www.travelsentimentanalysisai.com" },
+      { name: "Sustainability Tracking", favicon: "/favicons/sustainability-tracking.png", website: "https://www.sustainabilitytrackingai.com" },
+    ]
+  },
+  {
+    name: "AI for Banking & Financial Services",
+    icon: "🏦",
+    toolCount: 10,
+    subcategories: [
+      { name: "Credit Scoring", favicon: "/favicons/credit-scoring.png", website: "https://www.creditscoringai.com" },
+      { name: "Algorithmic Trading", favicon: "/favicons/algorithmic-trading.png", website: "https://www.algorithmictradingai.com" },
+      { name: "Fraud Prevention", favicon: "/favicons/banking-fraud-prevention.png", website: "https://www.bankingfraudpreventionai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Customer Service Automation", favicon: "/favicons/customer-service-automation.png", website: "https://www.customerserviceautomationai.com" },
+      { name: "Regulatory Compliance", favicon: "/favicons/regulatory-compliance.png", website: "https://www.regulatorycomplianceai.com" },
+      { name: "Portfolio Management", favicon: "/favicons/portfolio-management.png", website: "https://www.portfoliomanagementai.com" },
+      { name: "Loan Underwriting", favicon: "/favicons/loan-underwriting.png", website: "https://www.loanunderwritingai.com" },
+      { name: "Wealth Management", favicon: "/favicons/wealth-management.png", website: "https://www.wealthmanagementai.com" },
+      { name: "Anti-Money Laundering", favicon: "/favicons/anti-money-laundering.png", website: "https://www.antimoneylaunderingai.com" },
+    ]
+  },
+  {
+    name: "AI for Telecommunications",
+    icon: "📡",
+    toolCount: 10,
+    subcategories: [
+      { name: "Network Optimization", favicon: "/favicons/network-optimization.png", website: "https://www.networkoptimizationai.com" },
+      { name: "Customer Churn Prediction", favicon: "/favicons/customer-churn-prediction.png", website: "https://www.customerchurnpredictionai.com" },
+      { name: "Quality of Service Monitoring", favicon: "/favicons/quality-service-monitoring.png", website: "https://www.qualityservicemonitoringai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/telecom-predictive-maintenance.png", website: "https://www.telecompredictivemaintenanceai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/telecom-fraud-detection.png", website: "https://www.telecomfrauddetectionai.com" },
+      { name: "Bandwidth Management", favicon: "/favicons/bandwidth-management.png", website: "https://www.bandwidthmanagementai.com" },
+      { name: "Customer Experience Analytics", favicon: "/favicons/customer-experience-analytics.png", website: "https://www.customerexperienceanalyticsai.com" },
+      { name: "Service Assurance", favicon: "/favicons/service-assurance.png", website: "https://www.serviceassuranceai.com" },
+      { name: "5G Network Management", favicon: "/favicons/5g-network-management.png", website: "https://www.5gnetworkmanagementai.com" },
+      { name: "IoT Device Management", favicon: "/favicons/iot-device-management.png", website: "https://www.iotdevicemanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Real Estate & Property Management",
+    icon: "🏢",
+    toolCount: 10,
+    subcategories: [
+      { name: "Property Valuation", favicon: "/favicons/property-valuation.png", website: "https://www.propertyvaluationai.com" },
+      { name: "Tenant Screening", favicon: "/favicons/tenant-screening.png", website: "https://www.tenantscreeningai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/realestate-predictive-maintenance.png", website: "https://www.realestatepredictivemaintenanceai.com" },
+      { name: "Energy Management", favicon: "/favicons/energy-management.png", website: "https://www.energymanagementai.com" },
+      { name: "Lease Management", favicon: "/favicons/lease-management.png", website: "https://www.leasemanagementai.com" },
+      { name: "Property Inspection", favicon: "/favicons/property-inspection.png", website: "https://www.propertyinspectionai.com" },
+      { name: "Market Analysis", favicon: "/favicons/market-analysis.png", website: "https://www.marketsanalysisai.com" },
+      { name: "Smart Building Automation", favicon: "/favicons/smart-building-automation.png", website: "https://www.smartbuildingautomationai.com" },
+      { name: "Investment Analysis", favicon: "/favicons/investment-analysis.png", website: "https://www.investmentanalysisai.com" },
+      { name: "Facility Management", favicon: "/favicons/facility-management.png", website: "https://www.facilitymanagementai.com" },
+    ]
+  },
+  {
+    name: "AI for Healthcare & Medicine",
+    icon: "🏥",
+    toolCount: 10,
+    subcategories: [
+      { name: "Medical Diagnosis", favicon: "/favicons/medical-diagnosis.png", website: "https://www.medicaldiagnosisai.com" },
+      { name: "Patient Monitoring", favicon: "/favicons/patient-monitoring.png", website: "https://www.patientmonitoringai.com" },
+      { name: "Drug Discovery", favicon: "/favicons/drug-discovery.png", website: "https://www.drugdiscoveryai.com" },
+      { name: "Telemedicine", favicon: "/favicons/telemedicine.png", website: "https://www.telemedicineai.com" },
+      { name: "Medical Imaging", favicon: "/favicons/medical-imaging.png", website: "https://www.medicalimagingai.com" },
+      { name: "Electronic Health Records", favicon: "/favicons/ehr.png", website: "https://www.ehraI.com" },
+      { name: "Clinical Trials", favicon: "/favicons/clinical-trials.png", website: "https://www.clinicaltrialsai.com" },
+      { name: "Personalized Treatment", favicon: "/favicons/personalized-treatment.png", website: "https://www.personalizedtreatmentai.com" },
+      { name: "Mental Health Support", favicon: "/favicons/mental-health-support.png", website: "https://www.mentalhealthsupportai.com" },
+      { name: "Surgical Assistance", favicon: "/favicons/surgical-assistance.png", website: "https://www.surgicalassistanceai.com" },
+    ]
+  },
+  {
+    name: "AI for Automotive & Transportation",
+    icon: "🚗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Autonomous Driving", favicon: "/favicons/autonomous-driving.png", website: "https://www.autonomousdrivingai.com" },
+      { name: "Predictive Maintenance", favicon: "/favicons/predictive-maintenance.png", website: "https://www.predictivemaintenanceai.com" },
+      { name: "Traffic Optimization", favicon: "/favicons/traffic-optimization.png", website: "https://www.trafficoptimizationai.com" },
+      { name: "Fleet Management", favicon: "/favicons/fleet-management.png", website: "https://www.fleetmanagementai.com" },
+      { name: "Route Planning", favicon: "/favicons/route-planning.png", website: "https://www.routeplanningai.com" },
+      { name: "Vehicle Diagnostics", favicon: "/favicons/vehicle-diagnostics.png", website: "https://www.vehiclediagnosticsai.com" },
+      { name: "Driver Behavior Analysis", favicon: "/favicons/driver-behavior-analysis.png", website: "https://www.driverbehavioranalysisai.com" },
+      { name: "Fuel Efficiency", favicon: "/favicons/fuel-efficiency.png", website: "https://www.fuelefficiencyai.com" },
+      { name: "Supply Chain Logistics", favicon: "/favicons/supply-chain-logistics.png", website: "https://www.supplychainlogisticsai.com" },
+      { name: "Smart Parking", favicon: "/favicons/smart-parking.png", website: "https://www.smartparkingai.com" },
+    ]
+  },
+  {
+    name: "AI for Food & Beverage",
+    icon: "🍔",
+    toolCount: 10,
+    subcategories: [
+      { name: "Recipe Development", favicon: "/favicons/recipe-development.png", website: "https://www.recipedevelopmentai.com" },
+      { name: "Quality Control", favicon: "/favicons/food-quality-control.png", website: "https://www.foodqualitycontrolai.com" },
+      { name: "Supply Chain Management", favicon: "/favicons/food-supply-chain.png", website: "https://www.foodsupplychainai.com" },
+      { name: "Nutritional Analysis", favicon: "/favicons/nutritional-analysis.png", website: "https://www.nutritionalanalysisai.com" },
+      { name: "Food Safety Monitoring", favicon: "/favicons/food-safety-monitoring.png", website: "https://www.foodsafetymonitoringai.com" },
+      { name: "Waste Reduction", favicon: "/favicons/waste-reduction.png", website: "https://www.wastereductionai.com" },
+      { name: "Flavor Profiling", favicon: "/favicons/flavor-profiling.png", website: "https://www.flavorprofilingai.com" },
+      { name: "Inventory Management", favicon: "/favicons/food-inventory-management.png", website: "https://www.foodinventorymanagementai.com" },
+      { name: "Consumer Insights", favicon: "/favicons/consumer-insights.png", website: "https://www.consumerinsightsai.com" },
+      { name: "Production Optimization", favicon: "/favicons/production-optimization.png", website: "https://www.productionoptimizationai.com" },
+    ]
+  },
+  {
+    name: "AI for Fashion & Apparel",
+    icon: "👗",
+    toolCount: 10,
+    subcategories: [
+      { name: "Trend Forecasting", favicon: "/favicons/trend-forecasting.png", website: "https://www.trendforecastingai.com" },
+      { name: "Design Assistance", favicon: "/favicons/design-assistance.png", website: "https://www.designassistanceai.com" },
+      { name: "Virtual Fitting", favicon: "/favicons/virtual-fitting.png", website: "https://www.virtualfittingai.com" },
+      { name: "Supply Chain Optimization", favicon: "/favicons/fashion-supply-chain.png", website: "https://www.fashionsupplychainai.com" },
+      { name: "Inventory Management", favicon: "/favicons/fashion-inventory.png", website: "https://www.fashioninventoryai.com" },
+      { name: "Personalized Styling", favicon: "/favicons/personalized-styling.png", website: "https://www.personalizedstylingai.com" },
+      { name: "Quality Control", favicon: "/favicons/fashion-quality-control.png", website: "https://www.fashionqualitycontrolai.com" },
+      { name: "Sustainable Fashion", favicon: "/favicons/sustainable-fashion.png", website: "https://www.sustainablefashionai.com" },
+      { name: "Customer Experience", favicon: "/favicons/fashion-customer-experience.png", website: "https://www.fashioncustomerexperienceai.com" },
+      { name: "Brand Protection", favicon: "/favicons/brand-protection.png", website: "https://www.brandprotectionai.com" },
+    ]
+  },
+  {
+    name: "AI for Finance & Banking",
+    icon: "🏦",
+    toolCount: 10,
+    subcategories: [
+      { name: "Algorithmic Trading", favicon: "/favicons/algorithmic-trading.png", website: "https://www.algorithmictradingai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/risk-assessment.png", website: "https://www.riskassessmentai.com" },
+      { name: "Fraud Detection", favicon: "/favicons/fraud-detection.png", website: "https://www.fraudetectionai.com" },
+      { name: "Credit Scoring", favicon: "/favicons/credit-scoring.png", website: "https://www.creditscoringai.com" },
+      { name: "Customer Service", favicon: "/favicons/finance-customer-service.png", website: "https://www.financecustomerserviceai.com" },
+      { name: "Portfolio Management", favicon: "/favicons/portfolio-management.png", website: "https://www.portfoliomanagementai.com" },
+      { name: "Regulatory Compliance", favicon: "/favicons/regulatory-compliance.png", website: "https://www.regulatorycomplianceai.com" },
+      { name: "Loan Underwriting", favicon: "/favicons/loan-underwriting.png", website: "https://www.loanunderwritingai.com" },
+      { name: "Wealth Management", favicon: "/favicons/wealth-management.png", website: "https://www.wealthmanagementai.com" },
+      { name: "Payment Processing", favicon: "/favicons/payment-processing.png", website: "https://www.paymentprocessingai.com" },
+    ]
+  },
+  {
+    name: "AI for Construction & Architecture",
+    icon: "🏗️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Project Planning", favicon: "/favicons/project-planning.png", website: "https://www.projectplanningai.com" },
+      { name: "Building Design", favicon: "/favicons/building-design.png", website: "https://www.buildingdesignai.com" },
+      { name: "Construction Management", favicon: "/favicons/construction-management.png", website: "https://www.constructionmanagementai.com" },
+      { name: "Safety Monitoring", favicon: "/favicons/safety-monitoring.png", website: "https://www.safetymonitoringai.com" },
+      { name: "Quality Control", favicon: "/favicons/construction-quality-control.png", website: "https://www.constructionqualitycontrolai.com" },
+      { name: "Cost Estimation", favicon: "/favicons/cost-estimation.png", website: "https://www.costestimationai.com" },
+      { name: "Resource Allocation", favicon: "/favicons/resource-allocation.png", website: "https://www.resourceallocationai.com" },
+      { name: "Schedule Optimization", favicon: "/favicons/schedule-optimization.png", website: "https://www.scheduleoptimizationai.com" },
+      { name: "Structural Analysis", favicon: "/favicons/structural-analysis.png", website: "https://www.structuralanalysisai.com" },
+      { name: "Sustainability Assessment", favicon: "/favicons/sustainability-assessment.png", website: "https://www.sustainabilityassessmentai.com" },
+    ]
+  },
+  {
+    name: "AI for Media & Journalism",
+    icon: "📰",
+    toolCount: 10,
+    subcategories: [
+      { name: "News Writing", favicon: "/favicons/news-writing.png", website: "https://www.newswritingai.com" },
+      { name: "Fact Checking", favicon: "/favicons/fact-checking.png", website: "https://www.factcheckingai.com" },
+      { name: "Content Curation", favicon: "/favicons/content-curation.png", website: "https://www.contentcurationai.com" },
+      { name: "Audience Analytics", favicon: "/favicons/audience-analytics.png", website: "https://www.audienceanalyticsai.com" },
+      { name: "Video Editing", favicon: "/favicons/video-editing.png", website: "https://www.videoeditingai.com" },
+      { name: "Automated Reporting", favicon: "/favicons/automated-reporting.png", website: "https://www.automatedreportingai.com" },
+      { name: "Media Monitoring", favicon: "/favicons/media-monitoring.png", website: "https://www.mediamonitoringai.com" },
+      { name: "Content Personalization", favicon: "/favicons/content-personalization.png", website: "https://www.contentpersonalizationai.com" },
+      { name: "Trend Analysis", favicon: "/favicons/trend-analysis.png", website: "https://www.trendanalysisai.com" },
+      { name: "Fake News Detection", favicon: "/favicons/fake-news-detection.png", website: "https://www.fakenewsdetectionai.com" },
+    ]
+  },
+  {
+    name: "AI for Event Management",
+    icon: "🎉",
+    toolCount: 10,
+    subcategories: [
+      { name: "Event Planning", favicon: "/favicons/event-planning.png", website: "https://www.eventplanningai.com" },
+      { name: "Guest Management", favicon: "/favicons/guest-management.png", website: "https://www.guestmanagementai.com" },
+      { name: "Venue Selection", favicon: "/favicons/venue-selection.png", website: "https://www.venueselectionai.com" },
+      { name: "Ticketing Systems", favicon: "/favicons/ticketing-systems.png", website: "https://www.ticketingsystemsai.com" },
+      { name: "Attendee Engagement", favicon: "/favicons/attendee-engagement.png", website: "https://www.attendeeengagementai.com" },
+      { name: "Event Marketing", favicon: "/favicons/event-marketing.png", website: "https://www.eventmarketingai.com" },
+      { name: "Real-time Analytics", favicon: "/favicons/realtime-analytics.png", website: "https://www.realtimeanalyticsai.com" },
+      { name: "Crowd Management", favicon: "/favicons/crowd-management.png", website: "https://www.crowdmanagementai.com" },
+      { name: "Logistics Coordination", favicon: "/favicons/logistics-coordination.png", website: "https://www.logisticscoordinationai.com" },
+      { name: "Post-event Analysis", favicon: "/favicons/postevent-analysis.png", website: "https://www.posteventanalysisai.com" },
+    ]
+  },
+  {
+    name: "AI for Legal Services",
+    icon: "⚖️",
+    toolCount: 10,
+    subcategories: [
+      { name: "Document Review", favicon: "/favicons/document-review.png", website: "https://www.documentreviewai.com" },
+      { name: "Legal Research", favicon: "/favicons/legal-research.png", website: "https://www.legalresearchai.com" },
+      { name: "Contract Analysis", favicon: "/favicons/contract-analysis.png", website: "https://www.contractanalysisai.com" },
+      { name: "Case Prediction", favicon: "/favicons/case-prediction.png", website: "https://www.casepredictionai.com" },
+      { name: "E-discovery", favicon: "/favicons/ediscovery.png", website: "https://www.ediscoveryai.com" },
+      { name: "Legal Writing", favicon: "/favicons/legal-writing.png", website: "https://www.legalwritingai.com" },
+      { name: "Compliance Monitoring", favicon: "/favicons/compliance-monitoring.png", website: "https://www.compliancemonitoringai.com" },
+      { name: "Intellectual Property", favicon: "/favicons/intellectual-property.png", website: "https://www.intellectualpropertyai.com" },
+      { name: "Litigation Support", favicon: "/favicons/litigation-support.png", website: "https://www.litigationsupportai.com" },
+      { name: "Risk Assessment", favicon: "/favicons/legal-risk-assessment.png", website: "https://www.legalriskassessmentai.com" },
+    ]
+  },
+  {
+    name: "AI for Human Resources",
+    icon: "👥",
+    toolCount: 10,
+    subcategories: [
+      { name: "Talent Acquisition", favicon: "/favicons/talent-acquisition.png", website: "https://www.talentacquisitionai.com" },
+      { name: "Employee Onboarding", favicon: "/favicons/employee-onboarding.png", website: "https://www.employeeonboardingai.com" },
+      { name: "Performance Management", favicon: "/favicons/performance-management.png", website: "https://www.performancemanagementai.com" },
+      { name: "Employee Engagement", favicon: "/favicons/employee-engagement.png", website: "https://www.employeeengagementai.com" },
+      { name: "Workforce Analytics", favicon: "/favicons/workforce-analytics.png", website: "https://www.workforceanalyticsai.com" },
+      { name: "Training & Development", favicon: "/favicons/training-development.png", website: "https://www.trainingdevelopmentai.com" },
+      { name: "Compensation Planning", favicon: "/favicons/compensation-planning.png", website: "https://www.compensationplanningai.com" },
+      { name: "Succession Planning", favicon: "/favicons/succession-planning.png", website: "https://www.successionplanningai.com" },
+      { name: "Diversity & Inclusion", favicon: "/favicons/diversity-inclusion.png", website: "https://www.diversityinclusionai.com" },
+      { name: "HR Compliance", favicon: "/favicons/hr-compliance.png", website: "https://www.hrcomplianceai.com" },
     ]
   }
 ];

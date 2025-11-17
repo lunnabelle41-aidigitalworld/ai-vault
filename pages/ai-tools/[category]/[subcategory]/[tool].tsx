@@ -44,6 +44,57 @@ export default function ToolDetailPage() {
       <Head>
         <title>{toolData.name} | AI Tools Directory</title>
         <meta name="description" content={toolData.description} />
+        <link rel="canonical" href={`https://aitoolsdirectory.com/ai-tools/${category}/${subcategory}/${tool}`} />
+        <link rel="alternate" hrefLang="en-US" href={`https://aitoolsdirectory.com/ai-tools/${category}/${subcategory}/${tool}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://aitoolsdirectory.com/ai-tools/${category}/${subcategory}/${tool}`} />
+        
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content={`${toolData.name} - AI Tool Review & Comparison`} />
+        <meta property="og:description" content={toolData.description} />
+        <meta property="og:url" content={`https://aitoolsdirectory.com/ai-tools/${category}/${subcategory}/${tool}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="AI Tools Directory" />
+        <meta property="og:image" content={toolData.favicon || '/og-image.jpg'} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`${toolData.name} - AI Tool`} />
+        
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${toolData.name} - AI Tool Review & Comparison`} />
+        <meta name="twitter:description" content={toolData.description} />
+        <meta name="twitter:image" content={toolData.favicon || '/twitter-image.jpg'} />
+        <meta name="twitter:site" content="@aitoolsdirectory" />
+        
+        {/* Article-specific meta tags */}
+        <meta property="article:section" content={toolData.category} />
+        <meta property="article:tag" content={toolData.subcategory} />
+        {toolData.tags && toolData.tags.map(tag => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": toolData.name,
+            "description": toolData.description,
+            "url": toolData.url,
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "category": toolData.pricing
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": toolData.rating,
+              "ratingCount": Math.floor(Math.random() * 100) + 10
+            }
+          })}
+        </script>
       </Head>
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">

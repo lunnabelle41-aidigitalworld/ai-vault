@@ -1,6 +1,8 @@
 'use client';
 
-import { FiExternalLink, FiCopy, FiCheck, FiLink } from 'react-icons/fi';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt, faCopy, faCheck, faLink } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import Head from 'next/head';
 
@@ -25,11 +27,11 @@ const CodeBlock = ({ code, language = 'bash' }: { code: string; language?: strin
           >
             {copied ? (
               <>
-                <FiCheck className="w-4 h-4" /> Copied!
+                <FontAwesomeIcon icon={faCheck} className="w-4 h-4" /> Copied!
               </>
             ) : (
               <>
-                <FiCopy className="w-4 h-4" /> Copy
+                <FontAwesomeIcon icon={faCopy} className="w-4 h-4" /> Copy
               </>
             )}
           </button>
@@ -54,7 +56,7 @@ const Heading = ({ id, children, level = 2 }: { id: string; children: React.Reac
         <div className="text-2xl font-bold mt-8 mb-4 text-gray-800 dark:text-white" style={{ scrollMarginTop: '100px' }}>
           {children}
         </div>
-        <FiLink className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <FontAwesomeIcon icon={faLink} className="inline-block mr-2 text-gray-400 group-hover:text-blue-500 transition-colors" />
       </a>
     </div>
   );
@@ -94,7 +96,7 @@ export default function APIDocs() {
               onClick={() => navigator.clipboard.writeText(`${baseUrl}/api`)}
               className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
             >
-              <FiCopy className="w-4 h-4" />
+              <FontAwesomeIcon icon={faCopy} className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -308,7 +310,7 @@ export default function APIDocs() {
           href="mailto:huzaifakarim612@gmail.com" 
           className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
         >
-          <FiExternalLink className="w-5 h-5" />
+          <FontAwesomeIcon icon={faExternalLinkAlt} className="inline ml-1 w-3 h-3" />
           huzaifakarim612@gmail.com
         </a>
         <p className="mt-4 text-sm text-blue-600 dark:text-blue-400">

@@ -1,8 +1,21 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { FaArrowLeft, FaHeart, FaRegHeart } from 'react-icons/fa';
+'use client';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faArrowLeft, 
+  faHeart as faHeartSolid, 
+  faHeart as faHeartRegular, 
+  faSearch, 
+  faList, 
+  faTh, 
+  faShare, 
+  faFilter 
+} from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 import { Tool } from '@/types/tool';
 import { getToolById } from '@/lib/tools';
 import FavoritesButton from '@/components/Favorites/FavoritesButton';
@@ -10,6 +23,9 @@ import FavoritesButton from '@/components/Favorites/FavoritesButton';
 const FavoritesPage = () => {
   const [favoriteTools, setFavoriteTools] = useState<Tool[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [view, setView] = useState<'grid' | 'list'>('grid');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   useEffect(() => {
     // Load favorites from localStorage
@@ -33,19 +49,37 @@ const FavoritesPage = () => {
     };
   }, []);
 
+  const filteredTools = favoriteTools.filter((tool: Tool) => {
+    const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (tool.description && tool.description.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || tool.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const categories = ['All Categories', ...Array.from(new Set(favoriteTools.map((tool: Tool) => tool.category)))];
+
   if (isLoading) {
     return (
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="flex items-center mb-8">
-          <Link href="/" className="mr-4 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
-            <FaArrowLeft />
-          </Link>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">My Favorites</h1>
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.h1 
+              className="text-4xl md:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Your Saved Tools
+            </motion.h1>
+            <p className="text-xl text-indigo-100">Loading your favorite AI tools...</p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="h-48 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse"></div>
-          ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className="h-64 bg-white rounded-xl shadow-sm animate-pulse"></div>
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -55,15 +89,16 @@ const FavoritesPage = () => {
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="flex items-center mb-8">
         <Link href="/" className="mr-4 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
-          <FaArrowLeft />
+          <FontAwesomeIcon icon={faArrowLeft} />
         </Link>
+        <FontAwesomeIcon icon={faSearch} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">My Favorites</h1>
       </div>
 
       {favoriteTools.length === 0 ? (
         <div className="text-center py-12">
           <div className="mx-auto w-24 h-24 text-gray-400 mb-4">
-            <FaRegHeart className="w-full h-full opacity-50" />
+            <FontAwesomeIcon icon={faHeartRegular} className="w-5 h-5" />
           </div>
           <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-2">No favorites yet</h2>
           <p className="text-gray-500 dark:text-gray-400 mb-6">Save your favorite AI tools to find them here later!</p>
@@ -76,7 +111,7 @@ const FavoritesPage = () => {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {favoriteTools.map((tool) => (
+          {favoriteTools.map((tool: Tool) => (
             <div 
               key={tool.id}
               className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-200 dark:border-gray-700"

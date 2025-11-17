@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useComparison } from '@/contexts/ComparisonContext';
 import { Tool } from '@/types/tool';
-import { FaTimes, FaChevronUp, FaChevronDown, FaBalanceScale } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faChevronUp, faChevronDown, faBalanceScale } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 const ComparisonBar: React.FC = () => {
@@ -29,7 +30,7 @@ const ComparisonBar: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between h-12">
           <div className="flex items-center">
-            <FaBalanceScale className="text-blue-600 dark:text-blue-400 mr-2" />
+            <FontAwesomeIcon icon={faBalanceScale} className="mr-2 w-4 h-4 text-blue-600 dark:text-blue-400" />
             <span className="font-medium">Compare Tools ({tools.length}/3)</span>
           </div>
           <div className="flex items-center space-x-4">
@@ -38,7 +39,9 @@ const ComparisonBar: React.FC = () => {
               className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               aria-label={isExpanded ? 'Collapse' : 'Expand'}
             >
-              {isExpanded ? <FaChevronDown /> : <FaChevronUp />}
+              {isExpanded ? 
+              <FontAwesomeIcon icon={faChevronDown} className="w-4 h-4" /> : 
+              <FontAwesomeIcon icon={faChevronUp} className="w-4 h-4" />}
             </button>
             <button 
               onClick={clearComparison}
@@ -87,16 +90,12 @@ const ComparisonBar: React.FC = () => {
                       {tool.name.charAt(0).toUpperCase()}
                     </div>
                   )}
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      removeFromComparison(tool.id);
-                    }}
+                  <FontAwesomeIcon 
+                    icon={faTimes}
                     className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-600 transition-colors"
+                    onClick={() => removeFromComparison(tool.id)} 
                     aria-label={`Remove ${tool.name} from comparison`}
-                  >
-                    <FaTimes />
-                  </button>
+                  />
                 </div>
                 <span className="text-xs text-center font-medium text-gray-700 dark:text-gray-200 truncate w-full">
                   {tool.name}

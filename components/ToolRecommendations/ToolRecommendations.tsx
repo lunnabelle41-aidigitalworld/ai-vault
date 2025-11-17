@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { Tool } from '@/types/tool';
 import Link from 'next/link';
-import { FaArrowRight, FaRandom } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faRandom } from '@fortawesome/free-solid-svg-icons';
 
 interface ToolRecommendationsProps {
   currentToolId?: string;
@@ -87,7 +88,7 @@ const ToolRecommendations: React.FC<ToolRecommendationsProps> = ({
           onClick={() => window.location.reload()}
           className="flex items-center text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
         >
-          <FaRandom className="mr-1" /> Refresh
+          <FontAwesomeIcon icon={faRandom} className="mr-2" fixedWidth /> Refresh
         </button>
       </div>
       
@@ -142,7 +143,7 @@ const ToolRecommendations: React.FC<ToolRecommendationsProps> = ({
                   href={`/tools/${tool.id}`}
                   className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium flex items-center"
                 >
-                  View Tool <FaArrowRight className="ml-1" size={12} />
+                  <FontAwesomeIcon icon={faArrowRight} className="ml-2" fixedWidth /> View Tool
                 </Link>
               </div>
             </div>

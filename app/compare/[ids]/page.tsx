@@ -4,7 +4,16 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Tool } from '@/types/tool';
 import { getToolById } from '@/lib/tools';
-import { FaArrowLeft, FaExternalLinkAlt, FaStar, FaRegStar, FaTimes } from 'react-icons/fa';
+'use client';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faArrowLeft, 
+  faExternalLinkAlt, 
+  faStar as faStarSolid, 
+  faStar as faStarRegular, 
+  faTimes 
+} from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useComparison } from '@/contexts/ComparisonContext';
@@ -97,7 +106,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ params }) => {
             onClick={() => router.push('/')}
             className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            <FaArrowLeft className="mr-2" /> Back to Home
+            <FontAwesomeIcon icon={faArrowLeft} className="w-5 h-5" /> Back to Home
           </button>
         </div>
       </div>
@@ -121,7 +130,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ params }) => {
             }}
             className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            <FaTimes className="mr-2" /> Clear Comparison
+            <FontAwesomeIcon icon={faTimes} className="w-4 h-4" /> Clear Comparison
           </button>
         </div>
 
@@ -158,7 +167,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ params }) => {
                   <div className="flex items-center mt-1 mb-2">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <span key={star} className="text-yellow-400">
-                        {star <= (tool.rating || 0) ? <FaStar /> : <FaRegStar />}
+                        {star <= (tool.rating || 0) ? <FontAwesomeIcon icon={faStarSolid} className="w-5 h-5" /> : <FontAwesomeIcon icon={faStarRegular} className="w-5 h-5" />}
                       </span>
                     ))}
                   </div>
@@ -168,7 +177,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ params }) => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2"
                   >
-                    Visit Website <FaExternalLinkAlt className="ml-1 text-xs" />
+                    Visit Website <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 w-3 h-3" />
                   </a>
                 </div>
               </div>
@@ -239,7 +248,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ params }) => {
             href="/"
             className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            <FaArrowLeft className="mr-2" /> Back to All Tools
+            <FontAwesomeIcon icon={faArrowLeft} className="w-5 h-5" /> Back to All Tools
           </Link>
         </div>
       </div>

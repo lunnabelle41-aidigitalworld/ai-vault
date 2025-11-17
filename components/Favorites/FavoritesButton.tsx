@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as faHeartSolid, faHeart as faHeartRegular } from '@fortawesome/free-solid-svg-icons';
 import { Tool } from '@/types/tool';
 import useFavorites from '@/hooks/useFavorites';
 
@@ -46,7 +47,7 @@ const FavoritesButton: React.FC<FavoritesButtonProps> = ({
         className={`inline-flex items-center ${sizeClasses[size]} ${className}`}
         disabled
       >
-        <FaRegHeart className={iconClasses[size]} />
+        <FontAwesomeIcon icon={faHeartRegular} className={iconClasses[size]} fixedWidth />
         {showLabel && <span className="ml-2">Save</span>}
       </button>
     );
@@ -73,9 +74,9 @@ const FavoritesButton: React.FC<FavoritesButtonProps> = ({
       title={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
     >
       {isFavorited ? (
-        <FaHeart className={`${iconClasses[size]} fill-current`} />
+        <FontAwesomeIcon icon={faHeartSolid} className={iconClasses[size]} style={{ color: 'red' }} fixedWidth />
       ) : (
-        <FaRegHeart className={`${iconClasses[size]} fill-current`} />
+        <FontAwesomeIcon icon={faHeartRegular} className={iconClasses[size]} fixedWidth />
       )}
       {showLabel && (
         <span className="ml-2">

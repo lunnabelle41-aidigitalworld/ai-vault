@@ -19,7 +19,10 @@ export default function StaticPagesLayout({
           <Link href="/" className="text-xl font-bold text-indigo-600">
             AI Tools Directory
           </Link>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
+            <Link href="/best-tools" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors">
+              Best Tools
+            </Link>
             <Link href="/about" className="text-gray-700 hover:text-indigo-600">
               About Us
             </Link>
@@ -27,7 +30,7 @@ export default function StaticPagesLayout({
               Privacy Policy
             </Link>
             <Link href="/terms" className="text-gray-700 hover:text-indigo-600">
-              Terms of Service
+              Terms
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-indigo-600">
               Contact

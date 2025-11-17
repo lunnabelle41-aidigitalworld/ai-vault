@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FiSearch, FiX, FiFilter } from 'react-icons/fi';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faXmark, faFilter } from '@fortawesome/free-solid-svg-icons';
 
 type BlogSearchProps = {
   onSearch: (query: string) => void;
@@ -60,7 +61,7 @@ export default function BlogSearch({
       {/* Search Bar */}
       <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <FiSearch className="h-5 w-5 text-gray-400" />
+          <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-gray-400" />
         </div>
         <input
           type="text"
@@ -74,7 +75,7 @@ export default function BlogSearch({
             onClick={handleClearSearch}
             className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
           >
-            <FiX className="h-5 w-5" />
+            <FontAwesomeIcon icon={faXmark} className="w-4 h-4" />
           </button>
         )}
       </div>
@@ -86,7 +87,7 @@ export default function BlogSearch({
           className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           onClick={() => setIsFiltersOpen(!isFiltersOpen)}
         >
-          <FiFilter className="mr-2 h-4 w-4" />
+          <FontAwesomeIcon icon={faFilter} className="mr-2 w-4 h-4" />
           {isFiltersOpen ? 'Hide Filters' : 'Show Filters'}
         </button>
       </div>
@@ -127,7 +128,7 @@ export default function BlogSearch({
         <div>
           <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">Popular Tags</h3>
           <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
+            {tags.slice(0, 15).map((tag) => (
               <button
                 key={tag}
                 onClick={() => handleTagClick(tag)}

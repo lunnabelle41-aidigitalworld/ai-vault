@@ -1,0 +1,1070 @@
+'use client';
+
+import { useState, useEffect, useRef, useMemo } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion';
+import Link from 'next/link';
+import { FiSearch, FiFilter, FiChevronDown, FiStar, FiExternalLink, FiArrowRight, FiHeart, FiBookmark, FiAward, FiTrendingUp, FiZap, FiShare2, FiCheck, FiRocket, FiClock } from 'react-icons/fi';
+import { Tooltip } from 'react-tooltip';
+import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
+import { Playfair_Display, Inter } from 'next/font/google';
+
+// Fonts
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+
+// Dynamically import Navbar and Footer with no SSR to avoid hydration issues
+const Navbar = dynamic(() => import('@/components/Navbar'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
+
+// Types
+type Tool = {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  url: string;
+  image: string;
+  rating: number;
+  price: string;
+  tags: string[];
+  featured?: boolean;
+  trending?: boolean;
+  new?: boolean;
+  launchDate?: string;
+  upvotes?: number;
+  saves?: number;
+  innovationScore?: number;
+  expertReview?: number;
+  marketImpact?: number;
+};
+
+// Sample data
+const allTools: Tool[] = [
+  {
+    id: 'figma-ai',
+    name: 'Figma AI',
+    category: 'Design',
+    description: 'AI-powered design tool that transforms your ideas into high-fidelity designs instantly.',
+    url: 'https://figma.com/ai',
+    image: 'https://cdn.worldvectorlogo.com/logos/figma-1.svg',
+    rating: 4.9,
+    price: 'Freemium',
+    tags: ['UI/UX', 'Design', 'Prototyping', 'AI-Powered'],
+    featured: true,
+    trending: true,
+    new: true,
+    innovationScore: 98,
+    expertReview: 97,
+    marketImpact: 95,
+    upvotes: 1243,
+    saves: 856
+  },
+  {
+    id: 'midjourney',
+    name: 'Midjourney',
+    category: 'Art',
+    description: 'AI art generation tool that creates stunning images from text descriptions.',
+    url: 'https://midjourney.com',
+    image: 'https://pbs.twimg.com/profile_images/1594409615689175040/7vzBzX2A_400x400.jpg',
+    rating: 4.8,
+    price: 'Paid',
+    tags: ['Art', 'Image Generation', 'AI Art', 'Creative'],
+    trending: true,
+    innovationScore: 95,
+    expertReview: 96,
+    marketImpact: 94,
+    upvotes: 2156,
+    saves: 1342
+  },
+  {
+    id: 'chatgpt',
+    name: 'ChatGPT',
+    category: 'Productivity',
+    description: 'Advanced AI chatbot that can understand and generate human-like text.',
+    url: 'https://chat.openai.com',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg',
+    rating: 4.9,
+    price: 'Freemium',
+    tags: ['Chatbot', 'AI Assistant', 'Productivity', 'Writing'],
+    featured: true,
+    innovationScore: 97,
+    expertReview: 98,
+    marketImpact: 99,
+    upvotes: 5432,
+    saves: 3210
+  },
+  {
+    id: 'notion-ai',
+    name: 'Notion AI',
+    category: 'Productivity',
+    description: 'AI-powered workspace that helps you write, organize, and get more done.',
+    url: 'https://notion.so/ai',
+    image: 'https://upload.wikimedia.org/w/commons/4/45/Notion_app_logo.png',
+    rating: 4.7,
+    price: 'Freemium',
+    tags: ['Productivity', 'Note-taking', 'Project Management', 'AI'],
+    new: true,
+    innovationScore: 92,
+    expertReview: 94,
+    marketImpact: 93,
+    upvotes: 1876,
+    saves: 1245
+  },
+  {
+    id: 'github-copilot',
+    name: 'GitHub Copilot',
+    category: 'Development',
+    description: 'AI pair programmer that helps you write better code faster.',
+    url: 'https://github.com/features/copilot',
+    image: 'https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg',
+    rating: 4.8,
+    price: 'Paid',
+    tags: ['Coding', 'AI Assistant', 'Development', 'Productivity'],
+    featured: true,
+    trending: true,
+    innovationScore: 96,
+    expertReview: 95,
+    marketImpact: 97,
+    upvotes: 2987,
+    saves: 2103
+  },
+  {
+    id: 'runway',
+    name: 'Runway ML',
+    category: 'Video',
+    description: 'Advanced AI video editing and generation platform for creators.',
+    url: 'https://runwayml.com',
+    image: 'https://pbs.twimg.com/profile_images/1445104082271571973/7L1Gdx9k_400x400.jpg',
+    rating: 4.6,
+    price: 'Freemium',
+    tags: ['Video Editing', 'AI Video', 'Content Creation', 'Creative'],
+    new: true,
+    innovationScore: 94,
+    expertReview: 93,
+    marketImpact: 92,
+    upvotes: 1432,
+    saves: 987
+  }
+];
+
+const categories = ['All', 'Design', 'Art', 'Productivity', 'Development', 'Video'];
+
+// Animation variants
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.8 } },
+};
+
+const slideUp = {
+  hidden: { y: 50, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 0.6 } },
+};
+
+// Sample data - replace with your actual data source
+const bestTools: Tool[] = [
+  {
+    id: 'figma',
+    name: 'Figma',
+    category: 'Design',
+    description: 'The collaborative interface design tool that brings teams together for better design',
+    url: 'https://figma.com',
+    image: 'https://cdn.worldvectorlogo.com/logos/figma-1.svg',
+    rating: 4.8,
+    price: 'Freemium',
+    tags: ['UI/UX', 'Design', 'Prototyping', 'Collaboration', 'Cloud-based'],
+    featured: true,
+    trending: true,
+    launchDate: '2020-01-15',
+    upvotes: 4281,
+    saves: 1923
+  },
+  {
+    id: 'notion',
+    name: 'Notion',
+    category: 'Productivity',
+    description: 'All-in-one workspace for notes, tasks, wikis, and databases with powerful integrations',
+    url: 'https://notion.so',
+    image: 'https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg',
+    rating: 4.7,
+    price: 'Freemium',
+    tags: ['Productivity', 'Notes', 'Project Management', 'Database', 'Templates'],
+    featured: true,
+    new: true,
+    launchDate: '2023-03-22',
+    upvotes: 3921,
+    saves: 1542
+  },
+  {
+    id: 'slack',
+    name: 'Slack',
+    category: 'Communication',
+    description: 'Connect the right people, find anything you need and automate the rest of your workflow',
+    url: 'https://slack.com',
+    image: 'https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg',
+    rating: 4.5,
+    price: 'Freemium',
+    tags: ['Communication', 'Teamwork', 'Productivity', 'Integrations', 'Channels'],
+    trending: true,
+    launchDate: '2022-11-05',
+    upvotes: 3567,
+    saves: 1298
+  },
+  {
+    id: 'canva',
+    name: 'Canva',
+    category: 'Design',
+    description: 'Create beautiful designs & professional graphics in seconds',
+    url: 'https://canva.com',
+    image: 'https://cdn.worldvectorlogo.com/logos/canva-1.svg',
+    rating: 4.7,
+    price: 'Freemium',
+    tags: ['Graphic Design', 'Templates', 'Social Media', 'Presentations'],
+    featured: true,
+    launchDate: '2023-01-10',
+    upvotes: 4123,
+    saves: 1876
+  },
+  {
+    id: 'webflow',
+    name: 'Webflow',
+    category: 'Development',
+    description: 'Build with the power of code — without writing any',
+    url: 'https://webflow.com',
+    image: 'https://cdn.worldvectorlogo.com/logos/webflow.svg',
+    rating: 4.6,
+    price: 'Paid',
+    tags: ['Web Design', 'No-Code', 'CMS', 'Hosting'],
+    new: true,
+    launchDate: '2023-05-18',
+    upvotes: 2987,
+    saves: 1245
+  },
+  {
+    id: 'notion',
+    name: 'Notion',
+    category: 'Productivity',
+    description: 'All-in-one workspace for notes, tasks, wikis, and databases',
+    url: 'https://notion.so',
+    image: 'https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg',
+    rating: 4.7,
+    price: 'Freemium',
+    tags: ['Productivity', 'Notes', 'Project Management'],
+    featured: true,
+    launchDate: '2022-09-30',
+    upvotes: 3765,
+    saves: 1654
+  },
+  {
+    id: 'figma',
+    name: 'Figma',
+    category: 'Design',
+    description: 'The collaborative interface design tool',
+    url: 'https://figma.com',
+    image: 'https://cdn.worldvectorlogo.com/logos/figma-1.svg',
+    rating: 4.8,
+    price: 'Freemium',
+    tags: ['UI/UX', 'Design', 'Prototyping'],
+    trending: true,
+    launchDate: '2023-02-14',
+    upvotes: 4321,
+    saves: 1987
+  },
+  {
+    id: 'slack',
+    name: 'Slack',
+    category: 'Communication',
+    description: 'Connect the right people, find anything you need and automate the rest',
+    url: 'https://slack.com',
+    image: 'https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg',
+    rating: 4.5,
+    price: 'Freemium',
+    tags: ['Communication', 'Teamwork', 'Productivity'],
+    launchDate: '2022-12-01',
+    upvotes: 3210,
+    saves: 1432
+  }
+];
+
+const PriceBadge = ({ price }: { price: string }) => {
+  const isFree = price.toLowerCase() === 'free' || price.toLowerCase() === 'freemium';
+  
+  return (
+    <motion.span 
+      className={`px-3 py-1 rounded-full text-xs font-medium inline-flex items-center ${
+        isFree 
+          ? 'bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 border border-green-500/30' 
+          : 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 border border-blue-500/30'
+      }`}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <FiZap className="mr-1.5 h-3 w-3" />
+      {price}
+    </motion.span>
+  );
+};
+
+// Tool card component with 3D tilt effect
+const ToolCard = ({ tool }: { tool: Tool }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(tool.upvotes || 0);
+  const [saveCount, setSaveCount] = useState(tool.saves || 0);
+  const cardRef = useRef<HTMLDivElement>(null);
+  
+  // 3D tilt effect
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateY = ((x - centerX) / 20);
+    const rotateX = ((centerY - y) / 20);
+    
+    if (cardRef.current) {
+      cardRef.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    }
+  };
+  
+  const handleMouseLeave = () => {
+    if (cardRef.current) {
+      cardRef.current.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    }
+    setIsHovered(false);
+  };
+  
+  const handleLike = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsLiked(!isLiked);
+    setLikeCount(prev => isLiked ? prev - 1 : prev + 1);
+  };
+  
+  const handleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsSaved(!isSaved);
+    setSaveCount(prev => isSaved ? prev - 1 : prev + 1);
+  };
+  
+  const formatNumber = (num: number): string => {
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1) + 'M';
+    } else if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'K';
+    }
+    return num.toString();
+  };
+  
+  // Animation variants
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.6, 
+        ease: [0.6, -0.05, 0.01, 0.9],
+        staggerChildren: 0.1
+      }
+    },
+    hover: {
+      scale: 1.02,
+      transition: { duration: 0.2 }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.6,
+        ease: [0.6, -0.05, 0.01, 0.9]
+      }
+    },
+  };
+  
+  return (
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      viewport={{ once: true, margin: "-50px" }}
+      className="relative h-full"
+    >
+      <div 
+        className="relative bg-gradient-to-br from-[#0A0F2C] to-[#1A1A1A] rounded-2xl p-0.5 overflow-hidden h-full flex flex-col group"
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={handleMouseLeave}
+        ref={cardRef}
+      >
+        <div className="relative h-full">
+          <Link 
+            href={`/tools/${tool.id}`}
+            className="flex flex-col h-full"
+          >
+            {/* Animated gradient border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#00F5FF] via-[#00A3FF] to-[#FFD700] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            {/* Main card content */}
+            <div className="relative bg-[#0A0F2C] rounded-2xl p-6 h-full flex flex-col">
+              {/* Badges */}
+              <div className="flex justify-between items-start mb-4">
+                <div className="flex items-center space-x-2">
+                  {tool.featured && (
+                    <motion.span 
+                      className="bg-gradient-to-r from-yellow-500/20 to-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full flex items-center border border-amber-500/30"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <FiAward className="mr-1.5 h-3 w-3" />
+                      Featured
+                    </motion.span>
+                  )}
+                  {tool.trending && (
+                    <motion.span 
+                      className="bg-gradient-to-r from-pink-500/20 to-rose-500/20 text-pink-400 text-xs font-bold px-3 py-1 rounded-full flex items-center border border-pink-500/30"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <FiTrendingUp className="mr-1.5 h-3 w-3" />
+                      Trending
+                    </motion.span>
+                  )}
+                  {tool.new && (
+                    <motion.span 
+                      className="bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 text-xs font-bold px-3 py-1 rounded-full flex items-center border border-blue-500/30"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <FiZap className="mr-1.5 h-3 w-3" />
+                      New
+                    </motion.span>
+                  )}
+                </div>
+                
+                <PriceBadge price={tool.price} />
+              </div>
+              
+              {/* Tool image */}
+              <div className="relative h-40 bg-gray-900 rounded-xl overflow-hidden mb-4 group-hover:ring-2 group-hover:ring-[#00F5FF]/30 transition-all duration-300">
+                <motion.img 
+                  src={tool.image} 
+                  alt={tool.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  initial={{ opacity: 0.8 }}
+                  whileHover={{ opacity: 1 }}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://via.placeholder.com/400x200/0A0F2C/FFFFFF?text=No+Image';
+                  }}
+                />
+                
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div className="w-full">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center space-x-3">
+                        <motion.button 
+                          onClick={handleLike}
+                          className={`p-2 rounded-full backdrop-blur-sm ${
+                            isLiked 
+                              ? 'bg-red-500/20 text-red-400 border border-red-500/30' 
+                              : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-white/5'
+                          } transition-colors`}
+                          whileTap={{ scale: 0.9 }}
+                        >
+                          <FiHeart className={isLiked ? 'fill-current' : ''} />
+                        </motion.button>
+                        <span className="text-white text-sm font-medium">{formatNumber(likeCount)}</span>
+                        
+                        <motion.button 
+                          onClick={handleSave}
+                          className={`p-2 rounded-full backdrop-blur-sm ${
+                            isSaved 
+                              ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' 
+                              : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-white/5'
+                          } transition-colors`}
+                          whileTap={{ scale: 0.9 }}
+                        >
+                          <FiBookmark className={isSaved ? 'fill-current' : ''} />
+                        </motion.button>
+                        <span className="text-white text-sm font-medium">{formatNumber(saveCount)}</span>
+                      </div>
+                      
+                      <motion.span 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(tool.url, '_blank', 'noopener,noreferrer');
+                        }}
+                        className="p-2 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-full backdrop-blur-sm transition-colors flex items-center justify-center cursor-pointer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        title="Open in new tab"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            window.open(tool.url, '_blank', 'noopener,noreferrer');
+                          }
+                        }}
+                      >
+                        <FiExternalLink className="h-4 w-4" />
+                      </motion.span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Tool info */}
+              <div className="flex-1 flex flex-col">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-xl font-bold text-white line-clamp-1">
+                    {tool.name}
+                  </h3>
+                </div>
+                
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2 flex-1">
+                  {tool.description}
+                </p>
+                
+                {/* Rating and category */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <div className="flex mr-2">
+                      {[...Array(5)].map((_, i) => (
+                        <FiStar 
+                          key={i} 
+                          className={`h-4 w-4 ${i < Math.floor(tool.rating) ? 'text-yellow-400 fill-current' : 'text-gray-700'}`} 
+                        />
+                      ))}
+                    </div>
+                    <span className="text-sm text-gray-400">{tool.rating}</span>
+                  </div>
+                  
+                  <span className="px-2.5 py-1 bg-gray-800 text-gray-300 text-xs font-medium rounded-full">
+                    {tool.category}
+                  </span>
+                </div>
+                
+                {/* Innovation score */}
+                {tool.innovationScore && (
+                  <div className="mb-3">
+                    <div className="flex justify-between text-xs text-gray-500 mb-1.5">
+                      <span className="flex items-center">
+                        <FiZap className="mr-1.5 h-3 w-3 text-blue-400" />
+                        Innovation
+                      </span>
+                      <span>{tool.innovationScore}/100</span>
+                    </div>
+                    <div className="w-full bg-gray-800 rounded-full h-1.5 overflow-hidden">
+                      <motion.div 
+                        className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${tool.innovationScore}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.3 }}
+                      />
+                    </div>
+                  </div>
+                )}
+                
+                {/* Tags */}
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {tool.tags.slice(0, 3).map((tag, i) => (
+                    <motion.span 
+                      key={i}
+                      className="px-3 py-1 bg-gray-800/80 text-gray-300 text-xs rounded-full border border-gray-700/50 backdrop-blur-sm"
+                      whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+                    >
+                      {tag}
+                    </motion.span>
+                  ))}
+                  {tool.tags.length > 3 && (
+                    <span className="px-3 py-1 bg-gray-800/50 text-gray-500 text-xs rounded-full border border-gray-700/50">
+                      +{tool.tags.length - 3}
+                    </span>
+                  )}
+                </div>
+              </div>
+              
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#00F5FF]/20 via-[#00A3FF]/20 to-[#FFD700]/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10"></div>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+// ... (rest of the code remains the same)
+
+// Main page component with premium design
+const BestToolsPageContent = () => {
+  // State management
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('popular');
+  const [isSortOpen, setIsSortOpen] = useState(false);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  // Refs
+  const searchRef = useRef<HTMLInputElement>(null);
+  const sortRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  
+  // Handle scroll for header effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  // Filter and sort tools
+  const filteredTools = useMemo(() => {
+    let result = [...allTools];
+    
+    // Filter by search query
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(tool => 
+        tool.name.toLowerCase().includes(query) || 
+        tool.description.toLowerCase().includes(query) ||
+        tool.tags.some(tag => tag.toLowerCase().includes(query))
+      );
+    }
+    
+    // Filter by category
+    if (activeCategory !== 'All') {
+      result = result.filter(tool => tool.category === activeCategory);
+    }
+    
+    // Sort the results
+    switch (sortBy) {
+      case 'newest':
+        result.sort((a, b) => (b.launchDate || '').localeCompare(a.launchDate || ''));
+        break;
+      case 'rating':
+        result.sort((a, b) => b.rating - a.rating);
+        break;
+      case 'featured':
+        result = result.filter(tool => tool.featured);
+        break;
+      case 'popular':
+      default:
+        result.sort((a, b) => (b.upvotes || 0) - (a.upvotes || 0));
+        break;
+    }
+    
+    return result;
+  }, [searchQuery, activeCategory, sortBy]);
+  
+  // Handle keyboard shortcut for search (Cmd+K / Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchRef.current?.focus();
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+  
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.6,
+        ease: [0.6, -0.05, 0.01, 0.9]
+      }
+    },
+  };
+  
+  // Stats for the hero section
+  const stats = [
+    { value: '500+', label: 'AI Tools' },
+    { value: '50K+', label: 'Monthly Users' },
+    { value: '4.8/5', label: 'Avg. Rating' },
+    { value: '24/7', label: 'Support' }
+  ];
+  
+  return (
+    <div className={`min-h-screen bg-gradient-to-br from-[#0A0F2C] to-[#1A1A1A] text-white ${playfair.variable} ${inter.variable} font-sans`}>
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#00F5FF]/10 to-transparent -z-10" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#00F5FF]/5 rounded-full filter blur-3xl" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.9] }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <motion.div 
+              className="inline-flex items-center bg-[#00F5FF]/10 text-[#00F5FF] text-sm font-medium px-4 py-1.5 rounded-full mb-6"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <span className="w-2 h-2 bg-[#00F5FF] rounded-full mr-2 animate-pulse"></span>
+              Curated Excellence - Only the Top 1% of AI Tools
+            </motion.div>
+            
+            <motion.h1 
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-serif"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00F5FF] via-[#00FFA3] to-[#FFD700] animate-gradient">
+                World's Best
+              </span>
+              <br />
+              <span className="text-white">AI Tools</span>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-xl text-gray-300 max-w-2xl mx-auto mb-10"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              Discover the most powerful and innovative AI tools that are shaping the future of technology and business.
+            </motion.p>
+            
+            <motion.div 
+              className="max-w-2xl mx-auto relative"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search for AI tools..."
+                  className="w-full bg-[#1A1A1A] border border-gray-800 rounded-xl py-4 pl-5 pr-12 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00F5FF]/50 focus:border-transparent shadow-lg"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  ref={searchRef}
+                />
+                <FiSearch className="absolute right-5 top-1/2 transform -translate-y-1/2 text-gray-500 h-5 w-5" />
+              </div>
+              <motion.div 
+                className="absolute -bottom-8 left-0 right-0 flex justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+              >
+                <div className="bg-[#0A0F2C] text-[#00F5FF] text-xs font-medium px-3 py-1 rounded-full flex items-center border border-[#00F5FF]/30">
+                  <kbd className="bg-[#00F5FF]/10 text-[#00F5FF] rounded px-2 py-0.5 mr-1 border border-[#00F5FF]/20">⌘</kbd> + <kbd className="bg-[#00F5FF]/10 text-[#00F5FF] rounded px-2 py-0.5 ml-1 border border-[#00F5FF]/20">K</kbd> to search
+                </div>
+              </motion.div>
+            </motion.div>
+            
+            {/* Stats */}
+            <motion.div 
+              className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+            >
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-[#00F5FF] to-[#00FFA3] bg-clip-text text-transparent">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-gray-400 mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Categories */}
+      <div 
+        className={`sticky top-0 z-40 bg-[#0A0F2C]/95 backdrop-blur-md border-b border-gray-800/50 transition-all duration-300 ${
+          isScrolled ? 'py-3' : 'py-4'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between overflow-x-auto pb-2 hide-scrollbar">
+            <div className="flex space-x-2">
+              {categories.map((category) => (
+                <motion.button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
+                    activeCategory === category
+                      ? 'bg-gradient-to-r from-[#00F5FF] to-[#00A3FF] text-white shadow-lg shadow-[#00F5FF]/20'
+                      : 'text-gray-400 hover:text-white hover:bg-gray-800/50 backdrop-blur-sm'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {category}
+                </motion.button>
+              ))}
+            </div>
+            
+            <div className="flex items-center space-x-3 ml-4">
+              <div className="relative" ref={sortRef}>
+                <motion.button
+                  onClick={() => setIsSortOpen(!isSortOpen)}
+                  className="flex items-center space-x-2 bg-[#1A1A1A] border border-gray-800 rounded-lg px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-800/80 transition-colors"
+                  whileHover={{ backgroundColor: 'rgba(26, 26, 26, 0.8)' }}
+                >
+                  <span>Sort by: {sortBy === 'popular' ? 'Most Popular' : sortBy.charAt(0).toUpperCase() + sortBy.slice(1)}</span>
+                  <FiChevronDown className={`h-4 w-4 transition-transform ${isSortOpen ? 'transform rotate-180' : ''}`} />
+                </motion.button>
+                
+                <AnimatePresence>
+                  {isSortOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute right-0 mt-2 w-48 bg-[#1A1A1A] rounded-xl shadow-2xl py-1 z-10 border border-gray-800 overflow-hidden"
+                    >
+                      {[
+                        { id: 'popular', name: 'Most Popular', icon: <FiTrendingUp className="h-4 w-4 mr-2" /> },
+                        { id: 'newest', name: 'Newest', icon: <FiClock className="h-4 w-4 mr-2" /> },
+                        { id: 'rating', name: 'Highest Rated', icon: <FiStar className="h-4 w-4 mr-2" /> },
+                        { id: 'featured', name: 'Featured', icon: <FiAward className="h-4 w-4 mr-2" /> },
+                      ].map((option) => (
+                        <motion.button
+                          key={option.id}
+                          onClick={() => {
+                            setSortBy(option.id);
+                            setIsSortOpen(false);
+                          }}
+                          className={`w-full text-left px-4 py-2.5 text-sm flex items-center ${
+                            sortBy === option.id
+                              ? 'bg-[#00F5FF]/10 text-[#00F5FF]'
+                              : 'text-gray-300 hover:bg-gray-800/80'
+                          }`}
+                          whileHover={{ x: 5 }}
+                        >
+                          {option.icon}
+                          {option.name}
+                        </motion.button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              
+              <div className="h-6 w-px bg-gray-800" />
+              <div className="text-sm text-gray-400">
+                {filteredTools && filteredTools.length === 0 ? (
+                  <div className="text-center py-12">
+                    <svg
+                      className="mx-auto h-12 w-12 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <h3 className="mt-2 text-lg font-medium text-gray-900">No tools found</h3>
+                    <p className="mt-1 text-gray-500">Try adjusting your search or filter to find what you're looking for.</p>
+                    <div className="mt-6">
+                      <button
+                        onClick={() => {
+                          setSearchQuery('');
+                          setActiveCategory('All');
+                        }}
+                        className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-xl text-gray-700 bg-white hover:bg-gray-50 shadow-sm transition-colors duration-200"
+                      >
+                        Clear filters
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-sm text-gray-400">
+                    {filteredTools.length} {filteredTools.length === 1 ? 'tool' : 'tools'} found
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            {/* Tools Grid */}
+            <motion.div 
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.1
+                  }
+                }
+              }}
+            >
+              {filteredTools && filteredTools.length > 0 ? (
+                filteredTools.map((tool) => (
+                  <ToolCard key={tool.id} tool={tool} />
+                ))
+              ) : (
+                <div className="text-center py-12">
+                  <svg
+                    className="mx-auto h-12 w-12 text-gray-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <h3 className="mt-2 text-lg font-medium text-gray-900">No tools found</h3>
+                  <p className="mt-1 text-gray-500">Try adjusting your search or filter to find what you're looking for.</p>
+                  <div className="mt-6">
+                    <button
+                      onClick={() => {
+                        setSearchQuery('');
+                        setActiveCategory('All');
+                      }}
+                      className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-xl text-gray-700 bg-white hover:bg-gray-50 shadow-sm transition-colors duration-200"
+                    >
+                      Clear filters
+                    </button>
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          </div>
+        </div>
+      </div>
+      
+      {/* CTA Section */}
+      <div className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-90"></div>
+            <div className="relative px-6 py-12 sm:p-16">
+              <div className="text-center">
+                <motion.h2 
+                  className="text-3xl font-extrabold text-gray-900 sm:text-4xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
+                  Can't find what you're looking for?
+                </motion.h2>
+                <motion.p 
+                  className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  We're constantly updating our collection with the best tools. Check back soon or suggest a tool to be featured.
+                </motion.p>
+                <motion.div 
+                  className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <a
+                    href="/suggest-tool"
+                    className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200"
+                  >
+                    Suggest a Tool
+                  </a>
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-xl text-gray-700 bg-white hover:bg-gray-50 shadow-sm transition-colors duration-200"
+                  >
+                    Contact Us
+                  </a>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+}
+
+export default function BestToolsPage() {
+  return (
+    <div className={`${playfair.variable} ${inter.variable} font-sans`}>
+      <BestToolsPageContent />
+    </div>
+  );
+}
