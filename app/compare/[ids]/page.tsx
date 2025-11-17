@@ -4,8 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Tool } from '@/types/tool';
 import { getToolById } from '@/lib/tools';
-'use client';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faArrowLeft, 
