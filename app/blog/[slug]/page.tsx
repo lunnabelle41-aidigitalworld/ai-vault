@@ -8,12 +8,11 @@ export async function generateStaticParams() {
   }));
 }
 
-interface PageProps {
+export default async function BlogPostPage({
+  params,
+}: {
   params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-export default function BlogPostPage({ params }: PageProps) {
+}) {
   const post = blogPosts.find((p) => p.id === params.slug);
   
   if (!post) {
