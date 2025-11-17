@@ -1,10 +1,10 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 import { getToolById, getRecommendedTools, getTools } from '@/lib/tools';
 import ToolRecommendations from '@/components/ToolRecommendations/ToolRecommendations';
 import Image from 'next/image';
 import Link from 'next/link';
-'use client';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
