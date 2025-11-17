@@ -64,7 +64,7 @@ export const tools: Tool[] = [
     id: 'github',
     name: 'GitHub',
     category: 'Development',
-    description: 'The world's leading software development platform',
+    description: "The world's leading software development platform",
     url: 'https://github.com',
     image: '/tools/github.jpg',
     rating: 4.8,
