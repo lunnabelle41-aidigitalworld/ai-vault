@@ -1,12 +1,10 @@
-'use client';
-
 import { notFound } from 'next/navigation';
 import { tools } from '../data';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export default function ToolDetails({ params }: { params: { toolId: string } }) {
-  const tool = tools.find((t) => t.id === params.toolId);
+export default async function ToolDetails({ params }: { params: Promise<{ toolId: string }> }) {
+  const resolvedParams = await params;
+  const tool = tools.find((t) => t.id === resolvedParams.toolId);
 
   if (!tool) {
     notFound();
@@ -107,10 +105,7 @@ export default function ToolDetails({ params }: { params: { toolId: string } }) 
             </div>
 
             <div className="md:w-2/3">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="bg-white p-8 rounded-xl shadow-md"
+              <div className="bg-white p-8 rounded-xl shadow-md"
               >
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">{tool.name}</h1>
                 <p className="text-xl text-gray-600 mb-6">{tool.description}</p>
@@ -151,7 +146,7 @@ export default function ToolDetails({ params }: { params: { toolId: string } }) 
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Related Tools */}
               <div className="mt-8">
