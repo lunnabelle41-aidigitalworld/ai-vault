@@ -6,6 +6,7 @@ datasource db {
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
 }
 
 model User {
@@ -15,4 +16,21 @@ model User {
   password  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// Add more models as needed
+model Tool {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  category    String
+  url         String
+  image       String?
+  rating      Float    @default(0)
+  price       String   @default("Free")
+  tags        Json     @default("[]")
+  isNew       Boolean  @default(false)
+  launchDate  DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

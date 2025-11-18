@@ -28,14 +28,17 @@
       }
     ],
     "typeRoots": [
-      "./node_modules/@types"
+      "./node_modules/@types",
+      "./types"
     ],
     "types": [
       "node",
       "react",
       "react-dom",
       "next"
-    ]
+    ],
+    "strictNullChecks": true,
+    "noImplicitAny": true
   },
   "include": [
     "**/*.cjs",
