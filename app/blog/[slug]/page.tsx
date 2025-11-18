@@ -8,10 +8,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Awaited<ReturnType<typeof generateStaticParams>>[number];
+export default async function BlogPostPage({ 
+  params 
+}: { 
+  params: { slug: string } 
 }) {
   const post = blogPosts.find((p) => p.id === params.slug);
   
