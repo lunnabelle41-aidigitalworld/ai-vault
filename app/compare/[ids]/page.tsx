@@ -54,7 +54,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = async ({ params }) => {
     };
 
     loadTools();
-  }, [params.ids]);
+  }, [resolvedParams.ids]);
 
   // Get all unique features from all tools
   const getAllFeatures = () => {

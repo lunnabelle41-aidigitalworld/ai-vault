@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation';
 import { getToolById, getRecommendedTools, getTools } from '@/lib/tools';
 import ToolPageContent from './ToolPageContent';
 
-export default async function ToolPage({ params }: { params: { id: string } }) {
-  const tool = await getToolById(params.id);
+export default async function ToolPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const tool = await getToolById(resolvedParams.id);
   
   if (!tool) {
     notFound();
