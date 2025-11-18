@@ -17,12 +17,13 @@ import Link from 'next/link';
 import { useComparison } from '@/contexts/ComparisonContext';
 
 interface ComparisonPageProps {
-  params: {
+  params: Promise<{
     ids: string;
-  };
+  }>;
 }
 
-const ComparisonPage: React.FC<ComparisonPageProps> = ({ params }) => {
+const ComparisonPage: React.FC<ComparisonPageProps> = async ({ params }) => {
+  const resolvedParams = await params;
   const [tools, setTools] = useState<Tool[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -32,7 +33,7 @@ const ComparisonPage: React.FC<ComparisonPageProps> = ({ params }) => {
   useEffect(() => {
     const loadTools = async () => {
       try {
-        const ids = params.ids.split(',');
+        const ids = resolvedParams.ids.split(',');
         if (ids.length < 2 || ids.length > 3) {
           throw new Error('Please select 2-3 tools to compare');
         }
