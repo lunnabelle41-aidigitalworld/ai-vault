@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion';
 import Link from 'next/link';
-import { FiSearch, FiFilter, FiChevronDown, FiStar, FiExternalLink, FiArrowRight, FiHeart, FiBookmark, FiAward, FiTrendingUp, FiZap, FiShare2, FiCheck, FiRocket, FiClock } from 'react-icons/fi';
+import { FiSearch, FiFilter, FiChevronDown, FiStar, FiExternalLink, FiArrowRight, FiHeart, FiBookmark, FiAward, FiTrendingUp, FiZap, FiShare2, FiCheck, FiClock } from 'react-icons/fi';
 import { Tooltip } from 'react-tooltip';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
