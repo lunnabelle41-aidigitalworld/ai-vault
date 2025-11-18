@@ -1,6 +1,6 @@
-# AI Tools Directory
+# AI Vault - AI Tools Directory
 
-A professional, SEO-optimized directory for discovering, comparing, and reviewing 1000+ AI tools across 300+ categories. Built with Next.js, TypeScript, and Tailwind CSS.
+A professional, SEO-optimized directory for discovering, comparing, and reviewing 1000+ AI tools across 300+ categories. Built with Next.js, TypeScript, and Tailwind CSS. Updated to fix build issues.
 
 ## Features
 - Modern, responsive UI/UX
