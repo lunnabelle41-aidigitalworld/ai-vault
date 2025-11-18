@@ -1,10 +1,11 @@
-﻿import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 import { hash } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 
-const prisma = new PrismaClient();
 const JWT_SECRET = process.env.JWT_SECRET!;
+const isProduction = process.env.NODE_ENV === 'production';
+const DOMAIN = isProduction ? '.yourdomain.com' : 'localhost';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {

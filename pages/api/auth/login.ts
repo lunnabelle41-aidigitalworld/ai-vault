@@ -14,18 +14,15 @@ type NextApiResponse = {
   end: () => void;
 };
 
-// @ts-ignore - Bypassing type checking for bcryptjs
 import { compare } from 'bcryptjs';
-// @ts-ignore - Bypassing type checking for jsonwebtoken
-import { PrismaClient } from '@prisma/client';
 import { sign } from 'jsonwebtoken';
+import { prisma } from '@/lib/prisma';
 
 type LoginRequest = {
   email: string;
   password: string;
 };
 
-const prisma = new PrismaClient();
 const JWT_SECRET = process.env.JWT_SECRET!;
 const isProduction = process.env.NODE_ENV === 'production';
 const DOMAIN = isProduction ? '.yourdomain.com' : 'localhost';
