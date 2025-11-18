@@ -1,7 +1,13 @@
-﻿/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'randomuser.me'],
+    domains: [
+      'images.unsplash.com', 
+      'randomuser.me',
+      'cdn.worldvectorlogo.com',
+      'pbs.twimg.com',
+      'via.placeholder.com'
+    ],
   },
   async headers() {
     return [
